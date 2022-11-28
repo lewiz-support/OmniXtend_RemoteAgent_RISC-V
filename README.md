@@ -24,6 +24,8 @@ https://www.apache.org/licenses/LICENSE-2.0
 
 Any other work not mentioned above which had been deveoped by LeWiz and contained in this release are also released under Apache 2.0 license.
 As such this work is released on an AS-IS basis and 
+
 NO WARRANTY of ANY KIND is provided and 
+
 NO LIABILITY of ANYKIND is assumed by LeWiz.
 
