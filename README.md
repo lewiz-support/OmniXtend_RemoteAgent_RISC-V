@@ -1,5 +1,9 @@
 # OmniXtend_RemoteAgent_RISC-V
 
+Author: LeWiz Communications, Inc.
+
+www.LeWiz.com
+
 --------- November 28, 2022
 
 This repository contains the open source and documentation for OmniXtend protocol with RISC-V CPU as the initiator.
@@ -15,4 +19,11 @@ The RISC-V CPU are also available in open source and released by its developer u
 (Link to RISC-V core:   )
 
 The OmniXtend core is released under Apache 2.0 license
+
+https://www.apache.org/licenses/LICENSE-2.0
+
+Any other work not mentioned above which had been deveoped by LeWiz and contained in this release are also released under Apache 2.0 license.
+As such this work is released on an AS-IS basis and 
+NO WARRANTY of ANY KIND is provided and 
+NO LIABILITY of ANYKIND is assumed by LeWiz.
 
