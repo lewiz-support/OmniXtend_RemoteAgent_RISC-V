@@ -18,14 +18,14 @@ LeWiz LMAC cores are available on Github in lewiz-support repository (Here)
 The RISC-V CPU are also available in open source and released by its developer under its own open source license
 (Link to RISC-V core:   )
 
-The OmniXtend core is released under Apache 2.0 license
+The OmniXtend core (developed by LeWiz) is released under Apache 2.0 license
 
 https://www.apache.org/licenses/LICENSE-2.0
 
-Any other work not mentioned above which had been deveoped by LeWiz and contained in this release are also released under Apache 2.0 license.
+Any other work(s) not mentioned above which had been developed by LeWiz and contained in this release are also released under Apache 2.0 license.
 As such this work is released on an AS-IS basis and 
 
 NO WARRANTY of ANY KIND is provided and 
 
-NO LIABILITY of ANYKIND is assumed by LeWiz.
+NO LIABILITY of ANY KIND is assumed by LeWiz.
 
