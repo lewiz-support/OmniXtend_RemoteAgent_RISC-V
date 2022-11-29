@@ -8,7 +8,7 @@ www.LeWiz.com
 
 This repository contains the open source and documentation for OmniXtend protocol with RISC-V CPU as the initiator.
 An OmniXtend Endpoint was used as a target. The RISC-V CPU fetches program code from a remote network endpoint (not
-on its local memory) and executed a simple C-program. The design contains:
+on its local memory) and executes a simple C-program. The design contains:
 
 RISC-V64 <==> OmniXtend Core <==> LeWiz LMAC3 <==> PHY <==> NETWORK SWITCH <==> Endpoint
 
