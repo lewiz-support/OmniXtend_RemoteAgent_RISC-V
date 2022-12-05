@@ -1,0 +1,4 @@
+[submodule "VCU118_FPGA_INFO/ox_agent"]
+	path = VCU118_FPGA_INFO/ox_agent
+	url = https://github.com/lewiz-support/openpiton.git
+	branch = OXAgent
