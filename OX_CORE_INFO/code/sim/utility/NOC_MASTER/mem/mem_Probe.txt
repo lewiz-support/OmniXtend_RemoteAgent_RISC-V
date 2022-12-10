@@ -1,0 +1,74 @@
+//****************************************************************
+// December 6, 2022
+//
+// Licensed to the Apache Software Foundation (ASF) under one
+// or more contributor license agreements.  See the NOTICE file
+// distributed with this work for additional information
+// regarding copyright ownership.  The ASF licenses this file
+// to you under the Apache License, Version 2.0 (the
+// "License"); you may not use this file except in compliance
+// with the License.  You may obtain a copy of the License at
+//
+//   http://www.apache.org/licenses/LICENSE-2.0
+//
+// Unless required by applicable law or agreed to in writing,
+// software distributed under the License is distributed on an
+// "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+// KIND, either express or implied.  See the License for the
+// specific language governing permissions and limitations
+// under the License.
+//
+// Date: N/A
+// Project: OmniXtend Core
+// Comments: N/A
+//
+//********************************
+// File history:
+//   N/A
+//****************************************************************
+//
+//
+//    input                           ox_endpoint_in_rdy,         //i-1 ready signal from TLC 
+//    output reg                      ox_endpoint_in_valid,       //o-1 valid signal goes to TLC
+//    output reg [DATA_WIDTH - 1: 0]  ox_endpoint_in_data,        //o-64 data signal goes to TLC
+//    output reg [7:0]                ox_endpoint_in_keep,        //o-8 strb/keep
+//    output reg                      ox_endpoint_in_last,        //o-1
+//
+// Format of patterns below:
+// Assume RDY is always ready
+// 4 bits of ctrl, 8-bits of KEEP flags, 64 bits of data
+// CTRL in binary: 00LV, Keep: xxxx_xxxx, data 64 bit in big-endian
+// V = valid bit; L = LAST bits
+//
+// ex of keep: keep 2 bytes on LAST qwd, (hex)  3_03_xxxx_xxxx_xxxx_55AA
+// ex of keep 6 bytes, LAST qwd (hex), 3_3F_xxxx_6655_4433_2211
+// x = any thing or dont care
+//
+//
+//0_00_0000000000000000 // piton_pkt_probe, addr = 0, cnt = 11 (dec)
+//1_FF_0000f0ffff321200
+//1_FF_0000aaaa00000000
+//1_FF_042c080000000000
+//1_FF_0240249401030000
+//1_FF_1230012000000000
+//1_FF_4560000000000000
+//1_FF_7890000123000000
+//1_FF_abc0000000000000
+//3_3F_0000010000000000
+//0_00_0000000000000000
+//
+//
+0_00_0000000000000000 // piton_pkt_probe, addr = 0, cnt = 14 (dec)
+1_FF_0000f0ffff321200
+1_FF_0000aaaa00000000
+1_FF_062c080000000000
+1_FF_0240249401030000
+1_FF_0000012000000000
+1_FF_0000000000000000
+1_FF_0000000000000000
+1_FF_0000000000000000
+1_FF_0000000000000000
+1_FF_0000000000000000
+1_FF_0000000000000000
+3_3F_0000010000000000
+0_00_0000000000000000

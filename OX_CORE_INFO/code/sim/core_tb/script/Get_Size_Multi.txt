@@ -1,0 +1,106 @@
+# Requires NOC_MASTER data file `mem_Get2.txt`
+
+relaunch_sim
+
+#run 1000ns
+
+#CMD 0
+add_force {/core_tb/gen_en} -radix hex {1 0ns}
+add_force {/core_tb/pkt_gen_addr} -radix unsigned {0 0ns}
+add_force {/core_tb/pkt_gen_cnt} -radix unsigned {5 0ns}
+run 10ns
+remove_forces { {/core_tb/gen_en} }
+remove_forces { {/core_tb/pkt_gen_cnt} }
+remove_forces { {/core_tb/pkt_gen_addr} }
+run 400ns
+
+#CMD 0
+add_force {/core_tb/gen_en} -radix hex {1 0ns}
+add_force {/core_tb/pkt_gen_addr} -radix unsigned {0 0ns}
+add_force {/core_tb/pkt_gen_cnt} -radix unsigned {5 0ns}
+run 10ns
+remove_forces { {/core_tb/gen_en} }
+remove_forces { {/core_tb/pkt_gen_cnt} }
+remove_forces { {/core_tb/pkt_gen_addr} }
+run 400ns
+
+
+#CMD 1
+add_force {/core_tb/gen_en} -radix hex {1 0ns}
+add_force {/core_tb/pkt_gen_addr} -radix unsigned {5 0ns}
+add_force {/core_tb/pkt_gen_cnt} -radix unsigned {5 0ns}
+run 10ns
+remove_forces { {/core_tb/gen_en} }
+remove_forces { {/core_tb/pkt_gen_cnt} }
+remove_forces { {/core_tb/pkt_gen_addr} }
+run 400ns
+
+#CMD 1
+add_force {/core_tb/gen_en} -radix hex {1 0ns}
+add_force {/core_tb/pkt_gen_addr} -radix unsigned {5 0ns}
+add_force {/core_tb/pkt_gen_cnt} -radix unsigned {5 0ns}
+run 10ns
+remove_forces { {/core_tb/gen_en} }
+remove_forces { {/core_tb/pkt_gen_cnt} }
+remove_forces { {/core_tb/pkt_gen_addr} }
+run 400ns
+
+
+#CMD 2
+add_force {/core_tb/gen_en} -radix hex {1 0ns}
+add_force {/core_tb/pkt_gen_addr} -radix unsigned {10 0ns}
+add_force {/core_tb/pkt_gen_cnt} -radix unsigned {5 0ns}
+run 10ns
+remove_forces { {/core_tb/gen_en} }
+remove_forces { {/core_tb/pkt_gen_cnt} }
+remove_forces { {/core_tb/pkt_gen_addr} }
+run 400ns
+
+#CMD 2
+add_force {/core_tb/gen_en} -radix hex {1 0ns}
+add_force {/core_tb/pkt_gen_addr} -radix unsigned {10 0ns}
+add_force {/core_tb/pkt_gen_cnt} -radix unsigned {5 0ns}
+run 10ns
+remove_forces { {/core_tb/gen_en} }
+remove_forces { {/core_tb/pkt_gen_cnt} }
+remove_forces { {/core_tb/pkt_gen_addr} }
+run 400ns
+
+
+#CMD 3
+add_force {/core_tb/gen_en} -radix hex {1 0ns}
+add_force {/core_tb/pkt_gen_addr} -radix unsigned {15 0ns}
+add_force {/core_tb/pkt_gen_cnt} -radix unsigned {5 0ns}
+run 10ns
+remove_forces { {/core_tb/gen_en} }
+remove_forces { {/core_tb/pkt_gen_cnt} }
+remove_forces { {/core_tb/pkt_gen_addr} }
+run 400ns
+
+#CMD 3
+add_force {/core_tb/gen_en} -radix hex {1 0ns}
+add_force {/core_tb/pkt_gen_addr} -radix unsigned {15 0ns}
+add_force {/core_tb/pkt_gen_cnt} -radix unsigned {5 0ns}
+run 10ns
+remove_forces { {/core_tb/gen_en} }
+remove_forces { {/core_tb/pkt_gen_cnt} }
+remove_forces { {/core_tb/pkt_gen_addr} }
+run 400ns
+
+
+#CMD 3
+add_force {/core_tb/gen_en} -radix hex {1 0ns}
+add_force {/core_tb/pkt_gen_addr} -radix unsigned {15 0ns}
+add_force {/core_tb/pkt_gen_cnt} -radix unsigned {5 0ns}
+run 10ns
+remove_forces { {/core_tb/gen_en} }
+remove_forces { {/core_tb/pkt_gen_cnt} }
+remove_forces { {/core_tb/pkt_gen_addr} }
+run 400ns
+
+
+
+run 2us
+
+add_force {/core_tb/file_close} -radix hex {1 0ns}
+run 10 ns

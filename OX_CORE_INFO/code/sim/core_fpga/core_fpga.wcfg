@@ -1,0 +1,833 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="core_fpga_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="core_fpga" />
+            <top_module name="glbl" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="0.000000000 us"></ZoomStartTime>
+      <ZoomEndTime time="69.100000001 us"></ZoomEndTime>
+      <Cursor1Time time="5.441802968 us"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="227"></NameColumnWidth>
+      <ValueColumnWidth column_width="81"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="23" />
+   <wvobject type="group" fp_name="group6494">
+      <obj_property name="label">Inputs</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="isExpanded"></obj_property>
+      <wvobject type="logic" fp_name="/core_fpga/ext_reset_all_">
+         <obj_property name="ElementShortName">ext_reset_all_</obj_property>
+         <obj_property name="ObjectShortName">ext_reset_all_</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/core_fpga/ext_reset_sys_">
+         <obj_property name="ElementShortName">ext_reset_sys_</obj_property>
+         <obj_property name="ObjectShortName">ext_reset_sys_</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/core_fpga/ext_reset_mii_">
+         <obj_property name="ElementShortName">ext_reset_mii_</obj_property>
+         <obj_property name="ObjectShortName">ext_reset_mii_</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/core_fpga/ext_reset_oxc_">
+         <obj_property name="ElementShortName">ext_reset_oxc_</obj_property>
+         <obj_property name="ObjectShortName">ext_reset_oxc_</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/core_fpga/ext_enable">
+         <obj_property name="ElementShortName">ext_enable</obj_property>
+         <obj_property name="ObjectShortName">ext_enable</obj_property>
+      </wvobject>
+      <wvobject type="group" fp_name="group2008">
+         <obj_property name="label">GPIO</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <wvobject type="logic" fp_name="/core_fpga/GPIO_SW_N">
+            <obj_property name="ElementShortName">GPIO_SW_N</obj_property>
+            <obj_property name="ObjectShortName">GPIO_SW_N</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="/core_fpga/GPIO_SW_C">
+            <obj_property name="ElementShortName">GPIO_SW_C</obj_property>
+            <obj_property name="ObjectShortName">GPIO_SW_C</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="/core_fpga/GPIO_SW_S">
+            <obj_property name="ElementShortName">GPIO_SW_S</obj_property>
+            <obj_property name="ObjectShortName">GPIO_SW_S</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="/core_fpga/GPIO_SW_W">
+            <obj_property name="ElementShortName">GPIO_SW_W</obj_property>
+            <obj_property name="ObjectShortName">GPIO_SW_W</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="/core_fpga/GPIO_SW_E">
+            <obj_property name="ElementShortName">GPIO_SW_E</obj_property>
+            <obj_property name="ObjectShortName">GPIO_SW_E</obj_property>
+         </wvobject>
+      </wvobject>
+      <wvobject type="group" fp_name="group2014">
+         <obj_property name="label">VIO</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <wvobject type="logic" fp_name="/core_fpga/vio_reset_all">
+            <obj_property name="ElementShortName">vio_reset_all</obj_property>
+            <obj_property name="ObjectShortName">vio_reset_all</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="/core_fpga/vio_reset_sys">
+            <obj_property name="ElementShortName">vio_reset_sys</obj_property>
+            <obj_property name="ObjectShortName">vio_reset_sys</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="/core_fpga/vio_reset_mii">
+            <obj_property name="ElementShortName">vio_reset_mii</obj_property>
+            <obj_property name="ObjectShortName">vio_reset_mii</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="/core_fpga/vio_reset_oxc">
+            <obj_property name="ElementShortName">vio_reset_oxc</obj_property>
+            <obj_property name="ObjectShortName">vio_reset_oxc</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="/core_fpga/vio_enable">
+            <obj_property name="ElementShortName">vio_enable</obj_property>
+            <obj_property name="ObjectShortName">vio_enable</obj_property>
+         </wvobject>
+      </wvobject>
+   </wvobject>
+   <wvobject type="group" fp_name="group6489">
+      <obj_property name="label">Clocks</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <wvobject type="logic" fp_name="/core_fpga/mclk">
+         <obj_property name="ElementShortName">mclk</obj_property>
+         <obj_property name="ObjectShortName">mclk</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/core_fpga/gt_refclk_p">
+         <obj_property name="ElementShortName">gt_refclk_p</obj_property>
+         <obj_property name="ObjectShortName">gt_refclk_p</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/core_fpga/gt_refclk_n">
+         <obj_property name="ElementShortName">gt_refclk_n</obj_property>
+         <obj_property name="ObjectShortName">gt_refclk_n</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/core_fpga/gt_refclk">
+         <obj_property name="ElementShortName">gt_refclk</obj_property>
+         <obj_property name="ObjectShortName">gt_refclk</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject type="group" fp_name="group6499">
+      <obj_property name="label">Resets</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="isExpanded"></obj_property>
+      <wvobject type="logic" fp_name="/core_fpga/reset_mii_">
+         <obj_property name="ElementShortName">reset_mii_</obj_property>
+         <obj_property name="ObjectShortName">reset_mii_</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/core_fpga/reset_mem_">
+         <obj_property name="ElementShortName">reset_mem_</obj_property>
+         <obj_property name="ObjectShortName">reset_mem_</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/core_fpga/reset_mac_">
+         <obj_property name="ElementShortName">reset_mac_</obj_property>
+         <obj_property name="ObjectShortName">reset_mac_</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/core_fpga/reset_noc_">
+         <obj_property name="ElementShortName">reset_noc_</obj_property>
+         <obj_property name="ObjectShortName">reset_noc_</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/core_fpga/reset_oxc_">
+         <obj_property name="ElementShortName">reset_oxc_</obj_property>
+         <obj_property name="ObjectShortName">reset_oxc_</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/core_fpga/reset_usr_tx">
+         <obj_property name="ElementShortName">reset_usr_tx</obj_property>
+         <obj_property name="ObjectShortName">reset_usr_tx</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/core_fpga/reset_usr_rx">
+         <obj_property name="ElementShortName">reset_usr_rx</obj_property>
+         <obj_property name="ObjectShortName">reset_usr_rx</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/core_fpga/rst_done_phy">
+         <obj_property name="ElementShortName">rst_done_phy</obj_property>
+         <obj_property name="ObjectShortName">rst_done_phy</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/core_fpga/reset_done">
+         <obj_property name="ElementShortName">reset_done</obj_property>
+         <obj_property name="ObjectShortName">reset_done</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject type="group" fp_name="group34065">
+      <obj_property name="label">PHY Reset Dectection</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <wvobject type="logic" fp_name="/core_fpga/rstctrl_phy/clk">
+         <obj_property name="ElementShortName">clk</obj_property>
+         <obj_property name="ObjectShortName">clk</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/core_fpga/rstctrl_phy/reset_">
+         <obj_property name="ElementShortName">reset_</obj_property>
+         <obj_property name="ObjectShortName">reset_</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/core_fpga/rstctrl_phy/rst_rx">
+         <obj_property name="ElementShortName">rst_rx</obj_property>
+         <obj_property name="ObjectShortName">rst_rx</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/core_fpga/rstctrl_phy/rst_tx">
+         <obj_property name="ElementShortName">rst_tx</obj_property>
+         <obj_property name="ObjectShortName">rst_tx</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/core_fpga/rstctrl_phy/stat_rx">
+         <obj_property name="ElementShortName">stat_rx</obj_property>
+         <obj_property name="ObjectShortName">stat_rx</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/core_fpga/rstctrl_phy/stat_tx">
+         <obj_property name="ElementShortName">stat_tx</obj_property>
+         <obj_property name="ObjectShortName">stat_tx</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/core_fpga/rstctrl_phy/rst_done">
+         <obj_property name="ElementShortName">rst_done</obj_property>
+         <obj_property name="ObjectShortName">rst_done</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/core_fpga/rstctrl_phy/rst_rx_dly">
+         <obj_property name="ElementShortName">rst_rx_dly</obj_property>
+         <obj_property name="ObjectShortName">rst_rx_dly</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/core_fpga/rstctrl_phy/rst_tx_dly">
+         <obj_property name="ElementShortName">rst_tx_dly</obj_property>
+         <obj_property name="ObjectShortName">rst_tx_dly</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/core_fpga/rstctrl_phy/rst_rx_r">
+         <obj_property name="ElementShortName">rst_rx_r</obj_property>
+         <obj_property name="ObjectShortName">rst_rx_r</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/core_fpga/rstctrl_phy/rst_rx_f">
+         <obj_property name="ElementShortName">rst_rx_f</obj_property>
+         <obj_property name="ObjectShortName">rst_rx_f</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/core_fpga/rstctrl_phy/rst_tx_f">
+         <obj_property name="ElementShortName">rst_tx_f</obj_property>
+         <obj_property name="ObjectShortName">rst_tx_f</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject type="group" fp_name="group6508">
+      <obj_property name="label">Enable</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="isExpanded"></obj_property>
+      <wvobject type="logic" fp_name="/core_fpga/noc_en">
+         <obj_property name="ElementShortName">noc_en</obj_property>
+         <obj_property name="ObjectShortName">noc_en</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/core_fpga/lmac_rx_en">
+         <obj_property name="ElementShortName">lmac_rx_en</obj_property>
+         <obj_property name="ObjectShortName">lmac_rx_en</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject fp_name="divider6540" type="divider">
+      <obj_property name="label">--------</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+   </wvobject>
+   <wvobject type="group" fp_name="group6522">
+      <obj_property name="label">NOC In</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <wvobject type="logic" fp_name="/core_fpga/noc_done">
+         <obj_property name="ElementShortName">noc_done</obj_property>
+         <obj_property name="ObjectShortName">noc_done</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/core_fpga/noc_running">
+         <obj_property name="ElementShortName">noc_running</obj_property>
+         <obj_property name="ObjectShortName">noc_running</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/core_fpga/noc_in_data">
+         <obj_property name="ElementShortName">noc_in_data[63:0]</obj_property>
+         <obj_property name="ObjectShortName">noc_in_data[63:0]</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/core_fpga/noc_in_valid">
+         <obj_property name="ElementShortName">noc_in_valid</obj_property>
+         <obj_property name="ObjectShortName">noc_in_valid</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/core_fpga/noc_in_ready">
+         <obj_property name="ElementShortName">noc_in_ready</obj_property>
+         <obj_property name="ObjectShortName">noc_in_ready</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/core_fpga/noc_tmp_valid">
+         <obj_property name="ElementShortName">noc_tmp_valid</obj_property>
+         <obj_property name="ObjectShortName">noc_tmp_valid</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/core_fpga/noc_tmp_ready">
+         <obj_property name="ElementShortName">noc_tmp_ready</obj_property>
+         <obj_property name="ObjectShortName">noc_tmp_ready</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/core_fpga/noc_dlya">
+         <obj_property name="ElementShortName">noc_dlya</obj_property>
+         <obj_property name="ObjectShortName">noc_dlya</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/core_fpga/delay/delay">
+         <obj_property name="ElementShortName">delay[15:0]</obj_property>
+         <obj_property name="ObjectShortName">delay[15:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/core_fpga/delay/counter">
+         <obj_property name="ElementShortName">counter[15:0]</obj_property>
+         <obj_property name="ObjectShortName">counter[15:0]</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject type="group" fp_name="group6523">
+      <obj_property name="label">NOC Out</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <wvobject type="array" fp_name="/core_fpga/noc_out_data">
+         <obj_property name="ElementShortName">noc_out_data[63:0]</obj_property>
+         <obj_property name="ObjectShortName">noc_out_data[63:0]</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/core_fpga/noc_out_valid">
+         <obj_property name="ElementShortName">noc_out_valid</obj_property>
+         <obj_property name="ObjectShortName">noc_out_valid</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/core_fpga/noc_out_ready">
+         <obj_property name="ElementShortName">noc_out_ready</obj_property>
+         <obj_property name="ObjectShortName">noc_out_ready</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject fp_name="divider6524" type="divider">
+      <obj_property name="label">OX CORE</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+   </wvobject>
+   <wvobject type="group" fp_name="group6538">
+      <obj_property name="label">LMAC TX</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <wvobject type="array" fp_name="/core_fpga/ox2m_tx_data">
+         <obj_property name="ElementShortName">ox2m_tx_data[255:0]</obj_property>
+         <obj_property name="ObjectShortName">ox2m_tx_data[255:0]</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/core_fpga/ox2m_tx_wren">
+         <obj_property name="ElementShortName">ox2m_tx_wren</obj_property>
+         <obj_property name="ObjectShortName">ox2m_tx_wren</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/core_fpga/ox2m_tx_full">
+         <obj_property name="ElementShortName">ox2m_tx_full</obj_property>
+         <obj_property name="ObjectShortName">ox2m_tx_full</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/core_fpga/ox2m_tx_usedw">
+         <obj_property name="ElementShortName">ox2m_tx_usedw[15:0]</obj_property>
+         <obj_property name="ObjectShortName">ox2m_tx_usedw[15:0]</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject type="group" fp_name="group6533">
+      <obj_property name="label">LMAC RX</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <wvobject type="group" fp_name="group1932">
+         <obj_property name="label">IPCS</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <obj_property name="isExpanded"></obj_property>
+         <wvobject type="array" fp_name="/core_fpga/m2ox_rxi_data">
+            <obj_property name="ElementShortName">m2ox_rxi_data[63:0]</obj_property>
+            <obj_property name="ObjectShortName">m2ox_rxi_data[63:0]</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="/core_fpga/m2ox_rxi_rden">
+            <obj_property name="ElementShortName">m2ox_rxi_rden</obj_property>
+            <obj_property name="ObjectShortName">m2ox_rxi_rden</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="/core_fpga/m2ox_rxi_empty">
+            <obj_property name="ElementShortName">m2ox_rxi_empty</obj_property>
+            <obj_property name="ObjectShortName">m2ox_rxi_empty</obj_property>
+         </wvobject>
+         <wvobject type="array" fp_name="/core_fpga/m2ox_rxi_usedw">
+            <obj_property name="ElementShortName">m2ox_rxi_usedw[15:0]</obj_property>
+            <obj_property name="ObjectShortName">m2ox_rxi_usedw[15:0]</obj_property>
+         </wvobject>
+      </wvobject>
+      <wvobject type="group" fp_name="group1933">
+         <obj_property name="label">Packet</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <obj_property name="isExpanded"></obj_property>
+         <wvobject type="array" fp_name="/core_fpga/m2ox_rxp_data">
+            <obj_property name="ElementShortName">m2ox_rxp_data[255:0]</obj_property>
+            <obj_property name="ObjectShortName">m2ox_rxp_data[255:0]</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="/core_fpga/m2ox_rxp_rden">
+            <obj_property name="ElementShortName">m2ox_rxp_rden</obj_property>
+            <obj_property name="ObjectShortName">m2ox_rxp_rden</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="/core_fpga/m2ox_rxp_empty">
+            <obj_property name="ElementShortName">m2ox_rxp_empty</obj_property>
+            <obj_property name="ObjectShortName">m2ox_rxp_empty</obj_property>
+         </wvobject>
+         <wvobject type="array" fp_name="/core_fpga/m2ox_rxp_usedw">
+            <obj_property name="ElementShortName">m2ox_rxp_usedw[15:0]</obj_property>
+            <obj_property name="ObjectShortName">m2ox_rxp_usedw[15:0]</obj_property>
+         </wvobject>
+      </wvobject>
+   </wvobject>
+   <wvobject fp_name="divider6541" type="divider">
+      <obj_property name="label">LMAC</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+   </wvobject>
+   <wvobject type="group" fp_name="group32048">
+      <obj_property name="label">Delayline</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="isExpanded"></obj_property>
+   </wvobject>
+   <wvobject type="group" fp_name="group7243">
+      <obj_property name="label">LMAC</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <wvobject type="logic" fp_name="/core_fpga/LMAC/fmac_rxd_en">
+         <obj_property name="ElementShortName">fmac_rxd_en</obj_property>
+         <obj_property name="ObjectShortName">fmac_rxd_en</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/core_fpga/LMAC/core/core_rx_cgmii/bcast_en">
+         <obj_property name="ElementShortName">bcast_en</obj_property>
+         <obj_property name="ObjectShortName">bcast_en</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/core_fpga/LMAC/core/core_rx_cgmii/bcast_addr">
+         <obj_property name="ElementShortName">bcast_addr</obj_property>
+         <obj_property name="ObjectShortName">bcast_addr</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/core_fpga/LMAC/core/core_rx_cgmii/baddr_hit">
+         <obj_property name="ElementShortName">baddr_hit</obj_property>
+         <obj_property name="ObjectShortName">baddr_hit</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/core_fpga/LMAC/core/core_rx_cgmii/paddr_hit">
+         <obj_property name="ElementShortName">paddr_hit</obj_property>
+         <obj_property name="ObjectShortName">paddr_hit</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/core_fpga/LMAC/core/core_rx_cgmii/mac_hit">
+         <obj_property name="ElementShortName">mac_hit</obj_property>
+         <obj_property name="ObjectShortName">mac_hit</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/core_fpga/LMAC/core/core_rx_cgmii/my_mac_hit">
+         <obj_property name="ElementShortName">my_mac_hit</obj_property>
+         <obj_property name="ObjectShortName">my_mac_hit</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/core_fpga/LMAC/core/core_rx_cgmii/mcast_hit">
+         <obj_property name="ElementShortName">mcast_hit</obj_property>
+         <obj_property name="ObjectShortName">mcast_hit</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/core_fpga/LMAC/core/core_rx_cgmii/port0_hit">
+         <obj_property name="ElementShortName">port0_hit</obj_property>
+         <obj_property name="ObjectShortName">port0_hit</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/core_fpga/LMAC/core/core_rx_cgmii/pmode_hit">
+         <obj_property name="ElementShortName">pmode_hit</obj_property>
+         <obj_property name="ObjectShortName">pmode_hit</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject type="group" fp_name="group6546">
+      <obj_property name="label">TX</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <wvobject type="array" fp_name="/core_fpga/cgmii_txd">
+         <obj_property name="ElementShortName">cgmii_txd[255:0]</obj_property>
+         <obj_property name="ObjectShortName">cgmii_txd[255:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/core_fpga/cgmii_txc">
+         <obj_property name="ElementShortName">cgmii_txc[31:0]</obj_property>
+         <obj_property name="ObjectShortName">cgmii_txc[31:0]</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject type="group" fp_name="group6547">
+      <obj_property name="label">RX</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <wvobject type="array" fp_name="/core_fpga/cgmii_rxd">
+         <obj_property name="ElementShortName">cgmii_rxd[255:0]</obj_property>
+         <obj_property name="ObjectShortName">cgmii_rxd[255:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/core_fpga/cgmii_rxc">
+         <obj_property name="ElementShortName">cgmii_rxc[31:0]</obj_property>
+         <obj_property name="ObjectShortName">cgmii_rxc[31:0]</obj_property>
+      </wvobject>
+      <wvobject type="group" fp_name="group1904">
+         <obj_property name="label">Debug</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <wvobject type="group" fp_name="group1903">
+            <obj_property name="label">LMAC TOP</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject type="array" fp_name="/core_fpga/LMAC/cgmii_rxd">
+               <obj_property name="ElementShortName">cgmii_rxd[255:0]</obj_property>
+               <obj_property name="ObjectShortName">cgmii_rxd[255:0]</obj_property>
+            </wvobject>
+            <wvobject type="array" fp_name="/core_fpga/LMAC/cgmii_rxc">
+               <obj_property name="ElementShortName">cgmii_rxc[31:0]</obj_property>
+               <obj_property name="ObjectShortName">cgmii_rxc[31:0]</obj_property>
+            </wvobject>
+            <wvobject type="array" fp_name="/core_fpga/LMAC/br_sof">
+               <obj_property name="ElementShortName">br_sof[7:0]</obj_property>
+               <obj_property name="ObjectShortName">br_sof[7:0]</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/core_fpga/LMAC/sof0">
+               <obj_property name="ElementShortName">sof0</obj_property>
+               <obj_property name="ObjectShortName">sof0</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/core_fpga/LMAC/sof1">
+               <obj_property name="ElementShortName">sof1</obj_property>
+               <obj_property name="ObjectShortName">sof1</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/core_fpga/LMAC/sof2">
+               <obj_property name="ElementShortName">sof2</obj_property>
+               <obj_property name="ObjectShortName">sof2</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/core_fpga/LMAC/sof3">
+               <obj_property name="ElementShortName">sof3</obj_property>
+               <obj_property name="ObjectShortName">sof3</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/core_fpga/LMAC/sof4">
+               <obj_property name="ElementShortName">sof4</obj_property>
+               <obj_property name="ObjectShortName">sof4</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/core_fpga/LMAC/sof5">
+               <obj_property name="ElementShortName">sof5</obj_property>
+               <obj_property name="ObjectShortName">sof5</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/core_fpga/LMAC/sof6">
+               <obj_property name="ElementShortName">sof6</obj_property>
+               <obj_property name="ObjectShortName">sof6</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/core_fpga/LMAC/sof7">
+               <obj_property name="ElementShortName">sof7</obj_property>
+               <obj_property name="ObjectShortName">sof7</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/core_fpga/LMAC/bad_frame_nosof">
+               <obj_property name="ElementShortName">bad_frame_nosof</obj_property>
+               <obj_property name="ObjectShortName">bad_frame_nosof</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/core_fpga/LMAC/unknown_sof_sticky">
+               <obj_property name="ElementShortName">unknown_sof_sticky</obj_property>
+               <obj_property name="ObjectShortName">unknown_sof_sticky</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/core_fpga/LMAC/has_sof">
+               <obj_property name="ElementShortName">has_sof</obj_property>
+               <obj_property name="ObjectShortName">has_sof</obj_property>
+            </wvobject>
+         </wvobject>
+         <wvobject type="group" fp_name="group1907">
+            <obj_property name="label">rx_50G</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <obj_property name="isExpanded"></obj_property>
+            <wvobject type="array" fp_name="/core_fpga/LMAC/rx_50G/data_in">
+               <obj_property name="ElementShortName">data_in[255:0]</obj_property>
+               <obj_property name="ObjectShortName">data_in[255:0]</obj_property>
+            </wvobject>
+            <wvobject type="array" fp_name="/core_fpga/LMAC/rx_50G/ctrl_in">
+               <obj_property name="ElementShortName">ctrl_in[31:0]</obj_property>
+               <obj_property name="ObjectShortName">ctrl_in[31:0]</obj_property>
+            </wvobject>
+            <wvobject type="group" fp_name="group8494">
+               <obj_property name="label">s2p10</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <wvobject type="array" fp_name="/core_fpga/LMAC/rx_50G/s2p10/data_in">
+                  <obj_property name="ElementShortName">data_in[63:0]</obj_property>
+                  <obj_property name="ObjectShortName">data_in[63:0]</obj_property>
+               </wvobject>
+               <wvobject type="array" fp_name="/core_fpga/LMAC/rx_50G/s2p10/ctrl_in">
+                  <obj_property name="ElementShortName">ctrl_in[7:0]</obj_property>
+                  <obj_property name="ObjectShortName">ctrl_in[7:0]</obj_property>
+               </wvobject>
+               <wvobject type="array" fp_name="/core_fpga/LMAC/rx_50G/s2p10/data_out">
+                  <obj_property name="ElementShortName">data_out[255:0]</obj_property>
+                  <obj_property name="ObjectShortName">data_out[255:0]</obj_property>
+               </wvobject>
+               <wvobject type="array" fp_name="/core_fpga/LMAC/rx_50G/s2p10/ctrl_out">
+                  <obj_property name="ElementShortName">ctrl_out[31:0]</obj_property>
+                  <obj_property name="ObjectShortName">ctrl_out[31:0]</obj_property>
+               </wvobject>
+            </wvobject>
+            <wvobject type="array" fp_name="/core_fpga/LMAC/rx_50G/data_out">
+               <obj_property name="ElementShortName">data_out[255:0]</obj_property>
+               <obj_property name="ObjectShortName">data_out[255:0]</obj_property>
+            </wvobject>
+            <wvobject type="array" fp_name="/core_fpga/LMAC/rx_50G/ctrl_out">
+               <obj_property name="ElementShortName">ctrl_out[31:0]</obj_property>
+               <obj_property name="ObjectShortName">ctrl_out[31:0]</obj_property>
+            </wvobject>
+         </wvobject>
+         <wvobject type="group" fp_name="group1910">
+            <obj_property name="label">x2c_ctrl</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <obj_property name="isExpanded"></obj_property>
+            <wvobject type="array" fp_name="/core_fpga/LMAC/x2c_ctrl/data_in">
+               <obj_property name="ElementShortName">data_in[255:0]</obj_property>
+               <obj_property name="ObjectShortName">data_in[255:0]</obj_property>
+            </wvobject>
+            <wvobject type="array" fp_name="/core_fpga/LMAC/x2c_ctrl/ctrl_in">
+               <obj_property name="ElementShortName">ctrl_in[31:0]</obj_property>
+               <obj_property name="ObjectShortName">ctrl_in[31:0]</obj_property>
+            </wvobject>
+            <wvobject fp_name="divider1922" type="divider">
+               <obj_property name="label">--------</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/core_fpga/LMAC/x2c_ctrl/x_we">
+               <obj_property name="ElementShortName">x_we</obj_property>
+               <obj_property name="ObjectShortName">x_we</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/core_fpga/LMAC/x2c_ctrl/rd_en">
+               <obj_property name="ElementShortName">rd_en</obj_property>
+               <obj_property name="ObjectShortName">rd_en</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/core_fpga/LMAC/x2c_ctrl/rd_en_dly">
+               <obj_property name="ElementShortName">rd_en_dly</obj_property>
+               <obj_property name="ObjectShortName">rd_en_dly</obj_property>
+            </wvobject>
+            <wvobject type="array" fp_name="/core_fpga/LMAC/x2c_ctrl/rx_data">
+               <obj_property name="ElementShortName">rx_data[255:0]</obj_property>
+               <obj_property name="ObjectShortName">rx_data[255:0]</obj_property>
+            </wvobject>
+            <wvobject type="array" fp_name="/core_fpga/LMAC/x2c_ctrl/rx_ctrl">
+               <obj_property name="ElementShortName">rx_ctrl[31:0]</obj_property>
+               <obj_property name="ObjectShortName">rx_ctrl[31:0]</obj_property>
+            </wvobject>
+            <wvobject fp_name="divider1923" type="divider">
+               <obj_property name="label">--------</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+            </wvobject>
+            <wvobject type="array" fp_name="/core_fpga/LMAC/x2c_ctrl/data_out">
+               <obj_property name="ElementShortName">data_out[255:0]</obj_property>
+               <obj_property name="ObjectShortName">data_out[255:0]</obj_property>
+            </wvobject>
+            <wvobject type="array" fp_name="/core_fpga/LMAC/x2c_ctrl/ctrl_out">
+               <obj_property name="ElementShortName">ctrl_out[31:0]</obj_property>
+               <obj_property name="ObjectShortName">ctrl_out[31:0]</obj_property>
+            </wvobject>
+         </wvobject>
+         <wvobject type="group" fp_name="group1921">
+            <obj_property name="label">rx_100G</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <obj_property name="isExpanded"></obj_property>
+            <wvobject type="array" fp_name="/core_fpga/LMAC/rx_100G/data_in">
+               <obj_property name="ElementShortName">data_in[255:0]</obj_property>
+               <obj_property name="ObjectShortName">data_in[255:0]</obj_property>
+            </wvobject>
+            <wvobject type="array" fp_name="/core_fpga/LMAC/rx_100G/ctrl_in">
+               <obj_property name="ElementShortName">ctrl_in[31:0]</obj_property>
+               <obj_property name="ObjectShortName">ctrl_in[31:0]</obj_property>
+            </wvobject>
+            <wvobject type="array" fp_name="/core_fpga/LMAC/rx_100G/data_out">
+               <obj_property name="ElementShortName">data_out[255:0]</obj_property>
+               <obj_property name="ObjectShortName">data_out[255:0]</obj_property>
+            </wvobject>
+            <wvobject type="array" fp_name="/core_fpga/LMAC/rx_100G/ctrl_out">
+               <obj_property name="ElementShortName">ctrl_out[39:0]</obj_property>
+               <obj_property name="ObjectShortName">ctrl_out[39:0]</obj_property>
+            </wvobject>
+         </wvobject>
+         <wvobject type="group" fp_name="group8495">
+            <obj_property name="label">Byte Reordering</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <obj_property name="isExpanded"></obj_property>
+            <wvobject type="array" fp_name="/core_fpga/LMAC/byte_reordering_wrap/data_in">
+               <obj_property name="ElementShortName">data_in[255:0]</obj_property>
+               <obj_property name="ObjectShortName">data_in[255:0]</obj_property>
+            </wvobject>
+            <wvobject type="array" fp_name="/core_fpga/LMAC/byte_reordering_wrap/ctrl_in">
+               <obj_property name="ElementShortName">ctrl_in[39:0]</obj_property>
+               <obj_property name="ObjectShortName">ctrl_in[39:0]</obj_property>
+            </wvobject>
+            <wvobject type="array" fp_name="/core_fpga/LMAC/byte_reordering_wrap/data_out">
+               <obj_property name="ElementShortName">data_out[255:0]</obj_property>
+               <obj_property name="ObjectShortName">data_out[255:0]</obj_property>
+            </wvobject>
+            <wvobject type="array" fp_name="/core_fpga/LMAC/byte_reordering_wrap/ctrl_out">
+               <obj_property name="ElementShortName">ctrl_out[31:0]</obj_property>
+               <obj_property name="ObjectShortName">ctrl_out[31:0]</obj_property>
+            </wvobject>
+         </wvobject>
+         <wvobject type="group" fp_name="group8459">
+            <obj_property name="label">Core RX</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <obj_property name="isExpanded"></obj_property>
+            <wvobject type="array" fp_name="/core_fpga/LMAC/core/core_rx_cgmii/rxd">
+               <obj_property name="ElementShortName">rxd[255:0]</obj_property>
+               <obj_property name="ObjectShortName">rxd[255:0]</obj_property>
+            </wvobject>
+            <wvobject type="array" fp_name="/core_fpga/LMAC/core/core_rx_cgmii/rxc">
+               <obj_property name="ElementShortName">rxc[31:0]</obj_property>
+               <obj_property name="ObjectShortName">rxc[31:0]</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/core_fpga/LMAC/core/core_rx_cgmii/baddr_hit">
+               <obj_property name="ElementShortName">baddr_hit</obj_property>
+               <obj_property name="ObjectShortName">baddr_hit</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/core_fpga/LMAC/core/core_rx_cgmii/paddr_hit">
+               <obj_property name="ElementShortName">paddr_hit</obj_property>
+               <obj_property name="ObjectShortName">paddr_hit</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/core_fpga/LMAC/core/core_rx_cgmii/mac_hit">
+               <obj_property name="ElementShortName">mac_hit</obj_property>
+               <obj_property name="ObjectShortName">mac_hit</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/core_fpga/LMAC/core/core_rx_cgmii/my_mac_hit">
+               <obj_property name="ElementShortName">my_mac_hit</obj_property>
+               <obj_property name="ObjectShortName">my_mac_hit</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/core_fpga/LMAC/core/core_rx_cgmii/mcast_hit">
+               <obj_property name="ElementShortName">mcast_hit</obj_property>
+               <obj_property name="ObjectShortName">mcast_hit</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/core_fpga/LMAC/core/core_rx_cgmii/port0_hit">
+               <obj_property name="ElementShortName">port0_hit</obj_property>
+               <obj_property name="ObjectShortName">port0_hit</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/core_fpga/LMAC/core/core_rx_cgmii/pmode_hit">
+               <obj_property name="ElementShortName">pmode_hit</obj_property>
+               <obj_property name="ObjectShortName">pmode_hit</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/core_fpga/LMAC/core/core_rx_cgmii/sof">
+               <obj_property name="ElementShortName">sof</obj_property>
+               <obj_property name="ObjectShortName">sof</obj_property>
+            </wvobject>
+            <wvobject type="array" fp_name="/core_fpga/LMAC/core/core_rx_cgmii/daddr0">
+               <obj_property name="ElementShortName">daddr0[47:0]</obj_property>
+               <obj_property name="ObjectShortName">daddr0[47:0]</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/core_fpga/LMAC/core/core_rx_cgmii/no_start_pattern">
+               <obj_property name="ElementShortName">no_start_pattern</obj_property>
+               <obj_property name="ObjectShortName">no_start_pattern</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/core_fpga/LMAC/core/core_rx_cgmii/no_start_pattern_dly1">
+               <obj_property name="ElementShortName">no_start_pattern_dly1</obj_property>
+               <obj_property name="ObjectShortName">no_start_pattern_dly1</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/core_fpga/LMAC/core/core_rx_cgmii/no_start_pattern_dly2">
+               <obj_property name="ElementShortName">no_start_pattern_dly2</obj_property>
+               <obj_property name="ObjectShortName">no_start_pattern_dly2</obj_property>
+            </wvobject>
+            <wvobject type="array" fp_name="/core_fpga/LMAC/core/core_rx_cgmii/bdata1">
+               <obj_property name="ElementShortName">bdata1[255:0]</obj_property>
+               <obj_property name="ObjectShortName">bdata1[255:0]</obj_property>
+            </wvobject>
+            <wvobject type="array" fp_name="/core_fpga/LMAC/core/core_rx_cgmii/qchk_daddr_order">
+               <obj_property name="ElementShortName">qchk_daddr_order[47:0]</obj_property>
+               <obj_property name="ObjectShortName">qchk_daddr_order[47:0]</obj_property>
+            </wvobject>
+            <wvobject type="array" fp_name="/core_fpga/LMAC/core/core_rx_cgmii/chk_daddr_order">
+               <obj_property name="ElementShortName">chk_daddr_order[47:0]</obj_property>
+               <obj_property name="ObjectShortName">chk_daddr_order[47:0]</obj_property>
+            </wvobject>
+         </wvobject>
+      </wvobject>
+   </wvobject>
+   <wvobject fp_name="divider6550" type="divider">
+      <obj_property name="label">PHY</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+   </wvobject>
+   <wvobject type="group" fp_name="group32041">
+      <obj_property name="label">MII</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="isExpanded"></obj_property>
+      <wvobject type="array" fp_name="/core_fpga/PHY/rx_mii_d_0">
+         <obj_property name="ElementShortName">rx_mii_d_0[63:0]</obj_property>
+         <obj_property name="ObjectShortName">rx_mii_d_0[63:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/core_fpga/PHY/rx_mii_c_0">
+         <obj_property name="ElementShortName">rx_mii_c_0[7:0]</obj_property>
+         <obj_property name="ObjectShortName">rx_mii_c_0[7:0]</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject type="group" fp_name="group6548">
+      <obj_property name="label">GT TX</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="isExpanded"></obj_property>
+      <wvobject type="array" fp_name="/core_fpga/gt_txp_out">
+         <obj_property name="ElementShortName">gt_txp_out[0:0]</obj_property>
+         <obj_property name="ObjectShortName">gt_txp_out[0:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/core_fpga/gt_txn_out">
+         <obj_property name="ElementShortName">gt_txn_out[0:0]</obj_property>
+         <obj_property name="ObjectShortName">gt_txn_out[0:0]</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject type="group" fp_name="group6549">
+      <obj_property name="label">GT RX</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="isExpanded"></obj_property>
+      <wvobject type="array" fp_name="/core_fpga/gt_rxp_in">
+         <obj_property name="ElementShortName">gt_rxp_in[0:0]</obj_property>
+         <obj_property name="ObjectShortName">gt_rxp_in[0:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/core_fpga/gt_rxn_in">
+         <obj_property name="ElementShortName">gt_rxn_in[0:0]</obj_property>
+         <obj_property name="ObjectShortName">gt_rxn_in[0:0]</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject type="group" fp_name="group2028">
+      <obj_property name="label">PHY Status</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <wvobject type="logic" fp_name="/core_fpga/PHY/gtpowergood_out_0">
+         <obj_property name="ElementShortName">gtpowergood_out_0</obj_property>
+         <obj_property name="ObjectShortName">gtpowergood_out_0</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/core_fpga/PHY/stat_rx_status_0">
+         <obj_property name="ElementShortName">stat_rx_status_0</obj_property>
+         <obj_property name="ObjectShortName">stat_rx_status_0</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/core_fpga/PHY/stat_tx_local_fault_0">
+         <obj_property name="ElementShortName">stat_tx_local_fault_0</obj_property>
+         <obj_property name="ObjectShortName">stat_tx_local_fault_0</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject type="group" fp_name="group2026">
+      <obj_property name="label">PHY Resets</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <wvobject type="logic" fp_name="/core_fpga/PHY/sys_reset">
+         <obj_property name="ElementShortName">sys_reset</obj_property>
+         <obj_property name="ObjectShortName">sys_reset</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/core_fpga/PHY/gtwiz_reset_tx_datapath_0">
+         <obj_property name="ElementShortName">gtwiz_reset_tx_datapath_0</obj_property>
+         <obj_property name="ObjectShortName">gtwiz_reset_tx_datapath_0</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/core_fpga/PHY/gtwiz_reset_rx_datapath_0">
+         <obj_property name="ElementShortName">gtwiz_reset_rx_datapath_0</obj_property>
+         <obj_property name="ObjectShortName">gtwiz_reset_rx_datapath_0</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/core_fpga/PHY/qpllreset_in_0">
+         <obj_property name="ElementShortName">qpllreset_in_0</obj_property>
+         <obj_property name="ObjectShortName">qpllreset_in_0</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/core_fpga/PHY/rx_reset_0">
+         <obj_property name="ElementShortName">rx_reset_0</obj_property>
+         <obj_property name="ObjectShortName">rx_reset_0</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/core_fpga/PHY/tx_reset_0">
+         <obj_property name="ElementShortName">tx_reset_0</obj_property>
+         <obj_property name="ObjectShortName">tx_reset_0</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/core_fpga/PHY/user_rx_reset_0">
+         <obj_property name="ElementShortName">user_rx_reset_0</obj_property>
+         <obj_property name="ObjectShortName">user_rx_reset_0</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/core_fpga/PHY/user_tx_reset_0">
+         <obj_property name="ElementShortName">user_tx_reset_0</obj_property>
+         <obj_property name="ObjectShortName">user_tx_reset_0</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject type="group" fp_name="group2027">
+      <obj_property name="label">PHY Clocks</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <wvobject type="logic" fp_name="/core_fpga/PHY/dclk">
+         <obj_property name="ElementShortName">dclk</obj_property>
+         <obj_property name="ObjectShortName">dclk</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/core_fpga/PHY/gt_refclk_p[0]">
+         <obj_property name="DisplayName">label</obj_property>
+         <obj_property name="ElementShortName">[0]</obj_property>
+         <obj_property name="ObjectShortName">[0]</obj_property>
+         <obj_property name="label">gt_refclk_p</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/core_fpga/PHY/gt_refclk_out[0]">
+         <obj_property name="DisplayName">label</obj_property>
+         <obj_property name="ElementShortName">[0]</obj_property>
+         <obj_property name="ObjectShortName">[0]</obj_property>
+         <obj_property name="label">gt_refclk_out</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/core_fpga/PHY/tx_mii_clk_0">
+         <obj_property name="ElementShortName">tx_mii_clk_0</obj_property>
+         <obj_property name="ObjectShortName">tx_mii_clk_0</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/core_fpga/PHY/rx_clk_out_0">
+         <obj_property name="ElementShortName">rx_clk_out_0</obj_property>
+         <obj_property name="ObjectShortName">rx_clk_out_0</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/core_fpga/PHY/rxrecclkout_0">
+         <obj_property name="ElementShortName">rxrecclkout_0</obj_property>
+         <obj_property name="ObjectShortName">rxrecclkout_0</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/core_fpga/PHY/rx_core_clk_0">
+         <obj_property name="ElementShortName">rx_core_clk_0</obj_property>
+         <obj_property name="ObjectShortName">rx_core_clk_0</obj_property>
+      </wvobject>
+   </wvobject>
+</wave_config>

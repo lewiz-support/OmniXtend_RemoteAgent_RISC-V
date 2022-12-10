@@ -1,0 +1,744 @@
+//****************************************************************
+// December 6, 2022
+//
+// Licensed to the Apache Software Foundation (ASF) under one
+// or more contributor license agreements.  See the NOTICE file
+// distributed with this work for additional information
+// regarding copyright ownership.  The ASF licenses this file
+// to you under the Apache License, Version 2.0 (the
+// "License"); you may not use this file except in compliance
+// with the License.  You may obtain a copy of the License at
+// 
+//   http://www.apache.org/licenses/LICENSE-2.0
+// 
+// Unless required by applicable law or agreed to in writing,
+// software distributed under the License is distributed on an
+// "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+// KIND, either express or implied.  See the License for the
+// specific language governing permissions and limitations
+// under the License.
+//
+// Date: 2022-10-28
+// Project: OmniXtend Core
+// Comments: FPGA Level OX Core Test Module with LMAC & PHY
+//
+//********************************
+// File history:
+//   2022-10-28: Original
+//****************************************************************
+
+`timescale 1ns / 1ps
+
+
+module core_fpga #(
+        parameter  SRC_MAC          = 48'h001232_FFFF18,
+        parameter  DST_MAC          = 48'h001232_FFFFFA
+    ) (
+        //GPIO Inputs for Reset and Enable
+        input                       GPIO_SW_N, //Reset ALL
+        input                       GPIO_SW_S, //Enable
+        input                       GPIO_SW_E, //OX Core Reset
+        input                       GPIO_SW_W, //GCMII Reset
+        input                       GPIO_SW_C, //System Reset
+
+        //Free Running Clock
+        input                       mclk,
+
+        //GT reference clock
+        input                       gt_refclk_p,
+        input                       gt_refclk_n,
+
+        //GT Signals
+        input  wire [1-1:0]         gt_rxp_in,
+        input  wire [1-1:0]         gt_rxn_in,
+        output wire [1-1:0]         gt_txp_out,
+        output wire [1-1:0]         gt_txn_out
+
+        //Reset Done Flag
+        //output                      reset_done
+
+    );
+
+    wire    reset_done;
+
+    //================================================================//
+    //  Clocks and Clock Buffering
+
+    wire    gt_refclk;  //PHY generated ref clock
+    wire    mclk_buf;   //Buffered Free Running Clock
+
+    wire    rx_clk_out; //PHY: RX SERDES Clock (no necessarily in sync with rxrecclk)
+    wire    tx_mii_clk; //PHY: TX SERDES & MII Clock
+    wire    rxrecclk;   //PHY: Clock recovered from GT RX
+
+
+    //Input buffer for 90 MHz clock
+    //  Explicitly instantiated to work around strange synthesis problems
+    IBUF ibuf_mclk (
+        .I (mclk),
+        .O (mclk_buf)
+    );
+
+
+
+    //================================================================//
+    //  External Control/Reset IO
+
+    //VIO Signals
+    wire vio_reset_all;
+    wire vio_reset_sys;
+    wire vio_reset_mii;
+    wire vio_reset_oxc;
+    wire vio_enable;
+
+    //Virtual GPIO VIO
+    vio_gpio vio_gpio (
+        .clk                (gt_refclk),        //i-1
+        .probe_in0          (1'b0),             //i-1, GPIO LED0 Stand-in
+        .probe_in1          (1'b0),             //i-1, GPIO LED1 Stand-in
+        .probe_in2          (1'b0),             //i-1, GPIO LED2 Stand-in
+        .probe_in3          (1'b0),             //i-1, GPIO LED3 Stand-in
+        .probe_in4          (1'b0),             //i-1, GPIO LED4 Stand-in
+        .probe_in5          (1'b0),             //i-1, GPIO LED5 Stand-in
+        .probe_in6          (1'b0),             //i-1, GPIO LED6 Stand-in
+        .probe_in7          (1'b0),             //i-1, GPIO LED7 Stand-in
+        .probe_out0         (vio_reset_all),    //o-1, GPIO SW_N Stand-in
+        .probe_out1         (vio_reset_sys),    //o-1, GPIO SW_C Stand-in
+        .probe_out2         (vio_enable),       //o-1, GPIO SW_S Stand-in
+        .probe_out3         (vio_reset_oxc),    //o-1, GPIO SW_E Stand-in
+        .probe_out4         (vio_reset_mii)     //o-1, GPIO SW_W Stand-in
+    );
+
+    //Buffered Inputs
+    reg ext_reset_all_;
+    reg ext_reset_sys_;
+    reg ext_reset_mii_;
+    reg ext_reset_oxc_;
+    reg ext_enable;
+
+    //GPIO Input Buffering
+    always @ (posedge gt_refclk) ext_reset_all_ <= !(GPIO_SW_N || vio_reset_all);
+    always @ (posedge gt_refclk) ext_reset_mii_ <= !(GPIO_SW_W || vio_reset_mii);
+    always @ (posedge gt_refclk) ext_reset_sys_ <= !(GPIO_SW_C || vio_reset_sys);
+    always @ (posedge gt_refclk) ext_reset_oxc_ <= !(GPIO_SW_E || vio_reset_oxc);
+    always @ (posedge gt_refclk) ext_enable     <=  (GPIO_SW_S || vio_enable);
+
+
+
+    //================================================================//
+    //  Reset/Enable Generation
+
+    //Status & Other Generated Signals
+    wire    reset_usr_tx;       //TX Reset Generated by PHY
+    wire    reset_usr_rx;       //RX Reset Generated by PHY
+    wire    phy_rxgood;         //PHY RX Status
+    wire    phy_txbad;          //PHY TX Status
+    wire    rst_done_phy;       //PHY reset completed
+    wire    stat_good_phy;      //PHY reset completed AND status is good
+    wire    ready_lmac;
+
+
+    //Reset
+    wire    reset_mem_  = ext_reset_all_;                   //Memory reset releases immediately
+    wire    reset_mii_  = ext_reset_all_ & ext_reset_mii_;  //PHY reset releases immediately, or driven separately
+    wire    reset_mac_  = rst_done_phy   & ext_reset_sys_;  //LMAC reset released after PHY reset complete, or driven separately
+    wire    reset_noc_  = rst_done_phy   & ext_reset_sys_;  //NOC reset concurrent with LMAC
+    wire    reset_oxc_  = ready_lmac     & ext_reset_oxc_;  //OX Core reset released
+
+
+    //Enable
+    wire    noc_en      = reset_done & ext_enable;          //NOC enable allowed once OX Core reset is released
+    wire    lmac_rx_en;                                     //LMAC RX enabled 1024 cycles after LMAC reset release
+
+
+    //PHY Reset Detection/Controller
+    rstctrl_phy rstctrl_phy(
+        .clk        (gt_refclk),
+        .reset_     (ext_reset_all_),
+
+        .rst_rx     (reset_usr_rx),
+        .rst_tx     (reset_usr_tx),
+
+        .stat_rx    (phy_rxgood),
+        .stat_tx    (!phy_txbad),
+
+        .rst_done   (rst_done_phy),
+        .stat_good  (stat_good_phy)
+    );
+
+
+    //Delay LMAC RX Enable for 1024 cycles after reset deassertion
+    delayline #(10) dly_lmac_rx_en (
+        .clk    (gt_refclk),    //TODO: use a different clock?
+
+        .in     (reset_mac_),
+        .out    (lmac_rx_en),
+        .delay  ('d1023)
+    );
+
+    //Delay OX Core reset for 32 cycles after LMAC RX enable
+    delayline #(5) dly_reset_oxc_ (
+        .clk    (gt_refclk),    //TODO: use a different clock?
+
+        .in     (lmac_rx_en),
+        .out    (ready_lmac),
+        .delay  ('d31)
+    );
+    
+    //Assert reset_done 32 cycles after OX Core reset released
+    delayline #(5) dly_reset_done (
+        .clk    (gt_refclk),    //TODO: use a different clock?
+
+        .in     (ready_lmac),
+        .out    (reset_done),
+        .delay  ('d31)
+    );
+
+    //================================================================//
+
+
+
+    //================================================================//
+    //  Block ROM and NOC Master Emulator
+
+    localparam  DATA_WIDTH      = 64;               //Output Data width
+    localparam  ADDR_WIDTH      = 10;               //Address width
+    localparam  ADDR_MAX        = 175;              //Maximum value for address (Emulator stops sending at this point)
+    localparam  TOTAL_WIDTH     = DATA_WIDTH+DATA_WIDTH/8+2;
+
+    localparam  DELAY_WIDTH     = 16;
+
+
+    //Master Control I/O
+    wire                        noc_running;
+    wire                        noc_done;
+    wire                        noc_dlya;
+
+    //NOC to OX_CORE
+    wire                        noc_in_ready;
+    wire [DATA_WIDTH-1:0]       noc_in_data;
+    wire                        noc_in_valid;
+
+    //NOC from OX_CORE
+    wire                        noc_out_ready = 1;  //NOTE: Force assert because no slave is connected
+    wire [DATA_WIDTH-1:0]       noc_out_data;
+    wire                        noc_out_valid;
+
+    //AXIS signals unused by NoC
+    wire [DATA_WIDTH/8-1:0]     rsrvd_strb;
+    wire                        rsrvd_last;
+
+    //Memory to Master Signals
+    wire [TOTAL_WIDTH-1:0]      mem_data;
+    wire [ADDR_WIDTH-1:0]       mem_addr;
+    wire                        mem_en;
+
+    //Connection between AXIS/NOC Master and Delay Unit
+    wire                        noc_tmp_ready;
+    wire                        noc_tmp_valid;
+
+    //
+    wire [DELAY_WIDTH-1:0]      delay_time;
+
+
+    //Block ROM Containing NoC Commands
+    brom_noc nocrom(
+        .rsta       (!reset_mem_),
+        .clka       (tx_mii_clk),
+        .ena        (mem_en),
+        .addra      (mem_addr),
+        .douta      (mem_data),
+        .rsta_busy  ()
+    );
+
+    //AXIS/NoC Master Emulator
+    axis_mastersim_mem #(
+        .DATA_WIDTH     (DATA_WIDTH),
+        .ADDR_WIDTH     (ADDR_WIDTH),
+        .ADDR_MAX       (ADDR_MAX)
+    ) noc_mastersim (
+        .clk                    (tx_mii_clk),
+        .reset_                 (reset_noc_ && !(noc_done & !en_noc)),
+
+        .mem_in_data            (mem_data),     //i-DATA_WIDTH+DATA_WIDTH/8+2, Data from memory
+        .mem_in_addr            (mem_addr),     //o-ADDR_WIDTH, Address for data memory
+        .mem_in_en              (mem_en),       //o-1, Memory enable signal
+
+        .axis_out_tdata         (noc_in_data),  //o-IN_DATA_WIDTH, Outgoing data
+        .axis_out_tstrb         (rsrvd_strb),   //o-IN_DATA_WIDTH/8, Indicates what bytes of the data is valid.
+        .axis_out_tvalid        (noc_tmp_valid),//o-1, Signal to show if the data is valid.
+        .axis_out_tlast         (rsrvd_last),   //o-1, Signal to show the last data word.
+        .axis_out_tready        (noc_tmp_ready),//i-1, Indicates if the slave is ready.
+
+        .enable                 (noc_en),       //i-1, Enable the emulator (start pumping out data)
+        .latch                  (1),            //i-1, If asserted, enable will latch until reaching end of packet
+        .running                (noc_running),  //o-1,
+        .done                   (noc_done),     //o-1,
+
+        .test                   ()              //o-1, debug
+    );
+
+    //AXIS/NoC Delay Unit
+    //Enforces minimum cycles between NoC requests
+    axis_delay #(
+        .DELAY_WIDTH        (DELAY_WIDTH)   //Delay counter width
+    ) delay (
+        .clk                (tx_mii_clk),   //i-1
+        .reset_             (reset_noc_),   //i-1
+
+        //AXIS Bus In
+        .axis_m_tvalid      (noc_tmp_valid),//i-1, Valid signal from master
+        .axis_m_tlast       (0),            //i-1, Last signal from master
+        .axis_m_tready      (noc_tmp_ready),//o-1, Ready signal to master
+
+        //AXIS Bus Out
+        .axis_s_tready      (noc_in_ready), //i-1, Ready signal from slave
+        .axis_s_tvalid      (noc_in_valid), //o-1, Valid signal to slave
+
+        //Control IO
+        .enable             (|delay_time),  //i-1, Enable the delay
+        .mode               (0),            //i-1, If asserted, delay triggers on valid/last, otherwise ready
+        .delay              (delay_time),   //i-DELAY_WIDTH, Delay time in cycles
+        .active             (noc_dlya),     //o-1, Asserted while the delay is currently active
+
+        //Debug
+        .test               ()              //o-1 debug
+    );
+
+    //Real-time configurable delay through debug core
+    vio_1x16 vio_dly (
+        .clk                (tx_mii_clk),    //i-1
+        .probe_out0         (delay_time)    //o-16
+    );
+
+
+    //================================================================//
+    //  OX_CORE
+
+    //OX_CORE Configuration
+    wire            prb_ack_mode    = 0;
+    wire            lewiz_noc_mode  = 0;
+
+    //TX to LMAC
+    wire [255:0]    ox2m_tx_data;
+    wire            ox2m_tx_wren;
+    wire            ox2m_tx_full;
+    wire [15:0]     ox2m_tx_usedw;
+
+    //RX from LMAC
+    wire [63:0]     m2ox_rxi_data;
+    wire            m2ox_rxi_rden;
+    wire            m2ox_rxi_empty;
+    wire [15:0]     m2ox_rxi_usedw;
+
+    wire [255:0]    m2ox_rxp_data;
+    wire            m2ox_rxp_rden;
+    wire            m2ox_rxp_empty;
+    wire [15:0]     m2ox_rxp_usedw;
+
+
+    //Used Word Lines are 16-bit for the sake of the ILA
+    //Tie down unused bits
+    assign  ox2m_tx_usedw[15:13]    = 'b0;
+    assign  m2ox_rxi_usedw[15:10]   = 'b0;
+    assign  m2ox_rxp_usedw[15:13]   = 'b0;
+
+
+    OX_CORE #(
+        .SRC_MAC    (SRC_MAC),
+        .DST_MAC    (DST_MAC))
+    OX_CORE_U1  (
+        .clk                        (tx_mii_clk),
+        .rst_                       (reset_oxc_),
+
+        //config signals
+        //  prback_mode: 0 = ProbeAck with Data; 1 = ProbeAck with no data (for testing only)
+        .prb_ack_mode               (prb_ack_mode),                 //i-1
+
+        //  lewiz_noc_mode: 0 = standard NOC protocol mode (max datasize = 64 bytes)
+        //                  1 = LeWiz NOC mode, extended data size to 2KBytes
+        .lewiz_noc_mode             (lewiz_noc_mode),
+
+        //--------------------------------//
+
+        //TX Path from NOC
+        .noc_in_valid               (noc_in_valid),                 // i-1
+        .noc_in_data                (noc_in_data),                  // i-64
+        .noc_in_ready               (noc_in_ready),                 // o-1
+
+        //RX Path to NOC
+        .noc_out_ready              (noc_out_ready),                // i-1
+        .noc_out_valid              (noc_out_valid),                // o-1
+        .noc_out_data               (noc_out_data),                 // i-64
+
+        //--------------------------------//
+
+        //TX Path to LMAC
+        .m2ox_tx_fifo_full          (ox2m_tx_full),                 // o-1
+        .m2ox_tx_fifo_wrused        (ox2m_tx_usedw),                // i-13
+        .ox2m_tx_we                 (ox2m_tx_wren),                 // o-1
+        .ox2m_tx_data               (ox2m_tx_data),                 // o-256
+    //  .ox2m_tx_be                 (),                             //(optional) Byte enable
+
+        //RX Path from LMAC
+        .m2ox_rx_ipcs_data          ({48'b0,m2ox_rxi_data[63:48]}), // i-64     //NOTE: LMAC IPCS has byte count in upper 16,
+        .ox2m_rx_ipcs_rden          (m2ox_rxi_rden),                // o-1      //      but OX_CORE expects it in lower 16
+        .m2ox_rx_ipcs_empty         (m2ox_rxi_empty),               // i-1
+        .m2ox_rx_ipcs_usedword      (m2ox_rxi_usedw),               // i-7
+
+        .m2ox_rx_pkt_data           (m2ox_rxp_data),                // i-256
+        .ox2m_rx_pkt_rden           (m2ox_rxp_rden),                // o-1
+        .m2ox_rx_pkt_empty          (m2ox_rxp_empty),               // i-1
+        .m2ox_rx_pkt_usedword       (m2ox_rxp_usedw),               // i-7
+        .ox2m_rx_pkt_rd_cycle       ()
+    );
+
+
+
+    //================================================================//
+    //  LMAC
+
+    //LMAC Mode Control Signals
+    wire                        fail_over = 1'b0;
+
+//  wire    [ 31:0]             fmac_ctrl  = 32'h00000808;  //Enable CRC checking and Broadcast reception
+    wire    [ 31:0]             fmac_ctrl  = 32'h00000008;  //Enable CRC checking, no Broadcast reception
+    wire    [ 31:0]             fmac_ctrl1 = 32'h000005ee;
+
+    wire    [ 31:0]             mac_pause_value = 32'hffff0000;
+    wire    [ 47:0]             mac_addr0 = SRC_MAC;
+
+    wire                        FIFO_OV_IPEND;
+
+
+    //----------------------------------------------------------------//
+    //  CGMII Signals
+
+    wire        [255:0]         cgmii_txd;              //DATA_WIDTH
+    wire        [31:0]          cgmii_txc;              //CTRL_WIDTH
+
+    wire        [255:0]         cgmii_rxd;              //DATA_WIDTH
+    wire        [31:0]          cgmii_rxc;              //CTRL_WIDTH
+
+    `ifdef SYNTHESIS
+    //Hardwire CGMII portion not driven by PHY
+    assign                      cgmii_rxd[255:64] = {24{8'h07}};
+    assign                      cgmii_rxc[31:8] = 24'hFFFFFF;
+    `endif
+
+    LMAC_CORE_TOP LMAC (
+        //Clocks and Reset
+        .clk                        (tx_mii_clk),           //i-1, User Clock
+        .xA_clk                     (tx_mii_clk),           //i-1, XGMII/CGMII clock
+        .reset_                     (reset_mac_),           //i-1, FMAC specific reset (also follows PCIE RST)
+        .cgmii_reset_               (reset_mii_),           //i-1
+
+        //Mode Control
+        .mode_10G                   (1'b1),                 //i-1, Activate speed mode  10G (selected)
+        .mode_25G                   (1'b0),                 //i-1, Activate speed mode  25G
+        .mode_40G                   (1'b0),                 //i-1, Activate speed mode  40G
+        .mode_50G                   (1'b0),                 //i-1, Activate speed mode  50G
+        .mode_100G                  (1'b0),                 //i-1, Activate speed mode 100G
+
+        .TCORE_MODE                 (1'b1),                 //i-1, if TOE Core = 1  //26 JUNE 2018: forced to zero because it is not used.
+
+        //----------------------------------------------------------------//
+
+        //TX Path FIFO Interface
+        .tx_mac_data                (ox2m_tx_data),         //i-256
+        .tx_mac_wr                  (ox2m_tx_wren),         //i-1
+        .tx_mac_full                (ox2m_tx_full),         //o-1
+        .tx_mac_usedw               (ox2m_tx_usedw),        //o-13
+
+        //RX Path Packet FIFO Interface
+        .rx_mac_data                (m2ox_rxp_data),        //o-256
+        .rx_mac_rd                  (m2ox_rxp_rden),        //i-1
+        .rx_mac_empty               (m2ox_rxp_empty),       //o-1
+        .rx_mac_ctrl                (m2ox_rxp_ctrl),        //o-8, rsvd, pkt_end, pkt_start    //TODO: Port is actually 32-bit??
+        .rx_mac_rdusedw             (m2ox_rxp_usedw),       //o-13
+        .rx_mac_usedw_dbg           (   ),                  //o-12
+        .rx_mac_full_dbg            (   ),                  //o-1
+
+        //RX Path IPCS FIFO Interface
+        .ipcs_fifo_dout             (m2ox_rxi_data),        //o-64
+        .cs_fifo_rd_en              (m2ox_rxi_rden),        //i-1
+        .cs_fifo_empty              (m2ox_rxi_empty),       //o-1
+        .ipcs_fifo_rdusedw          (m2ox_rxi_usedw),       //o-10
+
+
+        //----------------------------------------------------------------//
+        //CGMII Signals
+        .cgmii_txd                  (cgmii_txd),                //o-256
+        .cgmii_txc                  (cgmii_txc),                //o-32
+
+        .cgmii_rxd                  (cgmii_rxd),                //i-256
+        .cgmii_rxc                  (cgmii_rxc),                //i-32
+
+        .cgmii_led_                 (2'b0),                     //i-2
+
+        .xauiA_linkup               (),                         // o-1, link up for either 10G or 10G mode  //TODO: 10 or 10 ???? (10 or 100?)
+
+
+        //----------------------------------------------------------------//
+        //Register Interface
+
+        .host_addr_reg              (16'b0),                    //i-16, Register read address (UNUSED)
+        .SYS_ADDR                   (4'b0),                     //i-4,  system assigned addr for the FMAC (UNUSED)
+        .reg_rd_start               (1'b0),                     //i-1,  Start Register Read (UNUSED)
+        .reg_rd_done_out            (),                         //o-1,  Register Read Don(UNUSED)
+        .FMAC_REGDOUT               (),                         //o-32, Read Data Out (UNUSED)
+
+
+        //----------------------------------------------------------------//
+
+        //From mac_register
+        .fail_over                  (fail_over),                // i-1
+        .fmac_ctrl                  (fmac_ctrl),                // i-32
+        .fmac_ctrl1                 (fmac_ctrl1),               // i-32
+
+        //----------------------------------------------------------------//
+
+        .fmac_rxd_en                (lmac_rx_en),               //i-1, 13jul11
+
+        .mac_pause_value            (mac_pause_value),          // i-32
+        .mac_addr0                  (mac_addr0),                // i-48
+
+        .FIFO_OV_IPEND              (FIFO_OV_IPEND)             // o-1
+
+    );
+
+
+    //================================================================//
+    //  PHY
+
+    //For other GT loopback options please change the value appropriately
+    //For example, for internal loopback gt_loopback_in[2:0] = 3'b010;
+    //For more information and settings on loopback, refer GT Transceivers user guide
+    wire [2:0]      gt_loopback_in_0 = 3'b000;
+
+    //From PHY User Manual:
+    //  The rx_core_clk signal is used to clock the receive AXI4-Stream interface.
+    //  When FIFO is not included, it must be driven by rx_clk_out. When FIFO is
+    //  included, rx_core_clk can be driven by tx_clk_out, rx_clk_out, or another
+    //  asynchronous clock at the same frequency.
+    //
+    //NOTE: In PHY only config, FIFO appears to be present regardless of FIFO enable config
+
+    wire            reset_gtwiz_tx = 1'b0;
+    wire            reset_gtwiz_rx = 1'b0;
+    wire            gtpowergood_out;
+
+    wire            qpllreset_in_0 = 1'b0;      // Changing qpllreset_in_0 value may impact or disturb other cores in case of multicore
+                                                // User should take care of this while changing.
+
+
+    phy_10g_eth_xil PHY (
+
+        //----------------------------------------------------------------//
+        //  Clock I/O
+
+        .gt_refclk_p                            (gt_refclk_p),          //i-1, Differential Reference Clock In (positive)
+        .gt_refclk_n                            (gt_refclk_n),          //i-1, Differential Reference Clock In (negative)
+        .gt_refclk_out                          (gt_refclk),            //o-1, Reference Clock Out (single ended, gated by gtpowergood)
+
+        .dclk                                   (mclk_buf),             //i-1, system clock. not synchronous to gr_refclk
+
+        .tx_mii_clk_0                           (tx_mii_clk),           //o-1, TX MII Interface Clock
+        .rx_clk_out_0                           (rx_clk_out),           //o-1,
+
+        .rxrecclkout_0                          (rxrecclk),             //o-1, Clock recovered from GT RX
+
+    //  .rx_core_clk_0                          (rx_clk_out),           //i-1, RX MII Interface Clock
+        .rx_core_clk_0                          (tx_mii_clk),           //i-1, RX MII Interface Clock
+
+
+        .txoutclksel_in_0                       (3'b101),               //i-3, Should not be changed, as per gtwizard
+        .rxoutclksel_in_0                       (3'b101),               //i-3, Should not be changed, as per gtwizard
+
+
+        //----------------------------------------------------------------//
+        //Resets
+
+        .sys_reset                              (!reset_mii_),          //i-1, Full system reset. Resets GT then MII module
+
+        .rx_reset_0                             (!reset_mii_),          //i-1, MII module RX path reset (also issued by GT module)
+        .user_rx_reset_0                        (reset_usr_rx),         //o-1, = rx_reset_0 || rx_reset_internal (from GT module)
+
+        .tx_reset_0                             (!reset_mii_),          //i-1, MII module TX path reset (also issued by GT module)
+        .user_tx_reset_0                        (reset_usr_tx),         //o-1, = tx_reset_0 || tx_reset_internal (from GT module)
+
+        //Analog Resets?
+        .qpllreset_in_0                         (qpllreset_in_0),       //i-1, pll reset (internally issued by GT module's powergood)
+        .gtwiz_reset_tx_datapath_0              (reset_gtwiz_tx),       //i-1, GT module RX path reset (internally asserted during sys reset)
+        .gtwiz_reset_rx_datapath_0              (reset_gtwiz_rx),       //i-1, GT module TX path reset (internally asserted during sys reset)
+
+
+        //----------------------------------------------------------------//
+
+        .gtpowergood_out_0(gtpowergood_out),                            //o-1, gtpowergood_out_0
+        .gt_loopback_in_0(gt_loopback_in_0),                            //i-3, gt_loopback_in_0
+
+
+        //----------------------------------------------------------------//
+        //MII TX and RX
+
+        `ifdef SYNTHESIS
+        .rx_mii_d_0                             (cgmii_rxd[63:0]),      //o-64, rx_mii_d_0
+        .rx_mii_c_0                             (cgmii_rxc[7:0]),       //o-8,  rx_mii_c_0
+        `endif
+
+        .tx_mii_d_0                             (cgmii_txd[63:0]),      //i-64, tx_mii_d_0
+        .tx_mii_c_0                             (cgmii_txc[7:0]),       //i-8,  tx_mii_c_0
+
+
+        //----------------------------------------------------------------//
+        //GT TX and RX
+
+        .gt_txp_out                             (gt_txp_out),           //o-1, gt_txp_out
+        .gt_txn_out                             (gt_txn_out),           //o-1, gt_txn_out
+
+        .gt_rxp_in                              (gt_rxp_in),            //i-1, gt_rxp_in
+        .gt_rxn_in                              (gt_rxn_in),            //i-1, gt_rxn_in
+
+        //----------------------------------------------------------------//
+        //Network Status Output Signals
+
+        .stat_rx_framing_err_0                  (),                     //o-1,
+        .stat_rx_framing_err_valid_0            (),                     //o-1,
+        .stat_rx_local_fault_0                  (),                     //o-1,
+        .stat_rx_block_lock_0                   (),                     //o-1,
+        .stat_rx_valid_ctrl_code_0              (),                     //o-1,
+        .stat_rx_status_0                       (phy_rxgood),           //o-1, Asserted when PHY RX status is good
+        .stat_rx_hi_ber_0                       (),                     //o-1,
+        .stat_rx_bad_code_0                     (),                     //o-1,
+        .stat_rx_bad_code_valid_0               (),                     //o-1,
+        .stat_rx_error_0                        (),                     //o-8,
+        .stat_rx_error_valid_0                  (),                     //o-1,
+        .stat_rx_fifo_error_0                   (),                     //o-1,
+
+        .stat_tx_local_fault_0                  (phy_txbad),            //o-1,
+
+
+        //----------------------------------------------------------------//
+        //Control Inputs for Test Pattern Generation
+
+        .ctl_rx_test_pattern_0                  (1'b0),                 //i-1,  ctl_rx_test_pattern_0
+        .ctl_rx_data_pattern_select_0           (1'b0),                 //i-1,  ctl_rx_data_pattern_select_0
+        .ctl_rx_test_pattern_enable_0           (1'b0),                 //i-1,  ctl_rx_test_pattern_enable_0
+        .ctl_rx_prbs31_test_pattern_enable_0    (1'b0),                 //i-1,  ctl_rx_prbs31_test_pattern_enable_0
+
+        .ctl_tx_test_pattern_0                  (1'b0),                 //i-1,  ctl_tx_test_pattern_0
+        .ctl_tx_test_pattern_enable_0           (1'b0),                 //i-1,  ctl_tx_test_pattern_enable_0
+        .ctl_tx_test_pattern_select_0           (1'b0),                 //i-1,  ctl_tx_test_pattern_select_0
+        .ctl_tx_data_pattern_select_0           (1'b0),                 //i-1,  ctl_tx_data_pattern_select_0
+        .ctl_tx_test_pattern_seed_a_0           (58'd0),                //i-58, ctl_tx_test_pattern_seed_a_0
+        .ctl_tx_test_pattern_seed_b_0           (58'd0),                //i-58, ctl_tx_test_pattern_seed_b_0
+        .ctl_tx_prbs31_test_pattern_enable_0    (1'b0)                  //i-1,  ctl_tx_prbs31_test_pattern_enable_0
+    );
+
+
+
+    //================================================================//
+    //  ILAs
+
+    `ifdef ILA_ENABLE
+    ila_noc_fmac_mii ila_fpga (
+        .clk        (tx_mii_clk),           //i-1,   Clock
+
+        .probe0     (noc_in_data),          //i-64,  noc_in_data
+        .probe1     (noc_in_valid),         //i-1,   noc_in_valid
+        .probe2     (noc_in_ready),         //i-1,   noc_in_ready
+
+        .probe3     (noc_out_data),         //i-64,  noc_out_data
+        .probe4     (noc_out_valid),        //i-1,   noc_out_valid
+        .probe5     (noc_out_ready),        //i-1,   noc_out_ready
+
+        .probe6     (ox2m_tx_data),         //i-256, ox2m_tx_data
+        .probe7     (ox2m_tx_wren),         //i-1,   ox2m_tx_wren
+        .probe8     (ox2m_tx_full),         //i-1,   ox2m_tx_full
+        .probe9     (ox2m_tx_usedw),        //i-13,  ox2m_tx_usedw
+
+        .probe10    (m2ox_rxp_data),        //i-256, m2ox_rxp_data
+        .probe11    (m2ox_rxp_rden),        //i-1,   m2ox_rxp_rden
+        .probe12    (m2ox_rxp_empty),       //i-1,   m2ox_rxp_empty
+        .probe13    (m2ox_rxp_usedw),       //i-13,  m2ox_rxp_usedw
+
+        .probe14    (m2ox_rxi_data[63:48]), //i-16,  m2ox_rxi_data
+        .probe15    (m2ox_rxi_rden),        //i-1,   m2ox_rxi_rden
+        .probe16    (m2ox_rxi_empty),       //i-1,   m2ox_rxi_empty
+        .probe17    (m2ox_rxi_usedw),       //i-13,  m2ox_rxi_usedw
+
+        .probe18    (cgmii_txd[63:0]),      //i-64, cgmii_txd
+        .probe19    (cgmii_txc[ 7:0]),      //i-8,  cgmii_txc
+    
+        .probe20    (cgmii_rxd[63:0]),      //i-64, cgmii_rxd
+        .probe21    (cgmii_rxc[ 7:0]),      //i-8,  cgmii_rxc
+
+        .probe22    (noc_tmp_valid),        //i-1,
+        .probe23    (noc_tmp_ready),        //i-1,
+        .probe24    (noc_dlya),             //i-1,
+
+
+        .probe25    (reset_mii_),           //i-1,
+        .probe26    (reset_usr_tx),         //i-1,
+        .probe27    (reset_usr_rx),         //i-1,
+        .probe28    (stat_phy_rst),         //i-1,
+        .probe29    (reset_mac_),           //i-1,
+        .probe30    (reset_rxd_),           //i-1,
+        .probe31    (reset_oxc_),           //i-1,
+
+        .probe32    (reset_done),           //i-1,
+
+        .probe33    (phy_rxgood),           //i-1,
+        .probe34    (phy_txbad),            //i-1,
+        .probe35    (stat_phy_good),        //i-1,
+
+        .probe36    (1'b0),
+        .probe37    (1'b0)
+    );
+    `endif
+
+
+    //================================================================//
+    //================================================================//
+    //SIMULATION ONLY
+    
+    `ifndef SYNTHESIS
+    
+    //================================================================//
+    //  Read from "core_fpga.v.RX.mem" to drive CGMII RX Lines
+    
+    reg  [287:0]    rxdata [0:65535]; //memory of 2^16 for data
+    reg  [15:0]     rxdata_ptr;
+
+    initial $readmemh({`__FILE__,".RX.mem"}, rxdata);
+
+    assign cgmii_rxc = rxdata[rxdata_ptr][287:256];
+    assign cgmii_rxd = rxdata[rxdata_ptr][255:0  ];
+
+    always @ (posedge tx_mii_clk) begin
+        rxdata_ptr <= (reset_oxc_) ? (rxdata_ptr + 1) : 16'b0;
+    end
+
+    integer f;
+    reg file_close;
+    
+    
+    //================================================================//
+    //  Write CGMII TX lines to "core_fpga.v.TX.mem"
+
+    //Open File at simulation start and close when `file_close` is asserted
+    initial begin
+        file_close <= 1'b0;
+        f = $fopen({`__FILE__,".TX.txt"},"w");
+    end
+    always @(posedge file_close) $fclose(f);
+
+    always @ (posedge tx_mii_clk) begin
+        if (cgmii_txc != 32'hFFFFFFFF) begin
+            $fdisplay(f,"%h_%h",cgmii_txc,cgmii_txd);
+        end
+    end
+    `endif
+
+endmodule

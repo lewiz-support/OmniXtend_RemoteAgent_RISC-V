@@ -1,0 +1,61 @@
+//****************************************************************
+// December 6, 2022
+//
+// Licensed to the Apache Software Foundation (ASF) under one
+// or more contributor license agreements.  See the NOTICE file
+// distributed with this work for additional information
+// regarding copyright ownership.  The ASF licenses this file
+// to you under the Apache License, Version 2.0 (the
+// "License"); you may not use this file except in compliance
+// with the License.  You may obtain a copy of the License at
+//
+//   http://www.apache.org/licenses/LICENSE-2.0
+//
+// Unless required by applicable law or agreed to in writing,
+// software distributed under the License is distributed on an
+// "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+// KIND, either express or implied.  See the License for the
+// specific language governing permissions and limitations
+// under the License.
+//
+// Date: N/A
+// Project: OmniXtend Core
+// Comments: N/A
+//
+//********************************
+// File history:
+//   N/A
+//****************************************************************
+//
+//
+//
+//request packet with message type L2_DIS_FLUSH_REQ = 8'd35
+//flit1 63:50 - CHIPID
+//		49:42 - XPOS
+//		41:34 - YPOS
+//		33:30 - FBITS
+//		29:22 - PAYLOAD LENGTH
+//		21:14 - MESSAGE TYPE
+//		13:06 - MSHR/TAG
+//		05:00 - RESERVED
+//flit2 63:16 - ADDRESS
+//      15:03 - OPTIONS2
+//      02:00 - LAST BYTE COUNT
+//flit3 63:50 - SRC CHIPID
+//		49:42 - SRC XPOS
+//		41:34 - SRC YPOS
+//		33:30 - SRC FBITS
+//		29:00 - RESERVED
+00_0000000000000000	// piton_pkt_probeAck or probeAckData, addr = 11, cnt = 13 (dec)
+01_0060328402030100
+01_4002012345002700
+01_0dec040880000000
+01_3c00004500080b04		
+01_518d06400040fa1a
+01_1000000000000000
+01_2000000000000000
+01_3000000000000000
+01_4000000000000000
+01_5000000000000000
+01_6000000000000000
+00_0000000000000000

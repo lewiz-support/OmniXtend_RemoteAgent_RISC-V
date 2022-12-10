@@ -1,0 +1,2783 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="core_tb_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="core_tb" />
+            <top_module name="glbl" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="0.000000 us"></ZoomStartTime>
+      <ZoomEndTime time="6.710001 us"></ZoomEndTime>
+      <Cursor1Time time="1.000000 us"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="220"></NameColumnWidth>
+      <ValueColumnWidth column_width="91"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="8" />
+   <wvobject fp_name="divider10724" type="divider">
+      <obj_property name="label">COH_MGR</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/core_tb/OX_CORE_U1/COHERENT_MGR1/clk">
+      <obj_property name="ElementShortName">clk</obj_property>
+      <obj_property name="ObjectShortName">clk</obj_property>
+   </wvobject>
+   <wvobject type="group" fp_name="group6711">
+      <obj_property name="label">NOC_MASTER</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="isExpanded"></obj_property>
+      <wvobject type="logic" fp_name="/core_tb/NOC_MASER/clk">
+         <obj_property name="ElementShortName">clk</obj_property>
+         <obj_property name="ObjectShortName">clk</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/core_tb/NOC_MASER/reset_">
+         <obj_property name="ElementShortName">reset_</obj_property>
+         <obj_property name="ObjectShortName">reset_</obj_property>
+      </wvobject>
+      <wvobject type="group" fp_name="group6712">
+         <obj_property name="label">CTRL</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <obj_property name="isExpanded"></obj_property>
+         <wvobject type="logic" fp_name="/core_tb/NOC_MASER/gen_en">
+            <obj_property name="ElementShortName">gen_en</obj_property>
+            <obj_property name="ObjectShortName">gen_en</obj_property>
+         </wvobject>
+         <wvobject type="array" fp_name="/core_tb/NOC_MASER/pkt_gen_addr">
+            <obj_property name="ElementShortName">pkt_gen_addr[47:0]</obj_property>
+            <obj_property name="ObjectShortName">pkt_gen_addr[47:0]</obj_property>
+         </wvobject>
+         <wvobject type="array" fp_name="/core_tb/NOC_MASER/pkt_gen_cnt">
+            <obj_property name="ElementShortName">pkt_gen_cnt[15:0]</obj_property>
+            <obj_property name="ObjectShortName">pkt_gen_cnt[15:0]</obj_property>
+         </wvobject>
+      </wvobject>
+      <wvobject type="group" fp_name="group6713">
+         <obj_property name="label">NOC OUT</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <obj_property name="isExpanded"></obj_property>
+         <wvobject type="logic" fp_name="/core_tb/NOC_MASER/noc_in_rdy">
+            <obj_property name="ElementShortName">noc_in_rdy</obj_property>
+            <obj_property name="ObjectShortName">noc_in_rdy</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="/core_tb/NOC_MASER/noc_in_valid">
+            <obj_property name="ElementShortName">noc_in_valid</obj_property>
+            <obj_property name="ObjectShortName">noc_in_valid</obj_property>
+         </wvobject>
+         <wvobject type="array" fp_name="/core_tb/NOC_MASER/noc_in_data">
+            <obj_property name="ElementShortName">noc_in_data[63:0]</obj_property>
+            <obj_property name="ObjectShortName">noc_in_data[63:0]</obj_property>
+         </wvobject>
+         <wvobject type="group" fp_name="group6819">
+            <obj_property name="label">Flit 1</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject type="vbus" fp_name="vbus6886">
+               <obj_property name="label">CHIPID</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <wvobject type="logic" fp_name="/core_tb/NOC_MASER/noc_in_data[63]">
+                  <obj_property name="ElementShortName">[63]</obj_property>
+                  <obj_property name="ObjectShortName">[63]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/core_tb/NOC_MASER/noc_in_data[62]">
+                  <obj_property name="ElementShortName">[62]</obj_property>
+                  <obj_property name="ObjectShortName">[62]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/core_tb/NOC_MASER/noc_in_data[61]">
+                  <obj_property name="ElementShortName">[61]</obj_property>
+                  <obj_property name="ObjectShortName">[61]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/core_tb/NOC_MASER/noc_in_data[60]">
+                  <obj_property name="ElementShortName">[60]</obj_property>
+                  <obj_property name="ObjectShortName">[60]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/core_tb/NOC_MASER/noc_in_data[59]">
+                  <obj_property name="ElementShortName">[59]</obj_property>
+                  <obj_property name="ObjectShortName">[59]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/core_tb/NOC_MASER/noc_in_data[58]">
+                  <obj_property name="ElementShortName">[58]</obj_property>
+                  <obj_property name="ObjectShortName">[58]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/core_tb/NOC_MASER/noc_in_data[57]">
+                  <obj_property name="ElementShortName">[57]</obj_property>
+                  <obj_property name="ObjectShortName">[57]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/core_tb/NOC_MASER/noc_in_data[56]">
+                  <obj_property name="ElementShortName">[56]</obj_property>
+                  <obj_property name="ObjectShortName">[56]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/core_tb/NOC_MASER/noc_in_data[55]">
+                  <obj_property name="ElementShortName">[55]</obj_property>
+                  <obj_property name="ObjectShortName">[55]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/core_tb/NOC_MASER/noc_in_data[54]">
+                  <obj_property name="ElementShortName">[54]</obj_property>
+                  <obj_property name="ObjectShortName">[54]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/core_tb/NOC_MASER/noc_in_data[53]">
+                  <obj_property name="ElementShortName">[53]</obj_property>
+                  <obj_property name="ObjectShortName">[53]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/core_tb/NOC_MASER/noc_in_data[52]">
+                  <obj_property name="ElementShortName">[52]</obj_property>
+                  <obj_property name="ObjectShortName">[52]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/core_tb/NOC_MASER/noc_in_data[51]">
+                  <obj_property name="ElementShortName">[51]</obj_property>
+                  <obj_property name="ObjectShortName">[51]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/core_tb/NOC_MASER/noc_in_data[50]">
+                  <obj_property name="ElementShortName">[50]</obj_property>
+                  <obj_property name="ObjectShortName">[50]</obj_property>
+               </wvobject>
+            </wvobject>
+            <wvobject type="vbus" fp_name="vbus6953">
+               <obj_property name="label">XPOS</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <wvobject type="logic" fp_name="/core_tb/NOC_MASER/noc_in_data[49]">
+                  <obj_property name="ElementShortName">[49]</obj_property>
+                  <obj_property name="ObjectShortName">[49]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/core_tb/NOC_MASER/noc_in_data[48]">
+                  <obj_property name="ElementShortName">[48]</obj_property>
+                  <obj_property name="ObjectShortName">[48]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/core_tb/NOC_MASER/noc_in_data[47]">
+                  <obj_property name="ElementShortName">[47]</obj_property>
+                  <obj_property name="ObjectShortName">[47]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/core_tb/NOC_MASER/noc_in_data[46]">
+                  <obj_property name="ElementShortName">[46]</obj_property>
+                  <obj_property name="ObjectShortName">[46]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/core_tb/NOC_MASER/noc_in_data[45]">
+                  <obj_property name="ElementShortName">[45]</obj_property>
+                  <obj_property name="ObjectShortName">[45]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/core_tb/NOC_MASER/noc_in_data[44]">
+                  <obj_property name="ElementShortName">[44]</obj_property>
+                  <obj_property name="ObjectShortName">[44]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/core_tb/NOC_MASER/noc_in_data[43]">
+                  <obj_property name="ElementShortName">[43]</obj_property>
+                  <obj_property name="ObjectShortName">[43]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/core_tb/NOC_MASER/noc_in_data[42]">
+                  <obj_property name="ElementShortName">[42]</obj_property>
+                  <obj_property name="ObjectShortName">[42]</obj_property>
+               </wvobject>
+            </wvobject>
+            <wvobject type="vbus" fp_name="vbus6954">
+               <obj_property name="label">YPOS</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <wvobject type="logic" fp_name="/core_tb/NOC_MASER/noc_in_data[41]">
+                  <obj_property name="ElementShortName">[41]</obj_property>
+                  <obj_property name="ObjectShortName">[41]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/core_tb/NOC_MASER/noc_in_data[40]">
+                  <obj_property name="ElementShortName">[40]</obj_property>
+                  <obj_property name="ObjectShortName">[40]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/core_tb/NOC_MASER/noc_in_data[39]">
+                  <obj_property name="ElementShortName">[39]</obj_property>
+                  <obj_property name="ObjectShortName">[39]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/core_tb/NOC_MASER/noc_in_data[38]">
+                  <obj_property name="ElementShortName">[38]</obj_property>
+                  <obj_property name="ObjectShortName">[38]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/core_tb/NOC_MASER/noc_in_data[37]">
+                  <obj_property name="ElementShortName">[37]</obj_property>
+                  <obj_property name="ObjectShortName">[37]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/core_tb/NOC_MASER/noc_in_data[36]">
+                  <obj_property name="ElementShortName">[36]</obj_property>
+                  <obj_property name="ObjectShortName">[36]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/core_tb/NOC_MASER/noc_in_data[35]">
+                  <obj_property name="ElementShortName">[35]</obj_property>
+                  <obj_property name="ObjectShortName">[35]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/core_tb/NOC_MASER/noc_in_data[34]">
+                  <obj_property name="ElementShortName">[34]</obj_property>
+                  <obj_property name="ObjectShortName">[34]</obj_property>
+               </wvobject>
+            </wvobject>
+            <wvobject type="vbus" fp_name="vbus6955">
+               <obj_property name="label">FBITS</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <wvobject type="logic" fp_name="/core_tb/NOC_MASER/noc_in_data[33]">
+                  <obj_property name="ElementShortName">[33]</obj_property>
+                  <obj_property name="ObjectShortName">[33]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/core_tb/NOC_MASER/noc_in_data[32]">
+                  <obj_property name="ElementShortName">[32]</obj_property>
+                  <obj_property name="ObjectShortName">[32]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/core_tb/NOC_MASER/noc_in_data[31]">
+                  <obj_property name="ElementShortName">[31]</obj_property>
+                  <obj_property name="ObjectShortName">[31]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/core_tb/NOC_MASER/noc_in_data[30]">
+                  <obj_property name="ElementShortName">[30]</obj_property>
+                  <obj_property name="ObjectShortName">[30]</obj_property>
+               </wvobject>
+            </wvobject>
+            <wvobject type="vbus" fp_name="vbus6956">
+               <obj_property name="label">Payload Len</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <wvobject type="logic" fp_name="/core_tb/NOC_MASER/noc_in_data[29]">
+                  <obj_property name="ElementShortName">[29]</obj_property>
+                  <obj_property name="ObjectShortName">[29]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/core_tb/NOC_MASER/noc_in_data[28]">
+                  <obj_property name="ElementShortName">[28]</obj_property>
+                  <obj_property name="ObjectShortName">[28]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/core_tb/NOC_MASER/noc_in_data[27]">
+                  <obj_property name="ElementShortName">[27]</obj_property>
+                  <obj_property name="ObjectShortName">[27]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/core_tb/NOC_MASER/noc_in_data[26]">
+                  <obj_property name="ElementShortName">[26]</obj_property>
+                  <obj_property name="ObjectShortName">[26]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/core_tb/NOC_MASER/noc_in_data[25]">
+                  <obj_property name="ElementShortName">[25]</obj_property>
+                  <obj_property name="ObjectShortName">[25]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/core_tb/NOC_MASER/noc_in_data[24]">
+                  <obj_property name="ElementShortName">[24]</obj_property>
+                  <obj_property name="ObjectShortName">[24]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/core_tb/NOC_MASER/noc_in_data[23]">
+                  <obj_property name="ElementShortName">[23]</obj_property>
+                  <obj_property name="ObjectShortName">[23]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/core_tb/NOC_MASER/noc_in_data[22]">
+                  <obj_property name="ElementShortName">[22]</obj_property>
+                  <obj_property name="ObjectShortName">[22]</obj_property>
+               </wvobject>
+            </wvobject>
+            <wvobject type="vbus" fp_name="vbus6957">
+               <obj_property name="label">MSG TYPE</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <wvobject type="logic" fp_name="/core_tb/NOC_MASER/noc_in_data[21]">
+                  <obj_property name="ElementShortName">[21]</obj_property>
+                  <obj_property name="ObjectShortName">[21]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/core_tb/NOC_MASER/noc_in_data[20]">
+                  <obj_property name="ElementShortName">[20]</obj_property>
+                  <obj_property name="ObjectShortName">[20]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/core_tb/NOC_MASER/noc_in_data[19]">
+                  <obj_property name="ElementShortName">[19]</obj_property>
+                  <obj_property name="ObjectShortName">[19]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/core_tb/NOC_MASER/noc_in_data[18]">
+                  <obj_property name="ElementShortName">[18]</obj_property>
+                  <obj_property name="ObjectShortName">[18]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/core_tb/NOC_MASER/noc_in_data[17]">
+                  <obj_property name="ElementShortName">[17]</obj_property>
+                  <obj_property name="ObjectShortName">[17]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/core_tb/NOC_MASER/noc_in_data[16]">
+                  <obj_property name="ElementShortName">[16]</obj_property>
+                  <obj_property name="ObjectShortName">[16]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/core_tb/NOC_MASER/noc_in_data[15]">
+                  <obj_property name="ElementShortName">[15]</obj_property>
+                  <obj_property name="ObjectShortName">[15]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/core_tb/NOC_MASER/noc_in_data[14]">
+                  <obj_property name="ElementShortName">[14]</obj_property>
+                  <obj_property name="ObjectShortName">[14]</obj_property>
+               </wvobject>
+            </wvobject>
+            <wvobject type="vbus" fp_name="vbus6958">
+               <obj_property name="label">MSHR/TAG</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <wvobject type="logic" fp_name="/core_tb/NOC_MASER/noc_in_data[13]">
+                  <obj_property name="ElementShortName">[13]</obj_property>
+                  <obj_property name="ObjectShortName">[13]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/core_tb/NOC_MASER/noc_in_data[12]">
+                  <obj_property name="ElementShortName">[12]</obj_property>
+                  <obj_property name="ObjectShortName">[12]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/core_tb/NOC_MASER/noc_in_data[11]">
+                  <obj_property name="ElementShortName">[11]</obj_property>
+                  <obj_property name="ObjectShortName">[11]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/core_tb/NOC_MASER/noc_in_data[10]">
+                  <obj_property name="ElementShortName">[10]</obj_property>
+                  <obj_property name="ObjectShortName">[10]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/core_tb/NOC_MASER/noc_in_data[9]">
+                  <obj_property name="ElementShortName">[9]</obj_property>
+                  <obj_property name="ObjectShortName">[9]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/core_tb/NOC_MASER/noc_in_data[8]">
+                  <obj_property name="ElementShortName">[8]</obj_property>
+                  <obj_property name="ObjectShortName">[8]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/core_tb/NOC_MASER/noc_in_data[7]">
+                  <obj_property name="ElementShortName">[7]</obj_property>
+                  <obj_property name="ObjectShortName">[7]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/core_tb/NOC_MASER/noc_in_data[6]">
+                  <obj_property name="ElementShortName">[6]</obj_property>
+                  <obj_property name="ObjectShortName">[6]</obj_property>
+               </wvobject>
+            </wvobject>
+            <wvobject type="vbus" fp_name="vbus6959">
+               <obj_property name="label">Reserved</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <wvobject type="logic" fp_name="/core_tb/NOC_MASER/noc_in_data[5]">
+                  <obj_property name="ElementShortName">[5]</obj_property>
+                  <obj_property name="ObjectShortName">[5]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/core_tb/NOC_MASER/noc_in_data[4]">
+                  <obj_property name="ElementShortName">[4]</obj_property>
+                  <obj_property name="ObjectShortName">[4]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/core_tb/NOC_MASER/noc_in_data[3]">
+                  <obj_property name="ElementShortName">[3]</obj_property>
+                  <obj_property name="ObjectShortName">[3]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/core_tb/NOC_MASER/noc_in_data[2]">
+                  <obj_property name="ElementShortName">[2]</obj_property>
+                  <obj_property name="ObjectShortName">[2]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/core_tb/NOC_MASER/noc_in_data[1]">
+                  <obj_property name="ElementShortName">[1]</obj_property>
+                  <obj_property name="ObjectShortName">[1]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/core_tb/NOC_MASER/noc_in_data[0]">
+                  <obj_property name="ElementShortName">[0]</obj_property>
+                  <obj_property name="ObjectShortName">[0]</obj_property>
+               </wvobject>
+            </wvobject>
+         </wvobject>
+         <wvobject type="group" fp_name="group6820">
+            <obj_property name="label">Flit 2</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject type="vbus" fp_name="vbus7090">
+               <obj_property name="label">ADDRESS</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <wvobject type="logic" fp_name="/core_tb/NOC_MASER/noc_in_data[63]">
+                  <obj_property name="ElementShortName">[63]</obj_property>
+                  <obj_property name="ObjectShortName">[63]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/core_tb/NOC_MASER/noc_in_data[62]">
+                  <obj_property name="ElementShortName">[62]</obj_property>
+                  <obj_property name="ObjectShortName">[62]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/core_tb/NOC_MASER/noc_in_data[61]">
+                  <obj_property name="ElementShortName">[61]</obj_property>
+                  <obj_property name="ObjectShortName">[61]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/core_tb/NOC_MASER/noc_in_data[60]">
+                  <obj_property name="ElementShortName">[60]</obj_property>
+                  <obj_property name="ObjectShortName">[60]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/core_tb/NOC_MASER/noc_in_data[59]">
+                  <obj_property name="ElementShortName">[59]</obj_property>
+                  <obj_property name="ObjectShortName">[59]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/core_tb/NOC_MASER/noc_in_data[58]">
+                  <obj_property name="ElementShortName">[58]</obj_property>
+                  <obj_property name="ObjectShortName">[58]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/core_tb/NOC_MASER/noc_in_data[57]">
+                  <obj_property name="ElementShortName">[57]</obj_property>
+                  <obj_property name="ObjectShortName">[57]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/core_tb/NOC_MASER/noc_in_data[56]">
+                  <obj_property name="ElementShortName">[56]</obj_property>
+                  <obj_property name="ObjectShortName">[56]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/core_tb/NOC_MASER/noc_in_data[55]">
+                  <obj_property name="ElementShortName">[55]</obj_property>
+                  <obj_property name="ObjectShortName">[55]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/core_tb/NOC_MASER/noc_in_data[54]">
+                  <obj_property name="ElementShortName">[54]</obj_property>
+                  <obj_property name="ObjectShortName">[54]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/core_tb/NOC_MASER/noc_in_data[53]">
+                  <obj_property name="ElementShortName">[53]</obj_property>
+                  <obj_property name="ObjectShortName">[53]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/core_tb/NOC_MASER/noc_in_data[52]">
+                  <obj_property name="ElementShortName">[52]</obj_property>
+                  <obj_property name="ObjectShortName">[52]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/core_tb/NOC_MASER/noc_in_data[51]">
+                  <obj_property name="ElementShortName">[51]</obj_property>
+                  <obj_property name="ObjectShortName">[51]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/core_tb/NOC_MASER/noc_in_data[50]">
+                  <obj_property name="ElementShortName">[50]</obj_property>
+                  <obj_property name="ObjectShortName">[50]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/core_tb/NOC_MASER/noc_in_data[49]">
+                  <obj_property name="ElementShortName">[49]</obj_property>
+                  <obj_property name="ObjectShortName">[49]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/core_tb/NOC_MASER/noc_in_data[48]">
+                  <obj_property name="ElementShortName">[48]</obj_property>
+                  <obj_property name="ObjectShortName">[48]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/core_tb/NOC_MASER/noc_in_data[47]">
+                  <obj_property name="ElementShortName">[47]</obj_property>
+                  <obj_property name="ObjectShortName">[47]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/core_tb/NOC_MASER/noc_in_data[46]">
+                  <obj_property name="ElementShortName">[46]</obj_property>
+                  <obj_property name="ObjectShortName">[46]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/core_tb/NOC_MASER/noc_in_data[45]">
+                  <obj_property name="ElementShortName">[45]</obj_property>
+                  <obj_property name="ObjectShortName">[45]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/core_tb/NOC_MASER/noc_in_data[44]">
+                  <obj_property name="ElementShortName">[44]</obj_property>
+                  <obj_property name="ObjectShortName">[44]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/core_tb/NOC_MASER/noc_in_data[43]">
+                  <obj_property name="ElementShortName">[43]</obj_property>
+                  <obj_property name="ObjectShortName">[43]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/core_tb/NOC_MASER/noc_in_data[42]">
+                  <obj_property name="ElementShortName">[42]</obj_property>
+                  <obj_property name="ObjectShortName">[42]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/core_tb/NOC_MASER/noc_in_data[41]">
+                  <obj_property name="ElementShortName">[41]</obj_property>
+                  <obj_property name="ObjectShortName">[41]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/core_tb/NOC_MASER/noc_in_data[40]">
+                  <obj_property name="ElementShortName">[40]</obj_property>
+                  <obj_property name="ObjectShortName">[40]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/core_tb/NOC_MASER/noc_in_data[39]">
+                  <obj_property name="ElementShortName">[39]</obj_property>
+                  <obj_property name="ObjectShortName">[39]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/core_tb/NOC_MASER/noc_in_data[38]">
+                  <obj_property name="ElementShortName">[38]</obj_property>
+                  <obj_property name="ObjectShortName">[38]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/core_tb/NOC_MASER/noc_in_data[37]">
+                  <obj_property name="ElementShortName">[37]</obj_property>
+                  <obj_property name="ObjectShortName">[37]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/core_tb/NOC_MASER/noc_in_data[36]">
+                  <obj_property name="ElementShortName">[36]</obj_property>
+                  <obj_property name="ObjectShortName">[36]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/core_tb/NOC_MASER/noc_in_data[35]">
+                  <obj_property name="ElementShortName">[35]</obj_property>
+                  <obj_property name="ObjectShortName">[35]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/core_tb/NOC_MASER/noc_in_data[34]">
+                  <obj_property name="ElementShortName">[34]</obj_property>
+                  <obj_property name="ObjectShortName">[34]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/core_tb/NOC_MASER/noc_in_data[33]">
+                  <obj_property name="ElementShortName">[33]</obj_property>
+                  <obj_property name="ObjectShortName">[33]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/core_tb/NOC_MASER/noc_in_data[32]">
+                  <obj_property name="ElementShortName">[32]</obj_property>
+                  <obj_property name="ObjectShortName">[32]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/core_tb/NOC_MASER/noc_in_data[31]">
+                  <obj_property name="ElementShortName">[31]</obj_property>
+                  <obj_property name="ObjectShortName">[31]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/core_tb/NOC_MASER/noc_in_data[30]">
+                  <obj_property name="ElementShortName">[30]</obj_property>
+                  <obj_property name="ObjectShortName">[30]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/core_tb/NOC_MASER/noc_in_data[29]">
+                  <obj_property name="ElementShortName">[29]</obj_property>
+                  <obj_property name="ObjectShortName">[29]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/core_tb/NOC_MASER/noc_in_data[28]">
+                  <obj_property name="ElementShortName">[28]</obj_property>
+                  <obj_property name="ObjectShortName">[28]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/core_tb/NOC_MASER/noc_in_data[27]">
+                  <obj_property name="ElementShortName">[27]</obj_property>
+                  <obj_property name="ObjectShortName">[27]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/core_tb/NOC_MASER/noc_in_data[26]">
+                  <obj_property name="ElementShortName">[26]</obj_property>
+                  <obj_property name="ObjectShortName">[26]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/core_tb/NOC_MASER/noc_in_data[25]">
+                  <obj_property name="ElementShortName">[25]</obj_property>
+                  <obj_property name="ObjectShortName">[25]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/core_tb/NOC_MASER/noc_in_data[24]">
+                  <obj_property name="ElementShortName">[24]</obj_property>
+                  <obj_property name="ObjectShortName">[24]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/core_tb/NOC_MASER/noc_in_data[23]">
+                  <obj_property name="ElementShortName">[23]</obj_property>
+                  <obj_property name="ObjectShortName">[23]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/core_tb/NOC_MASER/noc_in_data[22]">
+                  <obj_property name="ElementShortName">[22]</obj_property>
+                  <obj_property name="ObjectShortName">[22]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/core_tb/NOC_MASER/noc_in_data[21]">
+                  <obj_property name="ElementShortName">[21]</obj_property>
+                  <obj_property name="ObjectShortName">[21]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/core_tb/NOC_MASER/noc_in_data[20]">
+                  <obj_property name="ElementShortName">[20]</obj_property>
+                  <obj_property name="ObjectShortName">[20]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/core_tb/NOC_MASER/noc_in_data[19]">
+                  <obj_property name="ElementShortName">[19]</obj_property>
+                  <obj_property name="ObjectShortName">[19]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/core_tb/NOC_MASER/noc_in_data[18]">
+                  <obj_property name="ElementShortName">[18]</obj_property>
+                  <obj_property name="ObjectShortName">[18]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/core_tb/NOC_MASER/noc_in_data[17]">
+                  <obj_property name="ElementShortName">[17]</obj_property>
+                  <obj_property name="ObjectShortName">[17]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/core_tb/NOC_MASER/noc_in_data[16]">
+                  <obj_property name="ElementShortName">[16]</obj_property>
+                  <obj_property name="ObjectShortName">[16]</obj_property>
+               </wvobject>
+            </wvobject>
+            <wvobject type="vbus" fp_name="vbus7091">
+               <obj_property name="label">OPTIONS2</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <wvobject type="logic" fp_name="/core_tb/NOC_MASER/noc_in_data[15]">
+                  <obj_property name="ElementShortName">[15]</obj_property>
+                  <obj_property name="ObjectShortName">[15]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/core_tb/NOC_MASER/noc_in_data[14]">
+                  <obj_property name="ElementShortName">[14]</obj_property>
+                  <obj_property name="ObjectShortName">[14]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/core_tb/NOC_MASER/noc_in_data[13]">
+                  <obj_property name="ElementShortName">[13]</obj_property>
+                  <obj_property name="ObjectShortName">[13]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/core_tb/NOC_MASER/noc_in_data[12]">
+                  <obj_property name="ElementShortName">[12]</obj_property>
+                  <obj_property name="ObjectShortName">[12]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/core_tb/NOC_MASER/noc_in_data[11]">
+                  <obj_property name="ElementShortName">[11]</obj_property>
+                  <obj_property name="ObjectShortName">[11]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/core_tb/NOC_MASER/noc_in_data[10]">
+                  <obj_property name="ElementShortName">[10]</obj_property>
+                  <obj_property name="ObjectShortName">[10]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/core_tb/NOC_MASER/noc_in_data[9]">
+                  <obj_property name="ElementShortName">[9]</obj_property>
+                  <obj_property name="ObjectShortName">[9]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/core_tb/NOC_MASER/noc_in_data[8]">
+                  <obj_property name="ElementShortName">[8]</obj_property>
+                  <obj_property name="ObjectShortName">[8]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/core_tb/NOC_MASER/noc_in_data[7]">
+                  <obj_property name="ElementShortName">[7]</obj_property>
+                  <obj_property name="ObjectShortName">[7]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/core_tb/NOC_MASER/noc_in_data[6]">
+                  <obj_property name="ElementShortName">[6]</obj_property>
+                  <obj_property name="ObjectShortName">[6]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/core_tb/NOC_MASER/noc_in_data[5]">
+                  <obj_property name="ElementShortName">[5]</obj_property>
+                  <obj_property name="ObjectShortName">[5]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/core_tb/NOC_MASER/noc_in_data[4]">
+                  <obj_property name="ElementShortName">[4]</obj_property>
+                  <obj_property name="ObjectShortName">[4]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/core_tb/NOC_MASER/noc_in_data[3]">
+                  <obj_property name="ElementShortName">[3]</obj_property>
+                  <obj_property name="ObjectShortName">[3]</obj_property>
+               </wvobject>
+            </wvobject>
+            <wvobject type="vbus" fp_name="vbus7092">
+               <obj_property name="label">Last Byte Count</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <wvobject type="logic" fp_name="/core_tb/NOC_MASER/noc_in_data[2]">
+                  <obj_property name="ElementShortName">[2]</obj_property>
+                  <obj_property name="ObjectShortName">[2]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/core_tb/NOC_MASER/noc_in_data[1]">
+                  <obj_property name="ElementShortName">[1]</obj_property>
+                  <obj_property name="ObjectShortName">[1]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/core_tb/NOC_MASER/noc_in_data[0]">
+                  <obj_property name="ElementShortName">[0]</obj_property>
+                  <obj_property name="ObjectShortName">[0]</obj_property>
+               </wvobject>
+            </wvobject>
+         </wvobject>
+         <wvobject type="group" fp_name="group6821">
+            <obj_property name="label">Flit 3</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject type="vbus" fp_name="vbus7093">
+               <obj_property name="label">SRC CHIPID</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <wvobject type="logic" fp_name="/core_tb/NOC_MASER/noc_in_data[63]">
+                  <obj_property name="ElementShortName">[63]</obj_property>
+                  <obj_property name="ObjectShortName">[63]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/core_tb/NOC_MASER/noc_in_data[62]">
+                  <obj_property name="ElementShortName">[62]</obj_property>
+                  <obj_property name="ObjectShortName">[62]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/core_tb/NOC_MASER/noc_in_data[61]">
+                  <obj_property name="ElementShortName">[61]</obj_property>
+                  <obj_property name="ObjectShortName">[61]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/core_tb/NOC_MASER/noc_in_data[60]">
+                  <obj_property name="ElementShortName">[60]</obj_property>
+                  <obj_property name="ObjectShortName">[60]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/core_tb/NOC_MASER/noc_in_data[59]">
+                  <obj_property name="ElementShortName">[59]</obj_property>
+                  <obj_property name="ObjectShortName">[59]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/core_tb/NOC_MASER/noc_in_data[58]">
+                  <obj_property name="ElementShortName">[58]</obj_property>
+                  <obj_property name="ObjectShortName">[58]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/core_tb/NOC_MASER/noc_in_data[57]">
+                  <obj_property name="ElementShortName">[57]</obj_property>
+                  <obj_property name="ObjectShortName">[57]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/core_tb/NOC_MASER/noc_in_data[56]">
+                  <obj_property name="ElementShortName">[56]</obj_property>
+                  <obj_property name="ObjectShortName">[56]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/core_tb/NOC_MASER/noc_in_data[55]">
+                  <obj_property name="ElementShortName">[55]</obj_property>
+                  <obj_property name="ObjectShortName">[55]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/core_tb/NOC_MASER/noc_in_data[54]">
+                  <obj_property name="ElementShortName">[54]</obj_property>
+                  <obj_property name="ObjectShortName">[54]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/core_tb/NOC_MASER/noc_in_data[53]">
+                  <obj_property name="ElementShortName">[53]</obj_property>
+                  <obj_property name="ObjectShortName">[53]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/core_tb/NOC_MASER/noc_in_data[52]">
+                  <obj_property name="ElementShortName">[52]</obj_property>
+                  <obj_property name="ObjectShortName">[52]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/core_tb/NOC_MASER/noc_in_data[51]">
+                  <obj_property name="ElementShortName">[51]</obj_property>
+                  <obj_property name="ObjectShortName">[51]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/core_tb/NOC_MASER/noc_in_data[50]">
+                  <obj_property name="ElementShortName">[50]</obj_property>
+                  <obj_property name="ObjectShortName">[50]</obj_property>
+               </wvobject>
+            </wvobject>
+            <wvobject type="vbus" fp_name="vbus7094">
+               <obj_property name="label">SRC XPOS</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <wvobject type="logic" fp_name="/core_tb/NOC_MASER/noc_in_data[49]">
+                  <obj_property name="ElementShortName">[49]</obj_property>
+                  <obj_property name="ObjectShortName">[49]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/core_tb/NOC_MASER/noc_in_data[48]">
+                  <obj_property name="ElementShortName">[48]</obj_property>
+                  <obj_property name="ObjectShortName">[48]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/core_tb/NOC_MASER/noc_in_data[47]">
+                  <obj_property name="ElementShortName">[47]</obj_property>
+                  <obj_property name="ObjectShortName">[47]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/core_tb/NOC_MASER/noc_in_data[46]">
+                  <obj_property name="ElementShortName">[46]</obj_property>
+                  <obj_property name="ObjectShortName">[46]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/core_tb/NOC_MASER/noc_in_data[45]">
+                  <obj_property name="ElementShortName">[45]</obj_property>
+                  <obj_property name="ObjectShortName">[45]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/core_tb/NOC_MASER/noc_in_data[44]">
+                  <obj_property name="ElementShortName">[44]</obj_property>
+                  <obj_property name="ObjectShortName">[44]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/core_tb/NOC_MASER/noc_in_data[43]">
+                  <obj_property name="ElementShortName">[43]</obj_property>
+                  <obj_property name="ObjectShortName">[43]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/core_tb/NOC_MASER/noc_in_data[42]">
+                  <obj_property name="ElementShortName">[42]</obj_property>
+                  <obj_property name="ObjectShortName">[42]</obj_property>
+               </wvobject>
+            </wvobject>
+            <wvobject type="vbus" fp_name="vbus7095">
+               <obj_property name="label">SRC YPOS</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <wvobject type="logic" fp_name="/core_tb/NOC_MASER/noc_in_data[41]">
+                  <obj_property name="ElementShortName">[41]</obj_property>
+                  <obj_property name="ObjectShortName">[41]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/core_tb/NOC_MASER/noc_in_data[40]">
+                  <obj_property name="ElementShortName">[40]</obj_property>
+                  <obj_property name="ObjectShortName">[40]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/core_tb/NOC_MASER/noc_in_data[39]">
+                  <obj_property name="ElementShortName">[39]</obj_property>
+                  <obj_property name="ObjectShortName">[39]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/core_tb/NOC_MASER/noc_in_data[38]">
+                  <obj_property name="ElementShortName">[38]</obj_property>
+                  <obj_property name="ObjectShortName">[38]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/core_tb/NOC_MASER/noc_in_data[37]">
+                  <obj_property name="ElementShortName">[37]</obj_property>
+                  <obj_property name="ObjectShortName">[37]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/core_tb/NOC_MASER/noc_in_data[36]">
+                  <obj_property name="ElementShortName">[36]</obj_property>
+                  <obj_property name="ObjectShortName">[36]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/core_tb/NOC_MASER/noc_in_data[35]">
+                  <obj_property name="ElementShortName">[35]</obj_property>
+                  <obj_property name="ObjectShortName">[35]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/core_tb/NOC_MASER/noc_in_data[34]">
+                  <obj_property name="ElementShortName">[34]</obj_property>
+                  <obj_property name="ObjectShortName">[34]</obj_property>
+               </wvobject>
+            </wvobject>
+            <wvobject type="vbus" fp_name="vbus7096">
+               <obj_property name="label">SRC FBITS</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <wvobject type="logic" fp_name="/core_tb/NOC_MASER/noc_in_data[33]">
+                  <obj_property name="ElementShortName">[33]</obj_property>
+                  <obj_property name="ObjectShortName">[33]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/core_tb/NOC_MASER/noc_in_data[32]">
+                  <obj_property name="ElementShortName">[32]</obj_property>
+                  <obj_property name="ObjectShortName">[32]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/core_tb/NOC_MASER/noc_in_data[31]">
+                  <obj_property name="ElementShortName">[31]</obj_property>
+                  <obj_property name="ObjectShortName">[31]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/core_tb/NOC_MASER/noc_in_data[30]">
+                  <obj_property name="ElementShortName">[30]</obj_property>
+                  <obj_property name="ObjectShortName">[30]</obj_property>
+               </wvobject>
+            </wvobject>
+            <wvobject type="vbus" fp_name="vbus7097">
+               <obj_property name="label">Reserved</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <wvobject type="logic" fp_name="/core_tb/NOC_MASER/noc_in_data[29]">
+                  <obj_property name="ElementShortName">[29]</obj_property>
+                  <obj_property name="ObjectShortName">[29]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/core_tb/NOC_MASER/noc_in_data[28]">
+                  <obj_property name="ElementShortName">[28]</obj_property>
+                  <obj_property name="ObjectShortName">[28]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/core_tb/NOC_MASER/noc_in_data[27]">
+                  <obj_property name="ElementShortName">[27]</obj_property>
+                  <obj_property name="ObjectShortName">[27]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/core_tb/NOC_MASER/noc_in_data[26]">
+                  <obj_property name="ElementShortName">[26]</obj_property>
+                  <obj_property name="ObjectShortName">[26]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/core_tb/NOC_MASER/noc_in_data[25]">
+                  <obj_property name="ElementShortName">[25]</obj_property>
+                  <obj_property name="ObjectShortName">[25]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/core_tb/NOC_MASER/noc_in_data[24]">
+                  <obj_property name="ElementShortName">[24]</obj_property>
+                  <obj_property name="ObjectShortName">[24]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/core_tb/NOC_MASER/noc_in_data[23]">
+                  <obj_property name="ElementShortName">[23]</obj_property>
+                  <obj_property name="ObjectShortName">[23]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/core_tb/NOC_MASER/noc_in_data[22]">
+                  <obj_property name="ElementShortName">[22]</obj_property>
+                  <obj_property name="ObjectShortName">[22]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/core_tb/NOC_MASER/noc_in_data[21]">
+                  <obj_property name="ElementShortName">[21]</obj_property>
+                  <obj_property name="ObjectShortName">[21]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/core_tb/NOC_MASER/noc_in_data[20]">
+                  <obj_property name="ElementShortName">[20]</obj_property>
+                  <obj_property name="ObjectShortName">[20]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/core_tb/NOC_MASER/noc_in_data[19]">
+                  <obj_property name="ElementShortName">[19]</obj_property>
+                  <obj_property name="ObjectShortName">[19]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/core_tb/NOC_MASER/noc_in_data[18]">
+                  <obj_property name="ElementShortName">[18]</obj_property>
+                  <obj_property name="ObjectShortName">[18]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/core_tb/NOC_MASER/noc_in_data[17]">
+                  <obj_property name="ElementShortName">[17]</obj_property>
+                  <obj_property name="ObjectShortName">[17]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/core_tb/NOC_MASER/noc_in_data[16]">
+                  <obj_property name="ElementShortName">[16]</obj_property>
+                  <obj_property name="ObjectShortName">[16]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/core_tb/NOC_MASER/noc_in_data[15]">
+                  <obj_property name="ElementShortName">[15]</obj_property>
+                  <obj_property name="ObjectShortName">[15]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/core_tb/NOC_MASER/noc_in_data[14]">
+                  <obj_property name="ElementShortName">[14]</obj_property>
+                  <obj_property name="ObjectShortName">[14]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/core_tb/NOC_MASER/noc_in_data[13]">
+                  <obj_property name="ElementShortName">[13]</obj_property>
+                  <obj_property name="ObjectShortName">[13]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/core_tb/NOC_MASER/noc_in_data[12]">
+                  <obj_property name="ElementShortName">[12]</obj_property>
+                  <obj_property name="ObjectShortName">[12]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/core_tb/NOC_MASER/noc_in_data[11]">
+                  <obj_property name="ElementShortName">[11]</obj_property>
+                  <obj_property name="ObjectShortName">[11]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/core_tb/NOC_MASER/noc_in_data[10]">
+                  <obj_property name="ElementShortName">[10]</obj_property>
+                  <obj_property name="ObjectShortName">[10]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/core_tb/NOC_MASER/noc_in_data[9]">
+                  <obj_property name="ElementShortName">[9]</obj_property>
+                  <obj_property name="ObjectShortName">[9]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/core_tb/NOC_MASER/noc_in_data[8]">
+                  <obj_property name="ElementShortName">[8]</obj_property>
+                  <obj_property name="ObjectShortName">[8]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/core_tb/NOC_MASER/noc_in_data[7]">
+                  <obj_property name="ElementShortName">[7]</obj_property>
+                  <obj_property name="ObjectShortName">[7]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/core_tb/NOC_MASER/noc_in_data[6]">
+                  <obj_property name="ElementShortName">[6]</obj_property>
+                  <obj_property name="ObjectShortName">[6]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/core_tb/NOC_MASER/noc_in_data[5]">
+                  <obj_property name="ElementShortName">[5]</obj_property>
+                  <obj_property name="ObjectShortName">[5]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/core_tb/NOC_MASER/noc_in_data[4]">
+                  <obj_property name="ElementShortName">[4]</obj_property>
+                  <obj_property name="ObjectShortName">[4]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/core_tb/NOC_MASER/noc_in_data[3]">
+                  <obj_property name="ElementShortName">[3]</obj_property>
+                  <obj_property name="ObjectShortName">[3]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/core_tb/NOC_MASER/noc_in_data[2]">
+                  <obj_property name="ElementShortName">[2]</obj_property>
+                  <obj_property name="ObjectShortName">[2]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/core_tb/NOC_MASER/noc_in_data[1]">
+                  <obj_property name="ElementShortName">[1]</obj_property>
+                  <obj_property name="ObjectShortName">[1]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/core_tb/NOC_MASER/noc_in_data[0]">
+                  <obj_property name="ElementShortName">[0]</obj_property>
+                  <obj_property name="ObjectShortName">[0]</obj_property>
+               </wvobject>
+            </wvobject>
+         </wvobject>
+      </wvobject>
+      <wvobject type="group" fp_name="group6714">
+         <obj_property name="label">NOC IN</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <obj_property name="isExpanded"></obj_property>
+         <wvobject type="logic" fp_name="/core_tb/NOC_MASER/noc_out_rdy">
+            <obj_property name="ElementShortName">noc_out_rdy</obj_property>
+            <obj_property name="ObjectShortName">noc_out_rdy</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="/core_tb/NOC_MASER/noc_out_valid">
+            <obj_property name="ElementShortName">noc_out_valid</obj_property>
+            <obj_property name="ObjectShortName">noc_out_valid</obj_property>
+         </wvobject>
+         <wvobject type="array" fp_name="/core_tb/NOC_MASER/noc_out_data">
+            <obj_property name="ElementShortName">noc_out_data[63:0]</obj_property>
+            <obj_property name="ObjectShortName">noc_out_data[63:0]</obj_property>
+         </wvobject>
+      </wvobject>
+   </wvobject>
+   <wvobject type="group" fp_name="group6717">
+      <obj_property name="label">OX_CORE</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <wvobject type="logic" fp_name="/core_tb/OX_CORE_U1/OT1/N2TL/clk">
+         <obj_property name="ElementShortName">clk</obj_property>
+         <obj_property name="ObjectShortName">clk</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/core_tb/OX_CORE_U1/rst_">
+         <obj_property name="ElementShortName">rst_</obj_property>
+         <obj_property name="ObjectShortName">rst_</obj_property>
+      </wvobject>
+      <wvobject type="group" fp_name="group6718">
+         <obj_property name="label">NOC IN</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <obj_property name="isExpanded"></obj_property>
+         <wvobject type="logic" fp_name="/core_tb/OX_CORE_U1/noc_in_valid">
+            <obj_property name="ElementShortName">noc_in_valid</obj_property>
+            <obj_property name="ObjectShortName">noc_in_valid</obj_property>
+         </wvobject>
+         <wvobject type="array" fp_name="/core_tb/OX_CORE_U1/noc_in_data">
+            <obj_property name="ElementShortName">noc_in_data[63:0]</obj_property>
+            <obj_property name="ObjectShortName">noc_in_data[63:0]</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="/core_tb/OX_CORE_U1/noc_in_ready">
+            <obj_property name="ElementShortName">noc_in_ready</obj_property>
+            <obj_property name="ObjectShortName">noc_in_ready</obj_property>
+         </wvobject>
+      </wvobject>
+      <wvobject type="group" fp_name="group6719">
+         <obj_property name="label">NOC OUT</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <obj_property name="isExpanded"></obj_property>
+         <wvobject type="logic" fp_name="/core_tb/OX_CORE_U1/noc_out_ready">
+            <obj_property name="ElementShortName">noc_out_ready</obj_property>
+            <obj_property name="ObjectShortName">noc_out_ready</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="/core_tb/OX_CORE_U1/noc_out_valid">
+            <obj_property name="ElementShortName">noc_out_valid</obj_property>
+            <obj_property name="ObjectShortName">noc_out_valid</obj_property>
+         </wvobject>
+         <wvobject type="array" fp_name="/core_tb/OX_CORE_U1/noc_out_data">
+            <obj_property name="ElementShortName">noc_out_data[63:0]</obj_property>
+            <obj_property name="ObjectShortName">noc_out_data[63:0]</obj_property>
+         </wvobject>
+      </wvobject>
+      <wvobject type="group" fp_name="group6727">
+         <obj_property name="label">Internal</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <obj_property name="isExpanded"></obj_property>
+      </wvobject>
+      <wvobject type="group" fp_name="group6728">
+         <obj_property name="label">FMAC TX OUT</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <obj_property name="isExpanded"></obj_property>
+         <wvobject type="logic" fp_name="/core_tb/OX_CORE_U1/m2ox_tx_fifo_full">
+            <obj_property name="ElementShortName">m2ox_tx_fifo_full</obj_property>
+            <obj_property name="ObjectShortName">m2ox_tx_fifo_full</obj_property>
+         </wvobject>
+         <wvobject type="array" fp_name="/core_tb/OX_CORE_U1/m2ox_tx_fifo_wrused">
+            <obj_property name="ElementShortName">m2ox_tx_fifo_wrused[12:0]</obj_property>
+            <obj_property name="ObjectShortName">m2ox_tx_fifo_wrused[12:0]</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="/core_tb/OX_CORE_U1/ox2m_tx_we">
+            <obj_property name="ElementShortName">ox2m_tx_we</obj_property>
+            <obj_property name="ObjectShortName">ox2m_tx_we</obj_property>
+         </wvobject>
+         <wvobject type="array" fp_name="/core_tb/OX_CORE_U1/ox2m_tx_data">
+            <obj_property name="ElementShortName">ox2m_tx_data[255:0]</obj_property>
+            <obj_property name="ObjectShortName">ox2m_tx_data[255:0]</obj_property>
+         </wvobject>
+      </wvobject>
+      <wvobject type="group" fp_name="group6729">
+         <obj_property name="label">FMAC RX IN</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <obj_property name="isExpanded"></obj_property>
+         <wvobject type="array" fp_name="/core_tb/OX_CORE_U1/m2ox_rx_ipcs_data">
+            <obj_property name="ElementShortName">m2ox_rx_ipcs_data[63:0]</obj_property>
+            <obj_property name="ObjectShortName">m2ox_rx_ipcs_data[63:0]</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="/core_tb/OX_CORE_U1/m2ox_rx_ipcs_empty">
+            <obj_property name="ElementShortName">m2ox_rx_ipcs_empty</obj_property>
+            <obj_property name="ObjectShortName">m2ox_rx_ipcs_empty</obj_property>
+         </wvobject>
+         <wvobject type="array" fp_name="/core_tb/OX_CORE_U1/m2ox_rx_ipcs_usedword">
+            <obj_property name="ElementShortName">m2ox_rx_ipcs_usedword[6:0]</obj_property>
+            <obj_property name="ObjectShortName">m2ox_rx_ipcs_usedword[6:0]</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="/core_tb/OX_CORE_U1/ox2m_rx_ipcs_rden">
+            <obj_property name="ElementShortName">ox2m_rx_ipcs_rden</obj_property>
+            <obj_property name="ObjectShortName">ox2m_rx_ipcs_rden</obj_property>
+         </wvobject>
+         <wvobject type="array" fp_name="/core_tb/OX_CORE_U1/m2ox_rx_pkt_data">
+            <obj_property name="ElementShortName">m2ox_rx_pkt_data[255:0]</obj_property>
+            <obj_property name="ObjectShortName">m2ox_rx_pkt_data[255:0]</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="/core_tb/OX_CORE_U1/m2ox_rx_pkt_empty">
+            <obj_property name="ElementShortName">m2ox_rx_pkt_empty</obj_property>
+            <obj_property name="ObjectShortName">m2ox_rx_pkt_empty</obj_property>
+         </wvobject>
+         <wvobject type="array" fp_name="/core_tb/OX_CORE_U1/m2ox_rx_pkt_usedword">
+            <obj_property name="ElementShortName">m2ox_rx_pkt_usedword[6:0]</obj_property>
+            <obj_property name="ObjectShortName">m2ox_rx_pkt_usedword[6:0]</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="/core_tb/OX_CORE_U1/ox2m_rx_pkt_rden">
+            <obj_property name="ElementShortName">ox2m_rx_pkt_rden</obj_property>
+            <obj_property name="ObjectShortName">ox2m_rx_pkt_rden</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="/core_tb/OX_CORE_U1/ox2m_rx_pkt_rd_cycle">
+            <obj_property name="ElementShortName">ox2m_rx_pkt_rd_cycle</obj_property>
+            <obj_property name="ObjectShortName">ox2m_rx_pkt_rd_cycle</obj_property>
+         </wvobject>
+      </wvobject>
+   </wvobject>
+   <wvobject type="group" fp_name="group6746">
+      <obj_property name="label">NETE_MASTER</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <wvobject type="logic" fp_name="/core_tb/NETE_MASTER/clk">
+         <obj_property name="ElementShortName">clk</obj_property>
+         <obj_property name="ObjectShortName">clk</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/core_tb/NETE_MASTER/rst_">
+         <obj_property name="ElementShortName">rst_</obj_property>
+         <obj_property name="ObjectShortName">rst_</obj_property>
+      </wvobject>
+      <wvobject type="group" fp_name="group6758">
+         <obj_property name="label">FMAC TX IN</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <wvobject type="logic" fp_name="/core_tb/NETE_MASTER/ox2m_tx_we">
+            <obj_property name="ElementShortName">ox2m_tx_we</obj_property>
+            <obj_property name="ObjectShortName">ox2m_tx_we</obj_property>
+         </wvobject>
+         <wvobject type="array" fp_name="/core_tb/NETE_MASTER/ox2m_tx_data">
+            <obj_property name="ElementShortName">ox2m_tx_data[255:0]</obj_property>
+            <obj_property name="ObjectShortName">ox2m_tx_data[255:0]</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="/core_tb/NETE_MASTER/m2ox_tx_fifo_full">
+            <obj_property name="ElementShortName">m2ox_tx_fifo_full</obj_property>
+            <obj_property name="ObjectShortName">m2ox_tx_fifo_full</obj_property>
+         </wvobject>
+      </wvobject>
+      <wvobject type="group" fp_name="group6749">
+         <obj_property name="label">FMAC RX OUT</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <wvobject type="array" fp_name="/core_tb/NETE_MASTER/ipcs_data_out">
+            <obj_property name="ElementShortName">ipcs_data_out[63:0]</obj_property>
+            <obj_property name="ObjectShortName">ipcs_data_out[63:0]</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="/core_tb/NETE_MASTER/ipcs_rden">
+            <obj_property name="ElementShortName">ipcs_rden</obj_property>
+            <obj_property name="ObjectShortName">ipcs_rden</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="/core_tb/NETE_MASTER/ipcs_empty">
+            <obj_property name="ElementShortName">ipcs_empty</obj_property>
+            <obj_property name="ObjectShortName">ipcs_empty</obj_property>
+         </wvobject>
+         <wvobject type="array" fp_name="/core_tb/NETE_MASTER/ipcs_usedword">
+            <obj_property name="ElementShortName">ipcs_usedword[6:0]</obj_property>
+            <obj_property name="ObjectShortName">ipcs_usedword[6:0]</obj_property>
+         </wvobject>
+         <wvobject type="array" fp_name="/core_tb/NETE_MASTER/pkt_data_out">
+            <obj_property name="ElementShortName">pkt_data_out[255:0]</obj_property>
+            <obj_property name="ObjectShortName">pkt_data_out[255:0]</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="/core_tb/NETE_MASTER/pkt_rden">
+            <obj_property name="ElementShortName">pkt_rden</obj_property>
+            <obj_property name="ObjectShortName">pkt_rden</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="/core_tb/NETE_MASTER/pkt_empty">
+            <obj_property name="ElementShortName">pkt_empty</obj_property>
+            <obj_property name="ObjectShortName">pkt_empty</obj_property>
+         </wvobject>
+         <wvobject type="array" fp_name="/core_tb/NETE_MASTER/pkt_usedword">
+            <obj_property name="ElementShortName">pkt_usedword[6:0]</obj_property>
+            <obj_property name="ObjectShortName">pkt_usedword[6:0]</obj_property>
+         </wvobject>
+      </wvobject>
+      <wvobject fp_name="divider7363" type="divider">
+         <obj_property name="label">--------</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+      </wvobject>
+      <wvobject type="group" fp_name="group6763">
+         <obj_property name="label">AXIS OUT</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <wvobject type="logic" fp_name="/core_tb/NETE_MASTER/sfp_axis_tx_0_tready">
+            <obj_property name="ElementShortName">sfp_axis_tx_0_tready</obj_property>
+            <obj_property name="ObjectShortName">sfp_axis_tx_0_tready</obj_property>
+         </wvobject>
+         <wvobject type="array" fp_name="/core_tb/NETE_MASTER/sfp_axis_rx_0_tdata">
+            <obj_property name="ElementShortName">sfp_axis_rx_0_tdata[63:0]</obj_property>
+            <obj_property name="ObjectShortName">sfp_axis_rx_0_tdata[63:0]</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="/core_tb/NETE_MASTER/sfp_axis_rx_0_tvalid">
+            <obj_property name="ElementShortName">sfp_axis_rx_0_tvalid</obj_property>
+            <obj_property name="ObjectShortName">sfp_axis_rx_0_tvalid</obj_property>
+         </wvobject>
+         <wvobject type="array" fp_name="/core_tb/NETE_MASTER/sfp_axis_rx_0_tkeep">
+            <obj_property name="ElementShortName">sfp_axis_rx_0_tkeep[7:0]</obj_property>
+            <obj_property name="ObjectShortName">sfp_axis_rx_0_tkeep[7:0]</obj_property>
+         </wvobject>
+         <wvobject type="array" fp_name="/core_tb/NETE_MASTER/sfp_axis_rx_0_tDest">
+            <obj_property name="ElementShortName">sfp_axis_rx_0_tDest[3:0]</obj_property>
+            <obj_property name="ObjectShortName">sfp_axis_rx_0_tDest[3:0]</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="/core_tb/NETE_MASTER/sfp_axis_rx_0_tlast">
+            <obj_property name="ElementShortName">sfp_axis_rx_0_tlast</obj_property>
+            <obj_property name="ObjectShortName">sfp_axis_rx_0_tlast</obj_property>
+         </wvobject>
+      </wvobject>
+      <wvobject type="group" fp_name="group6764">
+         <obj_property name="label">AXIS IN</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <wvobject type="array" fp_name="/core_tb/NETE_MASTER/axi_in_data">
+            <obj_property name="ElementShortName">axi_in_data[63:0]</obj_property>
+            <obj_property name="ObjectShortName">axi_in_data[63:0]</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="/core_tb/NETE_MASTER/axi_in_valid">
+            <obj_property name="ElementShortName">axi_in_valid</obj_property>
+            <obj_property name="ObjectShortName">axi_in_valid</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="/core_tb/NETE_MASTER/axi_in_last">
+            <obj_property name="ElementShortName">axi_in_last</obj_property>
+            <obj_property name="ObjectShortName">axi_in_last</obj_property>
+         </wvobject>
+         <wvobject type="array" fp_name="/core_tb/NETE_MASTER/axi_in_keep">
+            <obj_property name="ElementShortName">axi_in_keep[7:0]</obj_property>
+            <obj_property name="ObjectShortName">axi_in_keep[7:0]</obj_property>
+         </wvobject>
+         <wvobject type="array" fp_name="/core_tb/NETE_MASTER/axi_in_dest">
+            <obj_property name="ElementShortName">axi_in_dest[3:0]</obj_property>
+            <obj_property name="ObjectShortName">axi_in_dest[3:0]</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="/core_tb/NETE_MASTER/axi_in_rdy">
+            <obj_property name="ElementShortName">axi_in_rdy</obj_property>
+            <obj_property name="ObjectShortName">axi_in_rdy</obj_property>
+         </wvobject>
+      </wvobject>
+   </wvobject>
+   <wvobject type="group" fp_name="group6777">
+      <obj_property name="label">ENDPOINT</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <wvobject type="group" fp_name="group6817">
+         <obj_property name="label">RX IN</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <obj_property name="isExpanded"></obj_property>
+         <wvobject type="logic" fp_name="/core_tb/endpoint/sfp_axis_rx_aclk_0">
+            <obj_property name="ElementShortName">sfp_axis_rx_aclk_0</obj_property>
+            <obj_property name="ObjectShortName">sfp_axis_rx_aclk_0</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="/core_tb/endpoint/sfp_axis_rx_aresetn_0">
+            <obj_property name="ElementShortName">sfp_axis_rx_aresetn_0</obj_property>
+            <obj_property name="ObjectShortName">sfp_axis_rx_aresetn_0</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="/core_tb/endpoint/sfp_axis_rx_0_tvalid">
+            <obj_property name="ElementShortName">sfp_axis_rx_0_tvalid</obj_property>
+            <obj_property name="ObjectShortName">sfp_axis_rx_0_tvalid</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="/core_tb/endpoint/sfp_axis_rx_0_tlast">
+            <obj_property name="ElementShortName">sfp_axis_rx_0_tlast</obj_property>
+            <obj_property name="ObjectShortName">sfp_axis_rx_0_tlast</obj_property>
+         </wvobject>
+         <wvobject type="array" fp_name="/core_tb/endpoint/sfp_axis_rx_0_tdata">
+            <obj_property name="ElementShortName">sfp_axis_rx_0_tdata[63:0]</obj_property>
+            <obj_property name="ObjectShortName">sfp_axis_rx_0_tdata[63:0]</obj_property>
+         </wvobject>
+         <wvobject type="group" fp_name="group5631">
+            <obj_property name="label">Flit 1</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject type="vbus" fp_name="vbus5635">
+               <obj_property name="label">DMAC</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <wvobject type="logic" fp_name="/core_tb/endpoint/sfp_axis_rx_0_tdata[47]">
+                  <obj_property name="ElementShortName">[47]</obj_property>
+                  <obj_property name="ObjectShortName">[47]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/core_tb/endpoint/sfp_axis_rx_0_tdata[46]">
+                  <obj_property name="ElementShortName">[46]</obj_property>
+                  <obj_property name="ObjectShortName">[46]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/core_tb/endpoint/sfp_axis_rx_0_tdata[45]">
+                  <obj_property name="ElementShortName">[45]</obj_property>
+                  <obj_property name="ObjectShortName">[45]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/core_tb/endpoint/sfp_axis_rx_0_tdata[44]">
+                  <obj_property name="ElementShortName">[44]</obj_property>
+                  <obj_property name="ObjectShortName">[44]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/core_tb/endpoint/sfp_axis_rx_0_tdata[43]">
+                  <obj_property name="ElementShortName">[43]</obj_property>
+                  <obj_property name="ObjectShortName">[43]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/core_tb/endpoint/sfp_axis_rx_0_tdata[42]">
+                  <obj_property name="ElementShortName">[42]</obj_property>
+                  <obj_property name="ObjectShortName">[42]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/core_tb/endpoint/sfp_axis_rx_0_tdata[41]">
+                  <obj_property name="ElementShortName">[41]</obj_property>
+                  <obj_property name="ObjectShortName">[41]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/core_tb/endpoint/sfp_axis_rx_0_tdata[40]">
+                  <obj_property name="ElementShortName">[40]</obj_property>
+                  <obj_property name="ObjectShortName">[40]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/core_tb/endpoint/sfp_axis_rx_0_tdata[39]">
+                  <obj_property name="ElementShortName">[39]</obj_property>
+                  <obj_property name="ObjectShortName">[39]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/core_tb/endpoint/sfp_axis_rx_0_tdata[38]">
+                  <obj_property name="ElementShortName">[38]</obj_property>
+                  <obj_property name="ObjectShortName">[38]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/core_tb/endpoint/sfp_axis_rx_0_tdata[37]">
+                  <obj_property name="ElementShortName">[37]</obj_property>
+                  <obj_property name="ObjectShortName">[37]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/core_tb/endpoint/sfp_axis_rx_0_tdata[36]">
+                  <obj_property name="ElementShortName">[36]</obj_property>
+                  <obj_property name="ObjectShortName">[36]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/core_tb/endpoint/sfp_axis_rx_0_tdata[35]">
+                  <obj_property name="ElementShortName">[35]</obj_property>
+                  <obj_property name="ObjectShortName">[35]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/core_tb/endpoint/sfp_axis_rx_0_tdata[34]">
+                  <obj_property name="ElementShortName">[34]</obj_property>
+                  <obj_property name="ObjectShortName">[34]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/core_tb/endpoint/sfp_axis_rx_0_tdata[33]">
+                  <obj_property name="ElementShortName">[33]</obj_property>
+                  <obj_property name="ObjectShortName">[33]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/core_tb/endpoint/sfp_axis_rx_0_tdata[32]">
+                  <obj_property name="ElementShortName">[32]</obj_property>
+                  <obj_property name="ObjectShortName">[32]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/core_tb/endpoint/sfp_axis_rx_0_tdata[31]">
+                  <obj_property name="ElementShortName">[31]</obj_property>
+                  <obj_property name="ObjectShortName">[31]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/core_tb/endpoint/sfp_axis_rx_0_tdata[30]">
+                  <obj_property name="ElementShortName">[30]</obj_property>
+                  <obj_property name="ObjectShortName">[30]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/core_tb/endpoint/sfp_axis_rx_0_tdata[29]">
+                  <obj_property name="ElementShortName">[29]</obj_property>
+                  <obj_property name="ObjectShortName">[29]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/core_tb/endpoint/sfp_axis_rx_0_tdata[28]">
+                  <obj_property name="ElementShortName">[28]</obj_property>
+                  <obj_property name="ObjectShortName">[28]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/core_tb/endpoint/sfp_axis_rx_0_tdata[27]">
+                  <obj_property name="ElementShortName">[27]</obj_property>
+                  <obj_property name="ObjectShortName">[27]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/core_tb/endpoint/sfp_axis_rx_0_tdata[26]">
+                  <obj_property name="ElementShortName">[26]</obj_property>
+                  <obj_property name="ObjectShortName">[26]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/core_tb/endpoint/sfp_axis_rx_0_tdata[25]">
+                  <obj_property name="ElementShortName">[25]</obj_property>
+                  <obj_property name="ObjectShortName">[25]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/core_tb/endpoint/sfp_axis_rx_0_tdata[24]">
+                  <obj_property name="ElementShortName">[24]</obj_property>
+                  <obj_property name="ObjectShortName">[24]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/core_tb/endpoint/sfp_axis_rx_0_tdata[23]">
+                  <obj_property name="ElementShortName">[23]</obj_property>
+                  <obj_property name="ObjectShortName">[23]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/core_tb/endpoint/sfp_axis_rx_0_tdata[22]">
+                  <obj_property name="ElementShortName">[22]</obj_property>
+                  <obj_property name="ObjectShortName">[22]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/core_tb/endpoint/sfp_axis_rx_0_tdata[21]">
+                  <obj_property name="ElementShortName">[21]</obj_property>
+                  <obj_property name="ObjectShortName">[21]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/core_tb/endpoint/sfp_axis_rx_0_tdata[20]">
+                  <obj_property name="ElementShortName">[20]</obj_property>
+                  <obj_property name="ObjectShortName">[20]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/core_tb/endpoint/sfp_axis_rx_0_tdata[19]">
+                  <obj_property name="ElementShortName">[19]</obj_property>
+                  <obj_property name="ObjectShortName">[19]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/core_tb/endpoint/sfp_axis_rx_0_tdata[18]">
+                  <obj_property name="ElementShortName">[18]</obj_property>
+                  <obj_property name="ObjectShortName">[18]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/core_tb/endpoint/sfp_axis_rx_0_tdata[17]">
+                  <obj_property name="ElementShortName">[17]</obj_property>
+                  <obj_property name="ObjectShortName">[17]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/core_tb/endpoint/sfp_axis_rx_0_tdata[16]">
+                  <obj_property name="ElementShortName">[16]</obj_property>
+                  <obj_property name="ObjectShortName">[16]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/core_tb/endpoint/sfp_axis_rx_0_tdata[15]">
+                  <obj_property name="ElementShortName">[15]</obj_property>
+                  <obj_property name="ObjectShortName">[15]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/core_tb/endpoint/sfp_axis_rx_0_tdata[14]">
+                  <obj_property name="ElementShortName">[14]</obj_property>
+                  <obj_property name="ObjectShortName">[14]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/core_tb/endpoint/sfp_axis_rx_0_tdata[13]">
+                  <obj_property name="ElementShortName">[13]</obj_property>
+                  <obj_property name="ObjectShortName">[13]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/core_tb/endpoint/sfp_axis_rx_0_tdata[12]">
+                  <obj_property name="ElementShortName">[12]</obj_property>
+                  <obj_property name="ObjectShortName">[12]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/core_tb/endpoint/sfp_axis_rx_0_tdata[11]">
+                  <obj_property name="ElementShortName">[11]</obj_property>
+                  <obj_property name="ObjectShortName">[11]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/core_tb/endpoint/sfp_axis_rx_0_tdata[10]">
+                  <obj_property name="ElementShortName">[10]</obj_property>
+                  <obj_property name="ObjectShortName">[10]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/core_tb/endpoint/sfp_axis_rx_0_tdata[9]">
+                  <obj_property name="ElementShortName">[9]</obj_property>
+                  <obj_property name="ObjectShortName">[9]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/core_tb/endpoint/sfp_axis_rx_0_tdata[8]">
+                  <obj_property name="ElementShortName">[8]</obj_property>
+                  <obj_property name="ObjectShortName">[8]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/core_tb/endpoint/sfp_axis_rx_0_tdata[7]">
+                  <obj_property name="ElementShortName">[7]</obj_property>
+                  <obj_property name="ObjectShortName">[7]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/core_tb/endpoint/sfp_axis_rx_0_tdata[6]">
+                  <obj_property name="ElementShortName">[6]</obj_property>
+                  <obj_property name="ObjectShortName">[6]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/core_tb/endpoint/sfp_axis_rx_0_tdata[5]">
+                  <obj_property name="ElementShortName">[5]</obj_property>
+                  <obj_property name="ObjectShortName">[5]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/core_tb/endpoint/sfp_axis_rx_0_tdata[4]">
+                  <obj_property name="ElementShortName">[4]</obj_property>
+                  <obj_property name="ObjectShortName">[4]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/core_tb/endpoint/sfp_axis_rx_0_tdata[3]">
+                  <obj_property name="ElementShortName">[3]</obj_property>
+                  <obj_property name="ObjectShortName">[3]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/core_tb/endpoint/sfp_axis_rx_0_tdata[2]">
+                  <obj_property name="ElementShortName">[2]</obj_property>
+                  <obj_property name="ObjectShortName">[2]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/core_tb/endpoint/sfp_axis_rx_0_tdata[1]">
+                  <obj_property name="ElementShortName">[1]</obj_property>
+                  <obj_property name="ObjectShortName">[1]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/core_tb/endpoint/sfp_axis_rx_0_tdata[0]">
+                  <obj_property name="ElementShortName">[0]</obj_property>
+                  <obj_property name="ObjectShortName">[0]</obj_property>
+               </wvobject>
+            </wvobject>
+            <wvobject type="vbus" fp_name="vbus5636">
+               <obj_property name="label">SMAC A</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <wvobject type="logic" fp_name="/core_tb/endpoint/sfp_axis_rx_0_tdata[63]">
+                  <obj_property name="ElementShortName">[63]</obj_property>
+                  <obj_property name="ObjectShortName">[63]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/core_tb/endpoint/sfp_axis_rx_0_tdata[62]">
+                  <obj_property name="ElementShortName">[62]</obj_property>
+                  <obj_property name="ObjectShortName">[62]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/core_tb/endpoint/sfp_axis_rx_0_tdata[61]">
+                  <obj_property name="ElementShortName">[61]</obj_property>
+                  <obj_property name="ObjectShortName">[61]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/core_tb/endpoint/sfp_axis_rx_0_tdata[60]">
+                  <obj_property name="ElementShortName">[60]</obj_property>
+                  <obj_property name="ObjectShortName">[60]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/core_tb/endpoint/sfp_axis_rx_0_tdata[59]">
+                  <obj_property name="ElementShortName">[59]</obj_property>
+                  <obj_property name="ObjectShortName">[59]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/core_tb/endpoint/sfp_axis_rx_0_tdata[58]">
+                  <obj_property name="ElementShortName">[58]</obj_property>
+                  <obj_property name="ObjectShortName">[58]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/core_tb/endpoint/sfp_axis_rx_0_tdata[57]">
+                  <obj_property name="ElementShortName">[57]</obj_property>
+                  <obj_property name="ObjectShortName">[57]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/core_tb/endpoint/sfp_axis_rx_0_tdata[56]">
+                  <obj_property name="ElementShortName">[56]</obj_property>
+                  <obj_property name="ObjectShortName">[56]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/core_tb/endpoint/sfp_axis_rx_0_tdata[55]">
+                  <obj_property name="ElementShortName">[55]</obj_property>
+                  <obj_property name="ObjectShortName">[55]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/core_tb/endpoint/sfp_axis_rx_0_tdata[54]">
+                  <obj_property name="ElementShortName">[54]</obj_property>
+                  <obj_property name="ObjectShortName">[54]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/core_tb/endpoint/sfp_axis_rx_0_tdata[53]">
+                  <obj_property name="ElementShortName">[53]</obj_property>
+                  <obj_property name="ObjectShortName">[53]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/core_tb/endpoint/sfp_axis_rx_0_tdata[52]">
+                  <obj_property name="ElementShortName">[52]</obj_property>
+                  <obj_property name="ObjectShortName">[52]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/core_tb/endpoint/sfp_axis_rx_0_tdata[51]">
+                  <obj_property name="ElementShortName">[51]</obj_property>
+                  <obj_property name="ObjectShortName">[51]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/core_tb/endpoint/sfp_axis_rx_0_tdata[50]">
+                  <obj_property name="ElementShortName">[50]</obj_property>
+                  <obj_property name="ObjectShortName">[50]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/core_tb/endpoint/sfp_axis_rx_0_tdata[49]">
+                  <obj_property name="ElementShortName">[49]</obj_property>
+                  <obj_property name="ObjectShortName">[49]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/core_tb/endpoint/sfp_axis_rx_0_tdata[48]">
+                  <obj_property name="ElementShortName">[48]</obj_property>
+                  <obj_property name="ObjectShortName">[48]</obj_property>
+               </wvobject>
+            </wvobject>
+         </wvobject>
+         <wvobject type="group" fp_name="group5632">
+            <obj_property name="label">Flit 2</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject type="vbus" fp_name="vbus5767">
+               <obj_property name="label">SMAC B</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <wvobject type="logic" fp_name="/core_tb/endpoint/sfp_axis_rx_0_tdata[31]">
+                  <obj_property name="ElementShortName">[31]</obj_property>
+                  <obj_property name="ObjectShortName">[31]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/core_tb/endpoint/sfp_axis_rx_0_tdata[30]">
+                  <obj_property name="ElementShortName">[30]</obj_property>
+                  <obj_property name="ObjectShortName">[30]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/core_tb/endpoint/sfp_axis_rx_0_tdata[29]">
+                  <obj_property name="ElementShortName">[29]</obj_property>
+                  <obj_property name="ObjectShortName">[29]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/core_tb/endpoint/sfp_axis_rx_0_tdata[28]">
+                  <obj_property name="ElementShortName">[28]</obj_property>
+                  <obj_property name="ObjectShortName">[28]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/core_tb/endpoint/sfp_axis_rx_0_tdata[27]">
+                  <obj_property name="ElementShortName">[27]</obj_property>
+                  <obj_property name="ObjectShortName">[27]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/core_tb/endpoint/sfp_axis_rx_0_tdata[26]">
+                  <obj_property name="ElementShortName">[26]</obj_property>
+                  <obj_property name="ObjectShortName">[26]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/core_tb/endpoint/sfp_axis_rx_0_tdata[25]">
+                  <obj_property name="ElementShortName">[25]</obj_property>
+                  <obj_property name="ObjectShortName">[25]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/core_tb/endpoint/sfp_axis_rx_0_tdata[24]">
+                  <obj_property name="ElementShortName">[24]</obj_property>
+                  <obj_property name="ObjectShortName">[24]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/core_tb/endpoint/sfp_axis_rx_0_tdata[23]">
+                  <obj_property name="ElementShortName">[23]</obj_property>
+                  <obj_property name="ObjectShortName">[23]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/core_tb/endpoint/sfp_axis_rx_0_tdata[22]">
+                  <obj_property name="ElementShortName">[22]</obj_property>
+                  <obj_property name="ObjectShortName">[22]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/core_tb/endpoint/sfp_axis_rx_0_tdata[21]">
+                  <obj_property name="ElementShortName">[21]</obj_property>
+                  <obj_property name="ObjectShortName">[21]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/core_tb/endpoint/sfp_axis_rx_0_tdata[20]">
+                  <obj_property name="ElementShortName">[20]</obj_property>
+                  <obj_property name="ObjectShortName">[20]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/core_tb/endpoint/sfp_axis_rx_0_tdata[19]">
+                  <obj_property name="ElementShortName">[19]</obj_property>
+                  <obj_property name="ObjectShortName">[19]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/core_tb/endpoint/sfp_axis_rx_0_tdata[18]">
+                  <obj_property name="ElementShortName">[18]</obj_property>
+                  <obj_property name="ObjectShortName">[18]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/core_tb/endpoint/sfp_axis_rx_0_tdata[17]">
+                  <obj_property name="ElementShortName">[17]</obj_property>
+                  <obj_property name="ObjectShortName">[17]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/core_tb/endpoint/sfp_axis_rx_0_tdata[16]">
+                  <obj_property name="ElementShortName">[16]</obj_property>
+                  <obj_property name="ObjectShortName">[16]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/core_tb/endpoint/sfp_axis_rx_0_tdata[15]">
+                  <obj_property name="ElementShortName">[15]</obj_property>
+                  <obj_property name="ObjectShortName">[15]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/core_tb/endpoint/sfp_axis_rx_0_tdata[14]">
+                  <obj_property name="ElementShortName">[14]</obj_property>
+                  <obj_property name="ObjectShortName">[14]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/core_tb/endpoint/sfp_axis_rx_0_tdata[13]">
+                  <obj_property name="ElementShortName">[13]</obj_property>
+                  <obj_property name="ObjectShortName">[13]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/core_tb/endpoint/sfp_axis_rx_0_tdata[12]">
+                  <obj_property name="ElementShortName">[12]</obj_property>
+                  <obj_property name="ObjectShortName">[12]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/core_tb/endpoint/sfp_axis_rx_0_tdata[11]">
+                  <obj_property name="ElementShortName">[11]</obj_property>
+                  <obj_property name="ObjectShortName">[11]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/core_tb/endpoint/sfp_axis_rx_0_tdata[10]">
+                  <obj_property name="ElementShortName">[10]</obj_property>
+                  <obj_property name="ObjectShortName">[10]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/core_tb/endpoint/sfp_axis_rx_0_tdata[9]">
+                  <obj_property name="ElementShortName">[9]</obj_property>
+                  <obj_property name="ObjectShortName">[9]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/core_tb/endpoint/sfp_axis_rx_0_tdata[8]">
+                  <obj_property name="ElementShortName">[8]</obj_property>
+                  <obj_property name="ObjectShortName">[8]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/core_tb/endpoint/sfp_axis_rx_0_tdata[7]">
+                  <obj_property name="ElementShortName">[7]</obj_property>
+                  <obj_property name="ObjectShortName">[7]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/core_tb/endpoint/sfp_axis_rx_0_tdata[6]">
+                  <obj_property name="ElementShortName">[6]</obj_property>
+                  <obj_property name="ObjectShortName">[6]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/core_tb/endpoint/sfp_axis_rx_0_tdata[5]">
+                  <obj_property name="ElementShortName">[5]</obj_property>
+                  <obj_property name="ObjectShortName">[5]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/core_tb/endpoint/sfp_axis_rx_0_tdata[4]">
+                  <obj_property name="ElementShortName">[4]</obj_property>
+                  <obj_property name="ObjectShortName">[4]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/core_tb/endpoint/sfp_axis_rx_0_tdata[3]">
+                  <obj_property name="ElementShortName">[3]</obj_property>
+                  <obj_property name="ObjectShortName">[3]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/core_tb/endpoint/sfp_axis_rx_0_tdata[2]">
+                  <obj_property name="ElementShortName">[2]</obj_property>
+                  <obj_property name="ObjectShortName">[2]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/core_tb/endpoint/sfp_axis_rx_0_tdata[1]">
+                  <obj_property name="ElementShortName">[1]</obj_property>
+                  <obj_property name="ObjectShortName">[1]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/core_tb/endpoint/sfp_axis_rx_0_tdata[0]">
+                  <obj_property name="ElementShortName">[0]</obj_property>
+                  <obj_property name="ObjectShortName">[0]</obj_property>
+               </wvobject>
+            </wvobject>
+            <wvobject type="vbus" fp_name="vbus5801">
+               <obj_property name="label">AAAA</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <wvobject type="logic" fp_name="/core_tb/endpoint/sfp_axis_rx_0_tdata[47]">
+                  <obj_property name="ElementShortName">[47]</obj_property>
+                  <obj_property name="ObjectShortName">[47]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/core_tb/endpoint/sfp_axis_rx_0_tdata[46]">
+                  <obj_property name="ElementShortName">[46]</obj_property>
+                  <obj_property name="ObjectShortName">[46]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/core_tb/endpoint/sfp_axis_rx_0_tdata[45]">
+                  <obj_property name="ElementShortName">[45]</obj_property>
+                  <obj_property name="ObjectShortName">[45]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/core_tb/endpoint/sfp_axis_rx_0_tdata[44]">
+                  <obj_property name="ElementShortName">[44]</obj_property>
+                  <obj_property name="ObjectShortName">[44]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/core_tb/endpoint/sfp_axis_rx_0_tdata[43]">
+                  <obj_property name="ElementShortName">[43]</obj_property>
+                  <obj_property name="ObjectShortName">[43]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/core_tb/endpoint/sfp_axis_rx_0_tdata[42]">
+                  <obj_property name="ElementShortName">[42]</obj_property>
+                  <obj_property name="ObjectShortName">[42]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/core_tb/endpoint/sfp_axis_rx_0_tdata[41]">
+                  <obj_property name="ElementShortName">[41]</obj_property>
+                  <obj_property name="ObjectShortName">[41]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/core_tb/endpoint/sfp_axis_rx_0_tdata[40]">
+                  <obj_property name="ElementShortName">[40]</obj_property>
+                  <obj_property name="ObjectShortName">[40]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/core_tb/endpoint/sfp_axis_rx_0_tdata[39]">
+                  <obj_property name="ElementShortName">[39]</obj_property>
+                  <obj_property name="ObjectShortName">[39]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/core_tb/endpoint/sfp_axis_rx_0_tdata[38]">
+                  <obj_property name="ElementShortName">[38]</obj_property>
+                  <obj_property name="ObjectShortName">[38]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/core_tb/endpoint/sfp_axis_rx_0_tdata[37]">
+                  <obj_property name="ElementShortName">[37]</obj_property>
+                  <obj_property name="ObjectShortName">[37]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/core_tb/endpoint/sfp_axis_rx_0_tdata[36]">
+                  <obj_property name="ElementShortName">[36]</obj_property>
+                  <obj_property name="ObjectShortName">[36]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/core_tb/endpoint/sfp_axis_rx_0_tdata[35]">
+                  <obj_property name="ElementShortName">[35]</obj_property>
+                  <obj_property name="ObjectShortName">[35]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/core_tb/endpoint/sfp_axis_rx_0_tdata[34]">
+                  <obj_property name="ElementShortName">[34]</obj_property>
+                  <obj_property name="ObjectShortName">[34]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/core_tb/endpoint/sfp_axis_rx_0_tdata[33]">
+                  <obj_property name="ElementShortName">[33]</obj_property>
+                  <obj_property name="ObjectShortName">[33]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/core_tb/endpoint/sfp_axis_rx_0_tdata[32]">
+                  <obj_property name="ElementShortName">[32]</obj_property>
+                  <obj_property name="ObjectShortName">[32]</obj_property>
+               </wvobject>
+            </wvobject>
+            <wvobject type="group" fp_name="group5991">
+               <obj_property name="label">TLoE B6, B7</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <obj_property name="isExpanded"></obj_property>
+               <wvobject type="vbus" fp_name="vbus5906">
+                  <obj_property name="label">VC</obj_property>
+                  <obj_property name="DisplayName">label</obj_property>
+                  <wvobject type="logic" fp_name="/core_tb/endpoint/sfp_axis_rx_0_tdata[55]">
+                     <obj_property name="ElementShortName">[55]</obj_property>
+                     <obj_property name="ObjectShortName">[55]</obj_property>
+                  </wvobject>
+                  <wvobject type="logic" fp_name="/core_tb/endpoint/sfp_axis_rx_0_tdata[54]">
+                     <obj_property name="ElementShortName">[54]</obj_property>
+                     <obj_property name="ObjectShortName">[54]</obj_property>
+                  </wvobject>
+                  <wvobject type="logic" fp_name="/core_tb/endpoint/sfp_axis_rx_0_tdata[53]">
+                     <obj_property name="ElementShortName">[53]</obj_property>
+                     <obj_property name="ObjectShortName">[53]</obj_property>
+                  </wvobject>
+               </wvobject>
+               <wvobject type="vbus" fp_name="vbus5907">
+                  <obj_property name="label">Reserved</obj_property>
+                  <obj_property name="DisplayName">label</obj_property>
+                  <wvobject type="logic" fp_name="/core_tb/endpoint/sfp_axis_rx_0_tdata[52]">
+                     <obj_property name="ElementShortName">[52]</obj_property>
+                     <obj_property name="ObjectShortName">[52]</obj_property>
+                  </wvobject>
+                  <wvobject type="logic" fp_name="/core_tb/endpoint/sfp_axis_rx_0_tdata[51]">
+                     <obj_property name="ElementShortName">[51]</obj_property>
+                     <obj_property name="ObjectShortName">[51]</obj_property>
+                  </wvobject>
+                  <wvobject type="logic" fp_name="/core_tb/endpoint/sfp_axis_rx_0_tdata[50]">
+                     <obj_property name="ElementShortName">[50]</obj_property>
+                     <obj_property name="ObjectShortName">[50]</obj_property>
+                  </wvobject>
+                  <wvobject type="logic" fp_name="/core_tb/endpoint/sfp_axis_rx_0_tdata[49]">
+                     <obj_property name="ElementShortName">[49]</obj_property>
+                     <obj_property name="ObjectShortName">[49]</obj_property>
+                  </wvobject>
+                  <wvobject type="logic" fp_name="/core_tb/endpoint/sfp_axis_rx_0_tdata[48]">
+                     <obj_property name="ElementShortName">[48]</obj_property>
+                     <obj_property name="ObjectShortName">[48]</obj_property>
+                  </wvobject>
+                  <wvobject type="logic" fp_name="/core_tb/endpoint/sfp_axis_rx_0_tdata[63]">
+                     <obj_property name="ElementShortName">[63]</obj_property>
+                     <obj_property name="ObjectShortName">[63]</obj_property>
+                  </wvobject>
+                  <wvobject type="logic" fp_name="/core_tb/endpoint/sfp_axis_rx_0_tdata[62]">
+                     <obj_property name="ElementShortName">[62]</obj_property>
+                     <obj_property name="ObjectShortName">[62]</obj_property>
+                  </wvobject>
+               </wvobject>
+               <wvobject type="vbus" fp_name="vbus5908">
+                  <obj_property name="label">Seq #, High</obj_property>
+                  <obj_property name="DisplayName">label</obj_property>
+                  <wvobject type="logic" fp_name="/core_tb/endpoint/sfp_axis_rx_0_tdata[61]">
+                     <obj_property name="ElementShortName">[61]</obj_property>
+                     <obj_property name="ObjectShortName">[61]</obj_property>
+                  </wvobject>
+                  <wvobject type="logic" fp_name="/core_tb/endpoint/sfp_axis_rx_0_tdata[60]">
+                     <obj_property name="ElementShortName">[60]</obj_property>
+                     <obj_property name="ObjectShortName">[60]</obj_property>
+                  </wvobject>
+                  <wvobject type="logic" fp_name="/core_tb/endpoint/sfp_axis_rx_0_tdata[59]">
+                     <obj_property name="ElementShortName">[59]</obj_property>
+                     <obj_property name="ObjectShortName">[59]</obj_property>
+                  </wvobject>
+                  <wvobject type="logic" fp_name="/core_tb/endpoint/sfp_axis_rx_0_tdata[58]">
+                     <obj_property name="ElementShortName">[58]</obj_property>
+                     <obj_property name="ObjectShortName">[58]</obj_property>
+                  </wvobject>
+                  <wvobject type="logic" fp_name="/core_tb/endpoint/sfp_axis_rx_0_tdata[57]">
+                     <obj_property name="ElementShortName">[57]</obj_property>
+                     <obj_property name="ObjectShortName">[57]</obj_property>
+                  </wvobject>
+                  <wvobject type="logic" fp_name="/core_tb/endpoint/sfp_axis_rx_0_tdata[56]">
+                     <obj_property name="ElementShortName">[56]</obj_property>
+                     <obj_property name="ObjectShortName">[56]</obj_property>
+                  </wvobject>
+               </wvobject>
+            </wvobject>
+         </wvobject>
+         <wvobject type="group" fp_name="group5633">
+            <obj_property name="label">Flit 3</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject type="group" fp_name="group5992">
+               <obj_property name="label">TLoE B0-B5</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <obj_property name="isExpanded"></obj_property>
+               <wvobject type="vbus" fp_name="vbus5909">
+                  <obj_property name="label">Channel</obj_property>
+                  <obj_property name="DisplayName">label</obj_property>
+                  <wvobject type="logic" fp_name="/core_tb/endpoint/sfp_axis_rx_0_tdata[47]">
+                     <obj_property name="ElementShortName">[47]</obj_property>
+                     <obj_property name="ObjectShortName">[47]</obj_property>
+                  </wvobject>
+                  <wvobject type="logic" fp_name="/core_tb/endpoint/sfp_axis_rx_0_tdata[46]">
+                     <obj_property name="ElementShortName">[46]</obj_property>
+                     <obj_property name="ObjectShortName">[46]</obj_property>
+                  </wvobject>
+                  <wvobject type="logic" fp_name="/core_tb/endpoint/sfp_axis_rx_0_tdata[45]">
+                     <obj_property name="ElementShortName">[45]</obj_property>
+                     <obj_property name="ObjectShortName">[45]</obj_property>
+                  </wvobject>
+               </wvobject>
+               <wvobject type="vbus" fp_name="vbus5910">
+                  <obj_property name="label">Credit</obj_property>
+                  <obj_property name="DisplayName">label</obj_property>
+                  <wvobject type="logic" fp_name="/core_tb/endpoint/sfp_axis_rx_0_tdata[44]">
+                     <obj_property name="ElementShortName">[44]</obj_property>
+                     <obj_property name="ObjectShortName">[44]</obj_property>
+                  </wvobject>
+                  <wvobject type="logic" fp_name="/core_tb/endpoint/sfp_axis_rx_0_tdata[43]">
+                     <obj_property name="ElementShortName">[43]</obj_property>
+                     <obj_property name="ObjectShortName">[43]</obj_property>
+                  </wvobject>
+                  <wvobject type="logic" fp_name="/core_tb/endpoint/sfp_axis_rx_0_tdata[42]">
+                     <obj_property name="ElementShortName">[42]</obj_property>
+                     <obj_property name="ObjectShortName">[42]</obj_property>
+                  </wvobject>
+                  <wvobject type="logic" fp_name="/core_tb/endpoint/sfp_axis_rx_0_tdata[41]">
+                     <obj_property name="ElementShortName">[41]</obj_property>
+                     <obj_property name="ObjectShortName">[41]</obj_property>
+                  </wvobject>
+                  <wvobject type="logic" fp_name="/core_tb/endpoint/sfp_axis_rx_0_tdata[40]">
+                     <obj_property name="ElementShortName">[40]</obj_property>
+                     <obj_property name="ObjectShortName">[40]</obj_property>
+                  </wvobject>
+               </wvobject>
+               <wvobject type="vbus" fp_name="vbus5913">
+                  <obj_property name="label">Seq # Ack</obj_property>
+                  <obj_property name="DisplayName">label</obj_property>
+                  <wvobject type="logic" fp_name="/core_tb/endpoint/sfp_axis_rx_0_tdata[23]">
+                     <obj_property name="ElementShortName">[23]</obj_property>
+                     <obj_property name="ObjectShortName">[23]</obj_property>
+                  </wvobject>
+                  <wvobject type="logic" fp_name="/core_tb/endpoint/sfp_axis_rx_0_tdata[22]">
+                     <obj_property name="ElementShortName">[22]</obj_property>
+                     <obj_property name="ObjectShortName">[22]</obj_property>
+                  </wvobject>
+                  <wvobject type="logic" fp_name="/core_tb/endpoint/sfp_axis_rx_0_tdata[21]">
+                     <obj_property name="ElementShortName">[21]</obj_property>
+                     <obj_property name="ObjectShortName">[21]</obj_property>
+                  </wvobject>
+                  <wvobject type="logic" fp_name="/core_tb/endpoint/sfp_axis_rx_0_tdata[20]">
+                     <obj_property name="ElementShortName">[20]</obj_property>
+                     <obj_property name="ObjectShortName">[20]</obj_property>
+                  </wvobject>
+                  <wvobject type="logic" fp_name="/core_tb/endpoint/sfp_axis_rx_0_tdata[19]">
+                     <obj_property name="ElementShortName">[19]</obj_property>
+                     <obj_property name="ObjectShortName">[19]</obj_property>
+                  </wvobject>
+                  <wvobject type="logic" fp_name="/core_tb/endpoint/sfp_axis_rx_0_tdata[18]">
+                     <obj_property name="ElementShortName">[18]</obj_property>
+                     <obj_property name="ObjectShortName">[18]</obj_property>
+                  </wvobject>
+                  <wvobject type="logic" fp_name="/core_tb/endpoint/sfp_axis_rx_0_tdata[17]">
+                     <obj_property name="ElementShortName">[17]</obj_property>
+                     <obj_property name="ObjectShortName">[17]</obj_property>
+                  </wvobject>
+                  <wvobject type="logic" fp_name="/core_tb/endpoint/sfp_axis_rx_0_tdata[16]">
+                     <obj_property name="ElementShortName">[16]</obj_property>
+                     <obj_property name="ObjectShortName">[16]</obj_property>
+                  </wvobject>
+                  <wvobject type="logic" fp_name="/core_tb/endpoint/sfp_axis_rx_0_tdata[31]">
+                     <obj_property name="ElementShortName">[31]</obj_property>
+                     <obj_property name="ObjectShortName">[31]</obj_property>
+                  </wvobject>
+                  <wvobject type="logic" fp_name="/core_tb/endpoint/sfp_axis_rx_0_tdata[30]">
+                     <obj_property name="ElementShortName">[30]</obj_property>
+                     <obj_property name="ObjectShortName">[30]</obj_property>
+                  </wvobject>
+                  <wvobject type="logic" fp_name="/core_tb/endpoint/sfp_axis_rx_0_tdata[29]">
+                     <obj_property name="ElementShortName">[29]</obj_property>
+                     <obj_property name="ObjectShortName">[29]</obj_property>
+                  </wvobject>
+                  <wvobject type="logic" fp_name="/core_tb/endpoint/sfp_axis_rx_0_tdata[28]">
+                     <obj_property name="ElementShortName">[28]</obj_property>
+                     <obj_property name="ObjectShortName">[28]</obj_property>
+                  </wvobject>
+                  <wvobject type="logic" fp_name="/core_tb/endpoint/sfp_axis_rx_0_tdata[27]">
+                     <obj_property name="ElementShortName">[27]</obj_property>
+                     <obj_property name="ObjectShortName">[27]</obj_property>
+                  </wvobject>
+                  <wvobject type="logic" fp_name="/core_tb/endpoint/sfp_axis_rx_0_tdata[26]">
+                     <obj_property name="ElementShortName">[26]</obj_property>
+                     <obj_property name="ObjectShortName">[26]</obj_property>
+                  </wvobject>
+                  <wvobject type="logic" fp_name="/core_tb/endpoint/sfp_axis_rx_0_tdata[25]">
+                     <obj_property name="ElementShortName">[25]</obj_property>
+                     <obj_property name="ObjectShortName">[25]</obj_property>
+                  </wvobject>
+                  <wvobject type="logic" fp_name="/core_tb/endpoint/sfp_axis_rx_0_tdata[24]">
+                     <obj_property name="ElementShortName">[24]</obj_property>
+                     <obj_property name="ObjectShortName">[24]</obj_property>
+                  </wvobject>
+                  <wvobject type="logic" fp_name="/core_tb/endpoint/sfp_axis_rx_0_tdata[39]">
+                     <obj_property name="ElementShortName">[39]</obj_property>
+                     <obj_property name="ObjectShortName">[39]</obj_property>
+                  </wvobject>
+                  <wvobject type="logic" fp_name="/core_tb/endpoint/sfp_axis_rx_0_tdata[38]">
+                     <obj_property name="ElementShortName">[38]</obj_property>
+                     <obj_property name="ObjectShortName">[38]</obj_property>
+                  </wvobject>
+                  <wvobject type="logic" fp_name="/core_tb/endpoint/sfp_axis_rx_0_tdata[37]">
+                     <obj_property name="ElementShortName">[37]</obj_property>
+                     <obj_property name="ObjectShortName">[37]</obj_property>
+                  </wvobject>
+                  <wvobject type="logic" fp_name="/core_tb/endpoint/sfp_axis_rx_0_tdata[36]">
+                     <obj_property name="ElementShortName">[36]</obj_property>
+                     <obj_property name="ObjectShortName">[36]</obj_property>
+                  </wvobject>
+                  <wvobject type="logic" fp_name="/core_tb/endpoint/sfp_axis_rx_0_tdata[35]">
+                     <obj_property name="ElementShortName">[35]</obj_property>
+                     <obj_property name="ObjectShortName">[35]</obj_property>
+                  </wvobject>
+                  <wvobject type="logic" fp_name="/core_tb/endpoint/sfp_axis_rx_0_tdata[34]">
+                     <obj_property name="ElementShortName">[34]</obj_property>
+                     <obj_property name="ObjectShortName">[34]</obj_property>
+                  </wvobject>
+               </wvobject>
+               <wvobject type="vbus" fp_name="vbus5911">
+                  <obj_property name="label">Ack</obj_property>
+                  <obj_property name="DisplayName">label</obj_property>
+                  <wvobject type="logic" fp_name="/core_tb/endpoint/sfp_axis_rx_0_tdata[33]">
+                     <obj_property name="ElementShortName">[33]</obj_property>
+                     <obj_property name="ObjectShortName">[33]</obj_property>
+                  </wvobject>
+               </wvobject>
+               <wvobject type="vbus" fp_name="vbus5912">
+                  <obj_property name="label">Reserved</obj_property>
+                  <obj_property name="DisplayName">label</obj_property>
+                  <wvobject type="logic" fp_name="/core_tb/endpoint/sfp_axis_rx_0_tdata[32]">
+                     <obj_property name="ElementShortName">[32]</obj_property>
+                     <obj_property name="ObjectShortName">[32]</obj_property>
+                  </wvobject>
+               </wvobject>
+               <wvobject type="vbus" fp_name="vbus5914">
+                  <obj_property name="label">Seq # Low</obj_property>
+                  <obj_property name="DisplayName">label</obj_property>
+                  <wvobject type="logic" fp_name="/core_tb/endpoint/sfp_axis_rx_0_tdata[7]">
+                     <obj_property name="ElementShortName">[7]</obj_property>
+                     <obj_property name="ObjectShortName">[7]</obj_property>
+                  </wvobject>
+                  <wvobject type="logic" fp_name="/core_tb/endpoint/sfp_axis_rx_0_tdata[6]">
+                     <obj_property name="ElementShortName">[6]</obj_property>
+                     <obj_property name="ObjectShortName">[6]</obj_property>
+                  </wvobject>
+                  <wvobject type="logic" fp_name="/core_tb/endpoint/sfp_axis_rx_0_tdata[5]">
+                     <obj_property name="ElementShortName">[5]</obj_property>
+                     <obj_property name="ObjectShortName">[5]</obj_property>
+                  </wvobject>
+                  <wvobject type="logic" fp_name="/core_tb/endpoint/sfp_axis_rx_0_tdata[4]">
+                     <obj_property name="ElementShortName">[4]</obj_property>
+                     <obj_property name="ObjectShortName">[4]</obj_property>
+                  </wvobject>
+                  <wvobject type="logic" fp_name="/core_tb/endpoint/sfp_axis_rx_0_tdata[3]">
+                     <obj_property name="ElementShortName">[3]</obj_property>
+                     <obj_property name="ObjectShortName">[3]</obj_property>
+                  </wvobject>
+                  <wvobject type="logic" fp_name="/core_tb/endpoint/sfp_axis_rx_0_tdata[2]">
+                     <obj_property name="ElementShortName">[2]</obj_property>
+                     <obj_property name="ObjectShortName">[2]</obj_property>
+                  </wvobject>
+                  <wvobject type="logic" fp_name="/core_tb/endpoint/sfp_axis_rx_0_tdata[1]">
+                     <obj_property name="ElementShortName">[1]</obj_property>
+                     <obj_property name="ObjectShortName">[1]</obj_property>
+                  </wvobject>
+                  <wvobject type="logic" fp_name="/core_tb/endpoint/sfp_axis_rx_0_tdata[0]">
+                     <obj_property name="ElementShortName">[0]</obj_property>
+                     <obj_property name="ObjectShortName">[0]</obj_property>
+                  </wvobject>
+                  <wvobject type="logic" fp_name="/core_tb/endpoint/sfp_axis_rx_0_tdata[15]">
+                     <obj_property name="ElementShortName">[15]</obj_property>
+                     <obj_property name="ObjectShortName">[15]</obj_property>
+                  </wvobject>
+                  <wvobject type="logic" fp_name="/core_tb/endpoint/sfp_axis_rx_0_tdata[14]">
+                     <obj_property name="ElementShortName">[14]</obj_property>
+                     <obj_property name="ObjectShortName">[14]</obj_property>
+                  </wvobject>
+                  <wvobject type="logic" fp_name="/core_tb/endpoint/sfp_axis_rx_0_tdata[13]">
+                     <obj_property name="ElementShortName">[13]</obj_property>
+                     <obj_property name="ObjectShortName">[13]</obj_property>
+                  </wvobject>
+                  <wvobject type="logic" fp_name="/core_tb/endpoint/sfp_axis_rx_0_tdata[12]">
+                     <obj_property name="ElementShortName">[12]</obj_property>
+                     <obj_property name="ObjectShortName">[12]</obj_property>
+                  </wvobject>
+                  <wvobject type="logic" fp_name="/core_tb/endpoint/sfp_axis_rx_0_tdata[11]">
+                     <obj_property name="ElementShortName">[11]</obj_property>
+                     <obj_property name="ObjectShortName">[11]</obj_property>
+                  </wvobject>
+                  <wvobject type="logic" fp_name="/core_tb/endpoint/sfp_axis_rx_0_tdata[10]">
+                     <obj_property name="ElementShortName">[10]</obj_property>
+                     <obj_property name="ObjectShortName">[10]</obj_property>
+                  </wvobject>
+                  <wvobject type="logic" fp_name="/core_tb/endpoint/sfp_axis_rx_0_tdata[9]">
+                     <obj_property name="ElementShortName">[9]</obj_property>
+                     <obj_property name="ObjectShortName">[9]</obj_property>
+                  </wvobject>
+                  <wvobject type="logic" fp_name="/core_tb/endpoint/sfp_axis_rx_0_tdata[8]">
+                     <obj_property name="ElementShortName">[8]</obj_property>
+                     <obj_property name="ObjectShortName">[8]</obj_property>
+                  </wvobject>
+               </wvobject>
+            </wvobject>
+            <wvobject type="group" fp_name="group5993">
+               <obj_property name="label">TL0 B6, B7</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <obj_property name="isExpanded"></obj_property>
+               <wvobject type="vbus" fp_name="vbus5915">
+                  <obj_property name="label">Param</obj_property>
+                  <obj_property name="DisplayName">label</obj_property>
+                  <wvobject type="logic" fp_name="/core_tb/endpoint/sfp_axis_rx_0_tdata[63]">
+                     <obj_property name="ElementShortName">[63]</obj_property>
+                     <obj_property name="ObjectShortName">[63]</obj_property>
+                  </wvobject>
+                  <wvobject type="logic" fp_name="/core_tb/endpoint/sfp_axis_rx_0_tdata[62]">
+                     <obj_property name="ElementShortName">[62]</obj_property>
+                     <obj_property name="ObjectShortName">[62]</obj_property>
+                  </wvobject>
+                  <wvobject type="logic" fp_name="/core_tb/endpoint/sfp_axis_rx_0_tdata[61]">
+                     <obj_property name="ElementShortName">[61]</obj_property>
+                     <obj_property name="ObjectShortName">[61]</obj_property>
+                  </wvobject>
+                  <wvobject type="logic" fp_name="/core_tb/endpoint/sfp_axis_rx_0_tdata[60]">
+                     <obj_property name="ElementShortName">[60]</obj_property>
+                     <obj_property name="ObjectShortName">[60]</obj_property>
+                  </wvobject>
+               </wvobject>
+               <wvobject type="vbus" fp_name="vbus5916">
+                  <obj_property name="label">Size</obj_property>
+                  <obj_property name="DisplayName">label</obj_property>
+                  <wvobject type="logic" fp_name="/core_tb/endpoint/sfp_axis_rx_0_tdata[59]">
+                     <obj_property name="ElementShortName">[59]</obj_property>
+                     <obj_property name="ObjectShortName">[59]</obj_property>
+                  </wvobject>
+                  <wvobject type="logic" fp_name="/core_tb/endpoint/sfp_axis_rx_0_tdata[58]">
+                     <obj_property name="ElementShortName">[58]</obj_property>
+                     <obj_property name="ObjectShortName">[58]</obj_property>
+                  </wvobject>
+                  <wvobject type="logic" fp_name="/core_tb/endpoint/sfp_axis_rx_0_tdata[57]">
+                     <obj_property name="ElementShortName">[57]</obj_property>
+                     <obj_property name="ObjectShortName">[57]</obj_property>
+                  </wvobject>
+                  <wvobject type="logic" fp_name="/core_tb/endpoint/sfp_axis_rx_0_tdata[56]">
+                     <obj_property name="ElementShortName">[56]</obj_property>
+                     <obj_property name="ObjectShortName">[56]</obj_property>
+                  </wvobject>
+               </wvobject>
+               <wvobject type="vbus" fp_name="vbus5917">
+                  <obj_property name="label">Reserved</obj_property>
+                  <obj_property name="DisplayName">label</obj_property>
+                  <wvobject type="logic" fp_name="/core_tb/endpoint/sfp_axis_rx_0_tdata[55]">
+                     <obj_property name="ElementShortName">[55]</obj_property>
+                     <obj_property name="ObjectShortName">[55]</obj_property>
+                  </wvobject>
+               </wvobject>
+               <wvobject type="vbus" fp_name="vbus5919">
+                  <obj_property name="label">Channel</obj_property>
+                  <obj_property name="DisplayName">label</obj_property>
+                  <wvobject type="logic" fp_name="/core_tb/endpoint/sfp_axis_rx_0_tdata[54]">
+                     <obj_property name="ElementShortName">[54]</obj_property>
+                     <obj_property name="ObjectShortName">[54]</obj_property>
+                  </wvobject>
+                  <wvobject type="logic" fp_name="/core_tb/endpoint/sfp_axis_rx_0_tdata[53]">
+                     <obj_property name="ElementShortName">[53]</obj_property>
+                     <obj_property name="ObjectShortName">[53]</obj_property>
+                  </wvobject>
+                  <wvobject type="logic" fp_name="/core_tb/endpoint/sfp_axis_rx_0_tdata[52]">
+                     <obj_property name="ElementShortName">[52]</obj_property>
+                     <obj_property name="ObjectShortName">[52]</obj_property>
+                  </wvobject>
+               </wvobject>
+               <wvobject type="vbus" fp_name="vbus5920">
+                  <obj_property name="label">Opcode</obj_property>
+                  <obj_property name="DisplayName">label</obj_property>
+                  <wvobject type="logic" fp_name="/core_tb/endpoint/sfp_axis_rx_0_tdata[51]">
+                     <obj_property name="ElementShortName">[51]</obj_property>
+                     <obj_property name="ObjectShortName">[51]</obj_property>
+                  </wvobject>
+                  <wvobject type="logic" fp_name="/core_tb/endpoint/sfp_axis_rx_0_tdata[50]">
+                     <obj_property name="ElementShortName">[50]</obj_property>
+                     <obj_property name="ObjectShortName">[50]</obj_property>
+                  </wvobject>
+                  <wvobject type="logic" fp_name="/core_tb/endpoint/sfp_axis_rx_0_tdata[49]">
+                     <obj_property name="ElementShortName">[49]</obj_property>
+                     <obj_property name="ObjectShortName">[49]</obj_property>
+                  </wvobject>
+               </wvobject>
+               <wvobject type="vbus" fp_name="vbus5918">
+                  <obj_property name="label">Reserved</obj_property>
+                  <obj_property name="DisplayName">label</obj_property>
+                  <wvobject type="logic" fp_name="/core_tb/endpoint/sfp_axis_rx_0_tdata[48]">
+                     <obj_property name="ElementShortName">[48]</obj_property>
+                     <obj_property name="ObjectShortName">[48]</obj_property>
+                  </wvobject>
+               </wvobject>
+            </wvobject>
+         </wvobject>
+         <wvobject type="group" fp_name="group5634">
+            <obj_property name="label">Flit 4</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject type="vbus" fp_name="vbus5988">
+               <obj_property name="label">Addr High</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <wvobject type="logic" fp_name="/core_tb/endpoint/sfp_axis_rx_0_tdata[63]">
+                  <obj_property name="ElementShortName">[63]</obj_property>
+                  <obj_property name="ObjectShortName">[63]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/core_tb/endpoint/sfp_axis_rx_0_tdata[62]">
+                  <obj_property name="ElementShortName">[62]</obj_property>
+                  <obj_property name="ObjectShortName">[62]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/core_tb/endpoint/sfp_axis_rx_0_tdata[61]">
+                  <obj_property name="ElementShortName">[61]</obj_property>
+                  <obj_property name="ObjectShortName">[61]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/core_tb/endpoint/sfp_axis_rx_0_tdata[60]">
+                  <obj_property name="ElementShortName">[60]</obj_property>
+                  <obj_property name="ObjectShortName">[60]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/core_tb/endpoint/sfp_axis_rx_0_tdata[59]">
+                  <obj_property name="ElementShortName">[59]</obj_property>
+                  <obj_property name="ObjectShortName">[59]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/core_tb/endpoint/sfp_axis_rx_0_tdata[58]">
+                  <obj_property name="ElementShortName">[58]</obj_property>
+                  <obj_property name="ObjectShortName">[58]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/core_tb/endpoint/sfp_axis_rx_0_tdata[57]">
+                  <obj_property name="ElementShortName">[57]</obj_property>
+                  <obj_property name="ObjectShortName">[57]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/core_tb/endpoint/sfp_axis_rx_0_tdata[56]">
+                  <obj_property name="ElementShortName">[56]</obj_property>
+                  <obj_property name="ObjectShortName">[56]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/core_tb/endpoint/sfp_axis_rx_0_tdata[55]">
+                  <obj_property name="ElementShortName">[55]</obj_property>
+                  <obj_property name="ObjectShortName">[55]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/core_tb/endpoint/sfp_axis_rx_0_tdata[54]">
+                  <obj_property name="ElementShortName">[54]</obj_property>
+                  <obj_property name="ObjectShortName">[54]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/core_tb/endpoint/sfp_axis_rx_0_tdata[53]">
+                  <obj_property name="ElementShortName">[53]</obj_property>
+                  <obj_property name="ObjectShortName">[53]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/core_tb/endpoint/sfp_axis_rx_0_tdata[52]">
+                  <obj_property name="ElementShortName">[52]</obj_property>
+                  <obj_property name="ObjectShortName">[52]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/core_tb/endpoint/sfp_axis_rx_0_tdata[51]">
+                  <obj_property name="ElementShortName">[51]</obj_property>
+                  <obj_property name="ObjectShortName">[51]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/core_tb/endpoint/sfp_axis_rx_0_tdata[50]">
+                  <obj_property name="ElementShortName">[50]</obj_property>
+                  <obj_property name="ObjectShortName">[50]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/core_tb/endpoint/sfp_axis_rx_0_tdata[49]">
+                  <obj_property name="ElementShortName">[49]</obj_property>
+                  <obj_property name="ObjectShortName">[49]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/core_tb/endpoint/sfp_axis_rx_0_tdata[48]">
+                  <obj_property name="ElementShortName">[48]</obj_property>
+                  <obj_property name="ObjectShortName">[48]</obj_property>
+               </wvobject>
+            </wvobject>
+            <wvobject type="group" fp_name="group5994">
+               <obj_property name="label">TL0 B0-B5</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <obj_property name="isExpanded"></obj_property>
+               <wvobject type="vbus" fp_name="vbus5996">
+                  <obj_property name="label">Domain</obj_property>
+                  <obj_property name="DisplayName">label</obj_property>
+                  <wvobject type="logic" fp_name="/core_tb/endpoint/sfp_axis_rx_0_tdata[7]">
+                     <obj_property name="ElementShortName">[7]</obj_property>
+                     <obj_property name="ObjectShortName">[7]</obj_property>
+                  </wvobject>
+                  <wvobject type="logic" fp_name="/core_tb/endpoint/sfp_axis_rx_0_tdata[6]">
+                     <obj_property name="ElementShortName">[6]</obj_property>
+                     <obj_property name="ObjectShortName">[6]</obj_property>
+                  </wvobject>
+                  <wvobject type="logic" fp_name="/core_tb/endpoint/sfp_axis_rx_0_tdata[5]">
+                     <obj_property name="ElementShortName">[5]</obj_property>
+                     <obj_property name="ObjectShortName">[5]</obj_property>
+                  </wvobject>
+                  <wvobject type="logic" fp_name="/core_tb/endpoint/sfp_axis_rx_0_tdata[4]">
+                     <obj_property name="ElementShortName">[4]</obj_property>
+                     <obj_property name="ObjectShortName">[4]</obj_property>
+                  </wvobject>
+                  <wvobject type="logic" fp_name="/core_tb/endpoint/sfp_axis_rx_0_tdata[3]">
+                     <obj_property name="ElementShortName">[3]</obj_property>
+                     <obj_property name="ObjectShortName">[3]</obj_property>
+                  </wvobject>
+                  <wvobject type="logic" fp_name="/core_tb/endpoint/sfp_axis_rx_0_tdata[2]">
+                     <obj_property name="ElementShortName">[2]</obj_property>
+                     <obj_property name="ObjectShortName">[2]</obj_property>
+                  </wvobject>
+                  <wvobject type="logic" fp_name="/core_tb/endpoint/sfp_axis_rx_0_tdata[1]">
+                     <obj_property name="ElementShortName">[1]</obj_property>
+                     <obj_property name="ObjectShortName">[1]</obj_property>
+                  </wvobject>
+                  <wvobject type="logic" fp_name="/core_tb/endpoint/sfp_axis_rx_0_tdata[0]">
+                     <obj_property name="ElementShortName">[0]</obj_property>
+                     <obj_property name="ObjectShortName">[0]</obj_property>
+                  </wvobject>
+               </wvobject>
+               <wvobject type="vbus" fp_name="vbus5995">
+                  <obj_property name="label">Err</obj_property>
+                  <obj_property name="DisplayName">label</obj_property>
+                  <wvobject type="logic" fp_name="/core_tb/endpoint/sfp_axis_rx_0_tdata[15]">
+                     <obj_property name="ElementShortName">[15]</obj_property>
+                     <obj_property name="ObjectShortName">[15]</obj_property>
+                  </wvobject>
+                  <wvobject type="logic" fp_name="/core_tb/endpoint/sfp_axis_rx_0_tdata[14]">
+                     <obj_property name="ElementShortName">[14]</obj_property>
+                     <obj_property name="ObjectShortName">[14]</obj_property>
+                  </wvobject>
+               </wvobject>
+               <wvobject type="vbus" fp_name="vbus5987">
+                  <obj_property name="label">Resrved</obj_property>
+                  <obj_property name="DisplayName">label</obj_property>
+                  <wvobject type="logic" fp_name="/core_tb/endpoint/sfp_axis_rx_0_tdata[13]">
+                     <obj_property name="ElementShortName">[13]</obj_property>
+                     <obj_property name="ObjectShortName">[13]</obj_property>
+                  </wvobject>
+                  <wvobject type="logic" fp_name="/core_tb/endpoint/sfp_axis_rx_0_tdata[12]">
+                     <obj_property name="ElementShortName">[12]</obj_property>
+                     <obj_property name="ObjectShortName">[12]</obj_property>
+                  </wvobject>
+                  <wvobject type="logic" fp_name="/core_tb/endpoint/sfp_axis_rx_0_tdata[11]">
+                     <obj_property name="ElementShortName">[11]</obj_property>
+                     <obj_property name="ObjectShortName">[11]</obj_property>
+                  </wvobject>
+                  <wvobject type="logic" fp_name="/core_tb/endpoint/sfp_axis_rx_0_tdata[10]">
+                     <obj_property name="ElementShortName">[10]</obj_property>
+                     <obj_property name="ObjectShortName">[10]</obj_property>
+                  </wvobject>
+                  <wvobject type="logic" fp_name="/core_tb/endpoint/sfp_axis_rx_0_tdata[9]">
+                     <obj_property name="ElementShortName">[9]</obj_property>
+                     <obj_property name="ObjectShortName">[9]</obj_property>
+                  </wvobject>
+                  <wvobject type="logic" fp_name="/core_tb/endpoint/sfp_axis_rx_0_tdata[8]">
+                     <obj_property name="ElementShortName">[8]</obj_property>
+                     <obj_property name="ObjectShortName">[8]</obj_property>
+                  </wvobject>
+                  <wvobject type="logic" fp_name="/core_tb/endpoint/sfp_axis_rx_0_tdata[23]">
+                     <obj_property name="ElementShortName">[23]</obj_property>
+                     <obj_property name="ObjectShortName">[23]</obj_property>
+                  </wvobject>
+                  <wvobject type="logic" fp_name="/core_tb/endpoint/sfp_axis_rx_0_tdata[22]">
+                     <obj_property name="ElementShortName">[22]</obj_property>
+                     <obj_property name="ObjectShortName">[22]</obj_property>
+                  </wvobject>
+                  <wvobject type="logic" fp_name="/core_tb/endpoint/sfp_axis_rx_0_tdata[21]">
+                     <obj_property name="ElementShortName">[21]</obj_property>
+                     <obj_property name="ObjectShortName">[21]</obj_property>
+                  </wvobject>
+                  <wvobject type="logic" fp_name="/core_tb/endpoint/sfp_axis_rx_0_tdata[20]">
+                     <obj_property name="ElementShortName">[20]</obj_property>
+                     <obj_property name="ObjectShortName">[20]</obj_property>
+                  </wvobject>
+                  <wvobject type="logic" fp_name="/core_tb/endpoint/sfp_axis_rx_0_tdata[19]">
+                     <obj_property name="ElementShortName">[19]</obj_property>
+                     <obj_property name="ObjectShortName">[19]</obj_property>
+                  </wvobject>
+                  <wvobject type="logic" fp_name="/core_tb/endpoint/sfp_axis_rx_0_tdata[18]">
+                     <obj_property name="ElementShortName">[18]</obj_property>
+                     <obj_property name="ObjectShortName">[18]</obj_property>
+                  </wvobject>
+               </wvobject>
+               <wvobject type="vbus" fp_name="vbus5986">
+                  <obj_property name="label">Source</obj_property>
+                  <obj_property name="DisplayName">label</obj_property>
+                  <wvobject type="logic" fp_name="/core_tb/endpoint/sfp_axis_rx_0_tdata[17]">
+                     <obj_property name="ElementShortName">[17]</obj_property>
+                     <obj_property name="ObjectShortName">[17]</obj_property>
+                  </wvobject>
+                  <wvobject type="logic" fp_name="/core_tb/endpoint/sfp_axis_rx_0_tdata[16]">
+                     <obj_property name="ElementShortName">[16]</obj_property>
+                     <obj_property name="ObjectShortName">[16]</obj_property>
+                  </wvobject>
+                  <wvobject type="logic" fp_name="/core_tb/endpoint/sfp_axis_rx_0_tdata[31]">
+                     <obj_property name="ElementShortName">[31]</obj_property>
+                     <obj_property name="ObjectShortName">[31]</obj_property>
+                  </wvobject>
+                  <wvobject type="logic" fp_name="/core_tb/endpoint/sfp_axis_rx_0_tdata[30]">
+                     <obj_property name="ElementShortName">[30]</obj_property>
+                     <obj_property name="ObjectShortName">[30]</obj_property>
+                  </wvobject>
+                  <wvobject type="logic" fp_name="/core_tb/endpoint/sfp_axis_rx_0_tdata[29]">
+                     <obj_property name="ElementShortName">[29]</obj_property>
+                     <obj_property name="ObjectShortName">[29]</obj_property>
+                  </wvobject>
+                  <wvobject type="logic" fp_name="/core_tb/endpoint/sfp_axis_rx_0_tdata[28]">
+                     <obj_property name="ElementShortName">[28]</obj_property>
+                     <obj_property name="ObjectShortName">[28]</obj_property>
+                  </wvobject>
+                  <wvobject type="logic" fp_name="/core_tb/endpoint/sfp_axis_rx_0_tdata[27]">
+                     <obj_property name="ElementShortName">[27]</obj_property>
+                     <obj_property name="ObjectShortName">[27]</obj_property>
+                  </wvobject>
+                  <wvobject type="logic" fp_name="/core_tb/endpoint/sfp_axis_rx_0_tdata[26]">
+                     <obj_property name="ElementShortName">[26]</obj_property>
+                     <obj_property name="ObjectShortName">[26]</obj_property>
+                  </wvobject>
+                  <wvobject type="logic" fp_name="/core_tb/endpoint/sfp_axis_rx_0_tdata[25]">
+                     <obj_property name="ElementShortName">[25]</obj_property>
+                     <obj_property name="ObjectShortName">[25]</obj_property>
+                  </wvobject>
+                  <wvobject type="logic" fp_name="/core_tb/endpoint/sfp_axis_rx_0_tdata[24]">
+                     <obj_property name="ElementShortName">[24]</obj_property>
+                     <obj_property name="ObjectShortName">[24]</obj_property>
+                  </wvobject>
+                  <wvobject type="logic" fp_name="/core_tb/endpoint/sfp_axis_rx_0_tdata[39]">
+                     <obj_property name="ElementShortName">[39]</obj_property>
+                     <obj_property name="ObjectShortName">[39]</obj_property>
+                  </wvobject>
+                  <wvobject type="logic" fp_name="/core_tb/endpoint/sfp_axis_rx_0_tdata[38]">
+                     <obj_property name="ElementShortName">[38]</obj_property>
+                     <obj_property name="ObjectShortName">[38]</obj_property>
+                  </wvobject>
+                  <wvobject type="logic" fp_name="/core_tb/endpoint/sfp_axis_rx_0_tdata[37]">
+                     <obj_property name="ElementShortName">[37]</obj_property>
+                     <obj_property name="ObjectShortName">[37]</obj_property>
+                  </wvobject>
+                  <wvobject type="logic" fp_name="/core_tb/endpoint/sfp_axis_rx_0_tdata[36]">
+                     <obj_property name="ElementShortName">[36]</obj_property>
+                     <obj_property name="ObjectShortName">[36]</obj_property>
+                  </wvobject>
+                  <wvobject type="logic" fp_name="/core_tb/endpoint/sfp_axis_rx_0_tdata[35]">
+                     <obj_property name="ElementShortName">[35]</obj_property>
+                     <obj_property name="ObjectShortName">[35]</obj_property>
+                  </wvobject>
+                  <wvobject type="logic" fp_name="/core_tb/endpoint/sfp_axis_rx_0_tdata[34]">
+                     <obj_property name="ElementShortName">[34]</obj_property>
+                     <obj_property name="ObjectShortName">[34]</obj_property>
+                  </wvobject>
+                  <wvobject type="logic" fp_name="/core_tb/endpoint/sfp_axis_rx_0_tdata[33]">
+                     <obj_property name="ElementShortName">[33]</obj_property>
+                     <obj_property name="ObjectShortName">[33]</obj_property>
+                  </wvobject>
+                  <wvobject type="logic" fp_name="/core_tb/endpoint/sfp_axis_rx_0_tdata[32]">
+                     <obj_property name="ElementShortName">[32]</obj_property>
+                     <obj_property name="ObjectShortName">[32]</obj_property>
+                  </wvobject>
+                  <wvobject type="logic" fp_name="/core_tb/endpoint/sfp_axis_rx_0_tdata[47]">
+                     <obj_property name="ElementShortName">[47]</obj_property>
+                     <obj_property name="ObjectShortName">[47]</obj_property>
+                  </wvobject>
+                  <wvobject type="logic" fp_name="/core_tb/endpoint/sfp_axis_rx_0_tdata[46]">
+                     <obj_property name="ElementShortName">[46]</obj_property>
+                     <obj_property name="ObjectShortName">[46]</obj_property>
+                  </wvobject>
+                  <wvobject type="logic" fp_name="/core_tb/endpoint/sfp_axis_rx_0_tdata[45]">
+                     <obj_property name="ElementShortName">[45]</obj_property>
+                     <obj_property name="ObjectShortName">[45]</obj_property>
+                  </wvobject>
+                  <wvobject type="logic" fp_name="/core_tb/endpoint/sfp_axis_rx_0_tdata[44]">
+                     <obj_property name="ElementShortName">[44]</obj_property>
+                     <obj_property name="ObjectShortName">[44]</obj_property>
+                  </wvobject>
+                  <wvobject type="logic" fp_name="/core_tb/endpoint/sfp_axis_rx_0_tdata[43]">
+                     <obj_property name="ElementShortName">[43]</obj_property>
+                     <obj_property name="ObjectShortName">[43]</obj_property>
+                  </wvobject>
+                  <wvobject type="logic" fp_name="/core_tb/endpoint/sfp_axis_rx_0_tdata[42]">
+                     <obj_property name="ElementShortName">[42]</obj_property>
+                     <obj_property name="ObjectShortName">[42]</obj_property>
+                  </wvobject>
+                  <wvobject type="logic" fp_name="/core_tb/endpoint/sfp_axis_rx_0_tdata[41]">
+                     <obj_property name="ElementShortName">[41]</obj_property>
+                     <obj_property name="ObjectShortName">[41]</obj_property>
+                  </wvobject>
+                  <wvobject type="logic" fp_name="/core_tb/endpoint/sfp_axis_rx_0_tdata[40]">
+                     <obj_property name="ElementShortName">[40]</obj_property>
+                     <obj_property name="ObjectShortName">[40]</obj_property>
+                  </wvobject>
+               </wvobject>
+            </wvobject>
+         </wvobject>
+         <wvobject type="group" fp_name="group5997">
+            <obj_property name="label">Flit 5</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject type="vbus" fp_name="vbus6063">
+               <obj_property name="label">Padding</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <wvobject type="logic" fp_name="/core_tb/endpoint/sfp_axis_rx_0_tdata[63]">
+                  <obj_property name="ElementShortName">[63]</obj_property>
+                  <obj_property name="ObjectShortName">[63]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/core_tb/endpoint/sfp_axis_rx_0_tdata[62]">
+                  <obj_property name="ElementShortName">[62]</obj_property>
+                  <obj_property name="ObjectShortName">[62]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/core_tb/endpoint/sfp_axis_rx_0_tdata[61]">
+                  <obj_property name="ElementShortName">[61]</obj_property>
+                  <obj_property name="ObjectShortName">[61]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/core_tb/endpoint/sfp_axis_rx_0_tdata[60]">
+                  <obj_property name="ElementShortName">[60]</obj_property>
+                  <obj_property name="ObjectShortName">[60]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/core_tb/endpoint/sfp_axis_rx_0_tdata[59]">
+                  <obj_property name="ElementShortName">[59]</obj_property>
+                  <obj_property name="ObjectShortName">[59]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/core_tb/endpoint/sfp_axis_rx_0_tdata[58]">
+                  <obj_property name="ElementShortName">[58]</obj_property>
+                  <obj_property name="ObjectShortName">[58]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/core_tb/endpoint/sfp_axis_rx_0_tdata[57]">
+                  <obj_property name="ElementShortName">[57]</obj_property>
+                  <obj_property name="ObjectShortName">[57]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/core_tb/endpoint/sfp_axis_rx_0_tdata[56]">
+                  <obj_property name="ElementShortName">[56]</obj_property>
+                  <obj_property name="ObjectShortName">[56]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/core_tb/endpoint/sfp_axis_rx_0_tdata[55]">
+                  <obj_property name="ElementShortName">[55]</obj_property>
+                  <obj_property name="ObjectShortName">[55]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/core_tb/endpoint/sfp_axis_rx_0_tdata[54]">
+                  <obj_property name="ElementShortName">[54]</obj_property>
+                  <obj_property name="ObjectShortName">[54]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/core_tb/endpoint/sfp_axis_rx_0_tdata[53]">
+                  <obj_property name="ElementShortName">[53]</obj_property>
+                  <obj_property name="ObjectShortName">[53]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/core_tb/endpoint/sfp_axis_rx_0_tdata[52]">
+                  <obj_property name="ElementShortName">[52]</obj_property>
+                  <obj_property name="ObjectShortName">[52]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/core_tb/endpoint/sfp_axis_rx_0_tdata[51]">
+                  <obj_property name="ElementShortName">[51]</obj_property>
+                  <obj_property name="ObjectShortName">[51]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/core_tb/endpoint/sfp_axis_rx_0_tdata[50]">
+                  <obj_property name="ElementShortName">[50]</obj_property>
+                  <obj_property name="ObjectShortName">[50]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/core_tb/endpoint/sfp_axis_rx_0_tdata[49]">
+                  <obj_property name="ElementShortName">[49]</obj_property>
+                  <obj_property name="ObjectShortName">[49]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/core_tb/endpoint/sfp_axis_rx_0_tdata[48]">
+                  <obj_property name="ElementShortName">[48]</obj_property>
+                  <obj_property name="ObjectShortName">[48]</obj_property>
+               </wvobject>
+            </wvobject>
+            <wvobject type="vbus" fp_name="vbus6064">
+               <obj_property name="label">Addr Low</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <wvobject type="logic" fp_name="/core_tb/endpoint/sfp_axis_rx_0_tdata[7]">
+                  <obj_property name="ElementShortName">[7]</obj_property>
+                  <obj_property name="ObjectShortName">[7]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/core_tb/endpoint/sfp_axis_rx_0_tdata[6]">
+                  <obj_property name="ElementShortName">[6]</obj_property>
+                  <obj_property name="ObjectShortName">[6]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/core_tb/endpoint/sfp_axis_rx_0_tdata[5]">
+                  <obj_property name="ElementShortName">[5]</obj_property>
+                  <obj_property name="ObjectShortName">[5]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/core_tb/endpoint/sfp_axis_rx_0_tdata[4]">
+                  <obj_property name="ElementShortName">[4]</obj_property>
+                  <obj_property name="ObjectShortName">[4]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/core_tb/endpoint/sfp_axis_rx_0_tdata[3]">
+                  <obj_property name="ElementShortName">[3]</obj_property>
+                  <obj_property name="ObjectShortName">[3]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/core_tb/endpoint/sfp_axis_rx_0_tdata[2]">
+                  <obj_property name="ElementShortName">[2]</obj_property>
+                  <obj_property name="ObjectShortName">[2]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/core_tb/endpoint/sfp_axis_rx_0_tdata[1]">
+                  <obj_property name="ElementShortName">[1]</obj_property>
+                  <obj_property name="ObjectShortName">[1]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/core_tb/endpoint/sfp_axis_rx_0_tdata[0]">
+                  <obj_property name="ElementShortName">[0]</obj_property>
+                  <obj_property name="ObjectShortName">[0]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/core_tb/endpoint/sfp_axis_rx_0_tdata[15]">
+                  <obj_property name="ElementShortName">[15]</obj_property>
+                  <obj_property name="ObjectShortName">[15]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/core_tb/endpoint/sfp_axis_rx_0_tdata[14]">
+                  <obj_property name="ElementShortName">[14]</obj_property>
+                  <obj_property name="ObjectShortName">[14]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/core_tb/endpoint/sfp_axis_rx_0_tdata[13]">
+                  <obj_property name="ElementShortName">[13]</obj_property>
+                  <obj_property name="ObjectShortName">[13]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/core_tb/endpoint/sfp_axis_rx_0_tdata[12]">
+                  <obj_property name="ElementShortName">[12]</obj_property>
+                  <obj_property name="ObjectShortName">[12]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/core_tb/endpoint/sfp_axis_rx_0_tdata[11]">
+                  <obj_property name="ElementShortName">[11]</obj_property>
+                  <obj_property name="ObjectShortName">[11]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/core_tb/endpoint/sfp_axis_rx_0_tdata[10]">
+                  <obj_property name="ElementShortName">[10]</obj_property>
+                  <obj_property name="ObjectShortName">[10]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/core_tb/endpoint/sfp_axis_rx_0_tdata[9]">
+                  <obj_property name="ElementShortName">[9]</obj_property>
+                  <obj_property name="ObjectShortName">[9]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/core_tb/endpoint/sfp_axis_rx_0_tdata[8]">
+                  <obj_property name="ElementShortName">[8]</obj_property>
+                  <obj_property name="ObjectShortName">[8]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/core_tb/endpoint/sfp_axis_rx_0_tdata[23]">
+                  <obj_property name="ElementShortName">[23]</obj_property>
+                  <obj_property name="ObjectShortName">[23]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/core_tb/endpoint/sfp_axis_rx_0_tdata[22]">
+                  <obj_property name="ElementShortName">[22]</obj_property>
+                  <obj_property name="ObjectShortName">[22]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/core_tb/endpoint/sfp_axis_rx_0_tdata[21]">
+                  <obj_property name="ElementShortName">[21]</obj_property>
+                  <obj_property name="ObjectShortName">[21]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/core_tb/endpoint/sfp_axis_rx_0_tdata[20]">
+                  <obj_property name="ElementShortName">[20]</obj_property>
+                  <obj_property name="ObjectShortName">[20]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/core_tb/endpoint/sfp_axis_rx_0_tdata[19]">
+                  <obj_property name="ElementShortName">[19]</obj_property>
+                  <obj_property name="ObjectShortName">[19]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/core_tb/endpoint/sfp_axis_rx_0_tdata[18]">
+                  <obj_property name="ElementShortName">[18]</obj_property>
+                  <obj_property name="ObjectShortName">[18]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/core_tb/endpoint/sfp_axis_rx_0_tdata[17]">
+                  <obj_property name="ElementShortName">[17]</obj_property>
+                  <obj_property name="ObjectShortName">[17]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/core_tb/endpoint/sfp_axis_rx_0_tdata[16]">
+                  <obj_property name="ElementShortName">[16]</obj_property>
+                  <obj_property name="ObjectShortName">[16]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/core_tb/endpoint/sfp_axis_rx_0_tdata[31]">
+                  <obj_property name="ElementShortName">[31]</obj_property>
+                  <obj_property name="ObjectShortName">[31]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/core_tb/endpoint/sfp_axis_rx_0_tdata[30]">
+                  <obj_property name="ElementShortName">[30]</obj_property>
+                  <obj_property name="ObjectShortName">[30]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/core_tb/endpoint/sfp_axis_rx_0_tdata[29]">
+                  <obj_property name="ElementShortName">[29]</obj_property>
+                  <obj_property name="ObjectShortName">[29]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/core_tb/endpoint/sfp_axis_rx_0_tdata[28]">
+                  <obj_property name="ElementShortName">[28]</obj_property>
+                  <obj_property name="ObjectShortName">[28]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/core_tb/endpoint/sfp_axis_rx_0_tdata[27]">
+                  <obj_property name="ElementShortName">[27]</obj_property>
+                  <obj_property name="ObjectShortName">[27]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/core_tb/endpoint/sfp_axis_rx_0_tdata[26]">
+                  <obj_property name="ElementShortName">[26]</obj_property>
+                  <obj_property name="ObjectShortName">[26]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/core_tb/endpoint/sfp_axis_rx_0_tdata[25]">
+                  <obj_property name="ElementShortName">[25]</obj_property>
+                  <obj_property name="ObjectShortName">[25]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/core_tb/endpoint/sfp_axis_rx_0_tdata[24]">
+                  <obj_property name="ElementShortName">[24]</obj_property>
+                  <obj_property name="ObjectShortName">[24]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/core_tb/endpoint/sfp_axis_rx_0_tdata[39]">
+                  <obj_property name="ElementShortName">[39]</obj_property>
+                  <obj_property name="ObjectShortName">[39]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/core_tb/endpoint/sfp_axis_rx_0_tdata[38]">
+                  <obj_property name="ElementShortName">[38]</obj_property>
+                  <obj_property name="ObjectShortName">[38]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/core_tb/endpoint/sfp_axis_rx_0_tdata[37]">
+                  <obj_property name="ElementShortName">[37]</obj_property>
+                  <obj_property name="ObjectShortName">[37]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/core_tb/endpoint/sfp_axis_rx_0_tdata[36]">
+                  <obj_property name="ElementShortName">[36]</obj_property>
+                  <obj_property name="ObjectShortName">[36]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/core_tb/endpoint/sfp_axis_rx_0_tdata[35]">
+                  <obj_property name="ElementShortName">[35]</obj_property>
+                  <obj_property name="ObjectShortName">[35]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/core_tb/endpoint/sfp_axis_rx_0_tdata[34]">
+                  <obj_property name="ElementShortName">[34]</obj_property>
+                  <obj_property name="ObjectShortName">[34]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/core_tb/endpoint/sfp_axis_rx_0_tdata[33]">
+                  <obj_property name="ElementShortName">[33]</obj_property>
+                  <obj_property name="ObjectShortName">[33]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/core_tb/endpoint/sfp_axis_rx_0_tdata[32]">
+                  <obj_property name="ElementShortName">[32]</obj_property>
+                  <obj_property name="ObjectShortName">[32]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/core_tb/endpoint/sfp_axis_rx_0_tdata[47]">
+                  <obj_property name="ElementShortName">[47]</obj_property>
+                  <obj_property name="ObjectShortName">[47]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/core_tb/endpoint/sfp_axis_rx_0_tdata[46]">
+                  <obj_property name="ElementShortName">[46]</obj_property>
+                  <obj_property name="ObjectShortName">[46]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/core_tb/endpoint/sfp_axis_rx_0_tdata[45]">
+                  <obj_property name="ElementShortName">[45]</obj_property>
+                  <obj_property name="ObjectShortName">[45]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/core_tb/endpoint/sfp_axis_rx_0_tdata[44]">
+                  <obj_property name="ElementShortName">[44]</obj_property>
+                  <obj_property name="ObjectShortName">[44]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/core_tb/endpoint/sfp_axis_rx_0_tdata[43]">
+                  <obj_property name="ElementShortName">[43]</obj_property>
+                  <obj_property name="ObjectShortName">[43]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/core_tb/endpoint/sfp_axis_rx_0_tdata[42]">
+                  <obj_property name="ElementShortName">[42]</obj_property>
+                  <obj_property name="ObjectShortName">[42]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/core_tb/endpoint/sfp_axis_rx_0_tdata[41]">
+                  <obj_property name="ElementShortName">[41]</obj_property>
+                  <obj_property name="ObjectShortName">[41]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/core_tb/endpoint/sfp_axis_rx_0_tdata[40]">
+                  <obj_property name="ElementShortName">[40]</obj_property>
+                  <obj_property name="ObjectShortName">[40]</obj_property>
+               </wvobject>
+            </wvobject>
+         </wvobject>
+         <wvobject type="array" fp_name="/core_tb/endpoint/sfp_axis_rx_0_tkeep">
+            <obj_property name="ElementShortName">sfp_axis_rx_0_tkeep[7:0]</obj_property>
+            <obj_property name="ObjectShortName">sfp_axis_rx_0_tkeep[7:0]</obj_property>
+         </wvobject>
+         <wvobject type="array" fp_name="/core_tb/endpoint/sfp_axis_rx_0_tDest">
+            <obj_property name="ElementShortName">sfp_axis_rx_0_tDest[3:0]</obj_property>
+            <obj_property name="ObjectShortName">sfp_axis_rx_0_tDest[3:0]</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="/core_tb/endpoint/sfp_axis_rx_0_tready">
+            <obj_property name="ElementShortName">sfp_axis_rx_0_tready</obj_property>
+            <obj_property name="ObjectShortName">sfp_axis_rx_0_tready</obj_property>
+         </wvobject>
+      </wvobject>
+      <wvobject type="group" fp_name="group6818">
+         <obj_property name="label">TX OUT</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <obj_property name="isExpanded"></obj_property>
+         <wvobject type="logic" fp_name="/core_tb/endpoint/sfp_axis_tx_aclk_0">
+            <obj_property name="ElementShortName">sfp_axis_tx_aclk_0</obj_property>
+            <obj_property name="ObjectShortName">sfp_axis_tx_aclk_0</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="/core_tb/endpoint/sfp_axis_tx_aresetn_0">
+            <obj_property name="ElementShortName">sfp_axis_tx_aresetn_0</obj_property>
+            <obj_property name="ObjectShortName">sfp_axis_tx_aresetn_0</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="/core_tb/endpoint/sfp_axis_tx_0_tready">
+            <obj_property name="ElementShortName">sfp_axis_tx_0_tready</obj_property>
+            <obj_property name="ObjectShortName">sfp_axis_tx_0_tready</obj_property>
+         </wvobject>
+         <wvobject type="array" fp_name="/core_tb/endpoint/sfp_axis_tx_0_tdata">
+            <obj_property name="ElementShortName">sfp_axis_tx_0_tdata[63:0]</obj_property>
+            <obj_property name="ObjectShortName">sfp_axis_tx_0_tdata[63:0]</obj_property>
+         </wvobject>
+         <wvobject type="array" fp_name="/core_tb/endpoint/sfp_axis_tx_0_tkeep">
+            <obj_property name="ElementShortName">sfp_axis_tx_0_tkeep[7:0]</obj_property>
+            <obj_property name="ObjectShortName">sfp_axis_tx_0_tkeep[7:0]</obj_property>
+         </wvobject>
+         <wvobject type="array" fp_name="/core_tb/endpoint/sfp_axis_tx_0_tDest">
+            <obj_property name="ElementShortName">sfp_axis_tx_0_tDest[3:0]</obj_property>
+            <obj_property name="ObjectShortName">sfp_axis_tx_0_tDest[3:0]</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="/core_tb/endpoint/sfp_axis_tx_0_tlast">
+            <obj_property name="ElementShortName">sfp_axis_tx_0_tlast</obj_property>
+            <obj_property name="ObjectShortName">sfp_axis_tx_0_tlast</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="/core_tb/endpoint/sfp_axis_tx_0_tvalid">
+            <obj_property name="ElementShortName">sfp_axis_tx_0_tvalid</obj_property>
+            <obj_property name="ObjectShortName">sfp_axis_tx_0_tvalid</obj_property>
+         </wvobject>
+      </wvobject>
+      <wvobject type="group" fp_name="group6816">
+         <obj_property name="label">config</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <wvobject type="logic" fp_name="/core_tb/endpoint/sconfig_axi_aclk">
+            <obj_property name="ElementShortName">sconfig_axi_aclk</obj_property>
+            <obj_property name="ObjectShortName">sconfig_axi_aclk</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="/core_tb/endpoint/sconfig_axi_aresetn">
+            <obj_property name="ElementShortName">sconfig_axi_aresetn</obj_property>
+            <obj_property name="ObjectShortName">sconfig_axi_aresetn</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="/core_tb/endpoint/sconfig_axi_arvalid">
+            <obj_property name="ElementShortName">sconfig_axi_arvalid</obj_property>
+            <obj_property name="ObjectShortName">sconfig_axi_arvalid</obj_property>
+         </wvobject>
+         <wvobject type="array" fp_name="/core_tb/endpoint/sconfig_axi_araddr">
+            <obj_property name="ElementShortName">sconfig_axi_araddr[15:0]</obj_property>
+            <obj_property name="ObjectShortName">sconfig_axi_araddr[15:0]</obj_property>
+         </wvobject>
+         <wvobject type="array" fp_name="/core_tb/endpoint/sconfig_axi_arprot">
+            <obj_property name="ElementShortName">sconfig_axi_arprot[2:0]</obj_property>
+            <obj_property name="ObjectShortName">sconfig_axi_arprot[2:0]</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="/core_tb/endpoint/sconfig_axi_rready">
+            <obj_property name="ElementShortName">sconfig_axi_rready</obj_property>
+            <obj_property name="ObjectShortName">sconfig_axi_rready</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="/core_tb/endpoint/sconfig_axi_awvalid">
+            <obj_property name="ElementShortName">sconfig_axi_awvalid</obj_property>
+            <obj_property name="ObjectShortName">sconfig_axi_awvalid</obj_property>
+         </wvobject>
+         <wvobject type="array" fp_name="/core_tb/endpoint/sconfig_axi_awaddr">
+            <obj_property name="ElementShortName">sconfig_axi_awaddr[15:0]</obj_property>
+            <obj_property name="ObjectShortName">sconfig_axi_awaddr[15:0]</obj_property>
+         </wvobject>
+         <wvobject type="array" fp_name="/core_tb/endpoint/sconfig_axi_awprot">
+            <obj_property name="ElementShortName">sconfig_axi_awprot[2:0]</obj_property>
+            <obj_property name="ObjectShortName">sconfig_axi_awprot[2:0]</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="/core_tb/endpoint/sconfig_axi_wvalid">
+            <obj_property name="ElementShortName">sconfig_axi_wvalid</obj_property>
+            <obj_property name="ObjectShortName">sconfig_axi_wvalid</obj_property>
+         </wvobject>
+         <wvobject type="array" fp_name="/core_tb/endpoint/sconfig_axi_wdata">
+            <obj_property name="ElementShortName">sconfig_axi_wdata[63:0]</obj_property>
+            <obj_property name="ObjectShortName">sconfig_axi_wdata[63:0]</obj_property>
+         </wvobject>
+         <wvobject type="array" fp_name="/core_tb/endpoint/sconfig_axi_wstrb">
+            <obj_property name="ElementShortName">sconfig_axi_wstrb[7:0]</obj_property>
+            <obj_property name="ObjectShortName">sconfig_axi_wstrb[7:0]</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="/core_tb/endpoint/sconfig_axi_bready">
+            <obj_property name="ElementShortName">sconfig_axi_bready</obj_property>
+            <obj_property name="ObjectShortName">sconfig_axi_bready</obj_property>
+         </wvobject>
+         <wvobject type="array" fp_name="/core_tb/endpoint/sconfig_axi_rdata">
+            <obj_property name="ElementShortName">sconfig_axi_rdata[63:0]</obj_property>
+            <obj_property name="ObjectShortName">sconfig_axi_rdata[63:0]</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="/core_tb/endpoint/sconfig_axi_arready">
+            <obj_property name="ElementShortName">sconfig_axi_arready</obj_property>
+            <obj_property name="ObjectShortName">sconfig_axi_arready</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="/core_tb/endpoint/sconfig_axi_awready">
+            <obj_property name="ElementShortName">sconfig_axi_awready</obj_property>
+            <obj_property name="ObjectShortName">sconfig_axi_awready</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="/core_tb/endpoint/sconfig_axi_bvalid">
+            <obj_property name="ElementShortName">sconfig_axi_bvalid</obj_property>
+            <obj_property name="ObjectShortName">sconfig_axi_bvalid</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="/core_tb/endpoint/sconfig_axi_rvalid">
+            <obj_property name="ElementShortName">sconfig_axi_rvalid</obj_property>
+            <obj_property name="ObjectShortName">sconfig_axi_rvalid</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="/core_tb/endpoint/sconfig_axi_wready">
+            <obj_property name="ElementShortName">sconfig_axi_wready</obj_property>
+            <obj_property name="ObjectShortName">sconfig_axi_wready</obj_property>
+         </wvobject>
+         <wvobject type="array" fp_name="/core_tb/endpoint/sconfig_axi_bresp">
+            <obj_property name="ElementShortName">sconfig_axi_bresp[1:0]</obj_property>
+            <obj_property name="ObjectShortName">sconfig_axi_bresp[1:0]</obj_property>
+         </wvobject>
+         <wvobject type="array" fp_name="/core_tb/endpoint/sconfig_axi_rresp">
+            <obj_property name="ElementShortName">sconfig_axi_rresp[1:0]</obj_property>
+            <obj_property name="ObjectShortName">sconfig_axi_rresp[1:0]</obj_property>
+         </wvobject>
+      </wvobject>
+      <wvobject type="logic" fp_name="/core_tb/endpoint/interrupt">
+         <obj_property name="ElementShortName">interrupt</obj_property>
+         <obj_property name="ObjectShortName">interrupt</obj_property>
+      </wvobject>
+      <wvobject type="group" fp_name="group7098">
+         <obj_property name="label">BRAM</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <obj_property name="isExpanded"></obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject type="logic" fp_name="/core_tb/file_close">
+      <obj_property name="ElementShortName">file_close</obj_property>
+      <obj_property name="ObjectShortName">file_close</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/core_tb/autonoc_en">
+      <obj_property name="ElementShortName">autonoc_en</obj_property>
+      <obj_property name="ObjectShortName">autonoc_en</obj_property>
+   </wvobject>
+</wave_config>

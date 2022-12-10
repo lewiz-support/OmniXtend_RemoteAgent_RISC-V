@@ -1,0 +1,67 @@
+//****************************************************************
+// December 6, 2022
+//
+// Licensed to the Apache Software Foundation (ASF) under one
+// or more contributor license agreements.  See the NOTICE file
+// distributed with this work for additional information
+// regarding copyright ownership.  The ASF licenses this file
+// to you under the Apache License, Version 2.0 (the
+// "License"); you may not use this file except in compliance
+// with the License.  You may obtain a copy of the License at
+//
+//   http://www.apache.org/licenses/LICENSE-2.0
+//
+// Unless required by applicable law or agreed to in writing,
+// software distributed under the License is distributed on an
+// "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+// KIND, either express or implied.  See the License for the
+// specific language governing permissions and limitations
+// under the License.
+//
+// Date: N/A
+// Project: OmniXtend Core
+// Comments: N/A
+//
+//********************************
+// File history:
+//   N/A
+//****************************************************************
+//
+//
+//
+//this is a sample piton packet to be tested for the bridge as a start
+//
+//packet length is 40 Bytes
+//packet attributes are assumed at random for now
+//request packet with message type NC_LOAD_MEM_RQ = 8'd14
+//flit1 63:50 - CHIPID
+//		49:42 - XPOS
+//		41:34 - YPOS
+//		33:30 - FBITS
+//		29:22 - PAYLOAD LENGTH
+//		21:14 - MESSAGE TYPE
+//		13:06 - MSHR/TAG
+//		05:00 - RESERVED
+//flit2 63:16 - ADDRESS
+//      15:03 - OPTIONS2
+//      02:00 - LAST BYTE COUNT
+//flit3 63:50 - SRC CHIPID
+//		49:42 - SRC XPOS
+//		41:34 - SRC YPOS
+//		33:30 - SRC FBITS
+//		29:00 - RESERVED
+//
+//
+00_0000000000000000	// piton_pkt_put_full_data, addr = A, cnt = 13
+01_0d8c12340203f100
+01_0001000000060007
+01_0dec040880000000
+01_0008ffffffffffff
+01_004500080b041927
+01_06400040fa1a3c00
+01_a8c0bc08a8c0518d
+01_773fbc0c58a36408
+01_02a0000000000b03
+01_0402000024361072
+01_d8000a080204b405
+00_0000000000000000

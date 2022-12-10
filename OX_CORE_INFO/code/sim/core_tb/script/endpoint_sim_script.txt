@@ -1,0 +1,66 @@
+# For Kit
+# source /media/external/sambashare_ext/KIT/MagicDust/TL_C/SCRIPTS/sim_script.txt
+# source /media/external/sambashare_ext/KENNY/MagicDust/OX2M/SCRIPTS/sim_script.txt
+
+relaunch_sim
+
+run 1000.0ns
+# pkt_1
+add_force {/core_tb/gen_en} -radix hex {1 0ns}
+add_force {/core_tb/pkt_gen_addr} -radix hex {0 0ns}
+add_force {/core_tb/pkt_gen_cnt} -radix hex {D 0ns}
+run 10ns
+remove_forces { {/core_tb/gen_en} }
+remove_forces { {/core_tb/pkt_gen_cnt} }
+remove_forces { {/core_tb/pkt_gen_addr} }
+
+run 500ns
+
+# pkt_2
+add_force {/core_tb/gen_en} -radix hex {1 0ns}
+add_force {/core_tb/pkt_gen_addr} -radix hex {D 0ns}
+add_force {/core_tb/pkt_gen_cnt} -radix hex {6 0ns}
+run 10ns
+remove_forces { {/core_tb/gen_en} }
+remove_forces { {/core_tb/pkt_gen_cnt} }
+remove_forces { {/core_tb/pkt_gen_addr} }
+
+#run 141ns
+#add_force {/core_tb/NETE_MASTER/NETE_RX/sfp_axis_tx_0_tdata} -radix hex {0340220800000500 0ns}
+#run 2ns
+#remove_forces { {/core_tb/NETE_MASTER/NETE_RX/sfp_axis_tx_0_tdata} }
+
+run 500ns
+
+# pkt_3
+add_force {/core_tb/gen_en} -radix hex {1 0ns}
+add_force {/core_tb/pkt_gen_addr} -radix hex {13 0ns}
+add_force {/core_tb/pkt_gen_cnt} -radix hex {9 0ns}
+run 10ns
+remove_forces { {/core_tb/gen_en} }
+remove_forces { {/core_tb/pkt_gen_cnt} }
+remove_forces { {/core_tb/pkt_gen_addr} }
+
+run 500ns
+
+# pkt_4 get
+add_force {/core_tb/gen_en} -radix hex {1 0ns}
+add_force {/core_tb/pkt_gen_addr} -radix hex {1C 0ns}
+add_force {/core_tb/pkt_gen_cnt} -radix hex {5 0ns}
+run 10ns
+remove_forces { {/core_tb/gen_en} }
+remove_forces { {/core_tb/pkt_gen_cnt} }
+remove_forces { {/core_tb/pkt_gen_addr} }
+
+run 500ns
+
+# pkt_5
+add_force {/core_tb/gen_en} -radix hex {1 0ns}
+add_force {/core_tb/pkt_gen_addr} -radix hex {21 0ns}
+add_force {/core_tb/pkt_gen_cnt} -radix hex {6 0ns}
+run 10ns
+remove_forces { {/core_tb/gen_en} }
+remove_forces { {/core_tb/pkt_gen_cnt} }
+remove_forces { {/core_tb/pkt_gen_addr} }
+
+run 1us

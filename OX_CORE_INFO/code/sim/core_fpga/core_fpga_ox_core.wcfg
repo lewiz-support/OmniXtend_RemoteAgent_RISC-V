@@ -1,0 +1,2042 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="core_fpga_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="core_fpga" />
+            <top_module name="glbl" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="14,732.701000 ns"></ZoomStartTime>
+      <ZoomEndTime time="14,846.701001 ns"></ZoomEndTime>
+      <Cursor1Time time="14,758.501000 ns"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="316"></NameColumnWidth>
+      <ValueColumnWidth column_width="113"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="8" />
+   <wvobject type="group" fp_name="group14157">
+      <obj_property name="label">Clk / Rst</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <wvobject type="logic" fp_name="/core_fpga/OX_CORE_U1/clk">
+         <obj_property name="ElementShortName">clk</obj_property>
+         <obj_property name="ObjectShortName">clk</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/core_fpga/OX_CORE_U1/rst_">
+         <obj_property name="ElementShortName">rst_</obj_property>
+         <obj_property name="ObjectShortName">rst_</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject type="group" fp_name="group14102">
+      <obj_property name="label">Control</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <wvobject type="logic" fp_name="/core_fpga/OX_CORE_U1/prb_ack_mode">
+         <obj_property name="ElementShortName">prb_ack_mode</obj_property>
+         <obj_property name="ObjectShortName">prb_ack_mode</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/core_fpga/OX_CORE_U1/lewiz_noc_mode">
+         <obj_property name="ElementShortName">lewiz_noc_mode</obj_property>
+         <obj_property name="ObjectShortName">lewiz_noc_mode</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject type="group" fp_name="group14105">
+      <obj_property name="label">TX Path</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <wvobject type="logic" fp_name="/core_fpga/OX_CORE_U1/OT1/clk">
+         <obj_property name="ElementShortName">clk</obj_property>
+         <obj_property name="ObjectShortName">clk</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/core_fpga/OX_CORE_U1/OT1/rst_">
+         <obj_property name="ElementShortName">rst_</obj_property>
+         <obj_property name="ObjectShortName">rst_</obj_property>
+      </wvobject>
+      <wvobject type="group" fp_name="group1481">
+         <obj_property name="label">N2TL</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <wvobject type="group" fp_name="group1482">
+            <obj_property name="label">State</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject type="array" fp_name="/core_fpga/OX_CORE_U1/OT1/N2TL/ascii_tlc_header_state">
+               <obj_property name="ElementShortName">ascii_tlc_header_state[120:0]</obj_property>
+               <obj_property name="ObjectShortName">ascii_tlc_header_state[120:0]</obj_property>
+               <obj_property name="Radix">ASCIIRADIX</obj_property>
+            </wvobject>
+            <wvobject type="array" fp_name="/core_fpga/OX_CORE_U1/OT1/N2TL/ascii_tlc_data_state">
+               <obj_property name="ElementShortName">ascii_tlc_data_state[96:0]</obj_property>
+               <obj_property name="ObjectShortName">ascii_tlc_data_state[96:0]</obj_property>
+               <obj_property name="Radix">ASCIIRADIX</obj_property>
+            </wvobject>
+         </wvobject>
+         <wvobject type="group" fp_name="group14103">
+            <obj_property name="label">NOC In</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject type="logic" fp_name="/core_fpga/OX_CORE_U1/OT1/noc_in_valid">
+               <obj_property name="ElementShortName">noc_in_valid</obj_property>
+               <obj_property name="ObjectShortName">noc_in_valid</obj_property>
+            </wvobject>
+            <wvobject type="array" fp_name="/core_fpga/OX_CORE_U1/OT1/noc_in_data">
+               <obj_property name="ElementShortName">noc_in_data[63:0]</obj_property>
+               <obj_property name="ObjectShortName">noc_in_data[63:0]</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/core_fpga/OX_CORE_U1/OT1/noc_in_ready">
+               <obj_property name="ElementShortName">noc_in_ready</obj_property>
+               <obj_property name="ObjectShortName">noc_in_ready</obj_property>
+            </wvobject>
+         </wvobject>
+         <wvobject type="group" fp_name="group1493">
+            <obj_property name="label">FIFOs Out</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject type="group" fp_name="group1499">
+               <obj_property name="label">Header</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <wvobject type="array" fp_name="/core_fpga/OX_CORE_U1/OT1/N2TL/tl2f_tx_header_i">
+                  <obj_property name="ElementShortName">tl2f_tx_header_i[63:0]</obj_property>
+                  <obj_property name="ObjectShortName">tl2f_tx_header_i[63:0]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/core_fpga/OX_CORE_U1/OT1/N2TL/tl2f_tx_header_we_i">
+                  <obj_property name="ElementShortName">tl2f_tx_header_we_i</obj_property>
+                  <obj_property name="ObjectShortName">tl2f_tx_header_we_i</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/core_fpga/OX_CORE_U1/OT1/N2TL/f2tl_tx_header_full_i">
+                  <obj_property name="ElementShortName">f2tl_tx_header_full_i</obj_property>
+                  <obj_property name="ObjectShortName">f2tl_tx_header_full_i</obj_property>
+               </wvobject>
+            </wvobject>
+            <wvobject type="group" fp_name="group1500">
+               <obj_property name="label">Addr</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <wvobject type="array" fp_name="/core_fpga/OX_CORE_U1/OT1/N2TL/tl2f_tx_addr_i">
+                  <obj_property name="ElementShortName">tl2f_tx_addr_i[63:0]</obj_property>
+                  <obj_property name="ObjectShortName">tl2f_tx_addr_i[63:0]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/core_fpga/OX_CORE_U1/OT1/N2TL/tl2f_tx_addr_we_i">
+                  <obj_property name="ElementShortName">tl2f_tx_addr_we_i</obj_property>
+                  <obj_property name="ObjectShortName">tl2f_tx_addr_we_i</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/core_fpga/OX_CORE_U1/OT1/N2TL/f2tl_tx_addr_full_i">
+                  <obj_property name="ElementShortName">f2tl_tx_addr_full_i</obj_property>
+                  <obj_property name="ObjectShortName">f2tl_tx_addr_full_i</obj_property>
+               </wvobject>
+            </wvobject>
+            <wvobject type="group" fp_name="group1501">
+               <obj_property name="label">Mask</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <wvobject type="array" fp_name="/core_fpga/OX_CORE_U1/OT1/N2TL/tl2f_tx_mask_i">
+                  <obj_property name="ElementShortName">tl2f_tx_mask_i[63:0]</obj_property>
+                  <obj_property name="ObjectShortName">tl2f_tx_mask_i[63:0]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/core_fpga/OX_CORE_U1/OT1/N2TL/tl2f_tx_mask_we_i">
+                  <obj_property name="ElementShortName">tl2f_tx_mask_we_i</obj_property>
+                  <obj_property name="ObjectShortName">tl2f_tx_mask_we_i</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/core_fpga/OX_CORE_U1/OT1/N2TL/f2tl_tx_mask_full_i">
+                  <obj_property name="ElementShortName">f2tl_tx_mask_full_i</obj_property>
+                  <obj_property name="ObjectShortName">f2tl_tx_mask_full_i</obj_property>
+               </wvobject>
+            </wvobject>
+            <wvobject type="group" fp_name="group1502">
+               <obj_property name="label">Data</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <wvobject type="array" fp_name="/core_fpga/OX_CORE_U1/OT1/N2TL/tl2f_tx_data_i">
+                  <obj_property name="ElementShortName">tl2f_tx_data_i[255:0]</obj_property>
+                  <obj_property name="ObjectShortName">tl2f_tx_data_i[255:0]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/core_fpga/OX_CORE_U1/OT1/N2TL/tl2f_tx_data_we_i">
+                  <obj_property name="ElementShortName">tl2f_tx_data_we_i</obj_property>
+                  <obj_property name="ObjectShortName">tl2f_tx_data_we_i</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/core_fpga/OX_CORE_U1/OT1/N2TL/f2tl_tx_data_full_i">
+                  <obj_property name="ElementShortName">f2tl_tx_data_full_i</obj_property>
+                  <obj_property name="ObjectShortName">f2tl_tx_data_full_i</obj_property>
+               </wvobject>
+            </wvobject>
+            <wvobject type="group" fp_name="group1503">
+               <obj_property name="label">BCNT</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <wvobject type="array" fp_name="/core_fpga/OX_CORE_U1/OT1/N2TL/tl2f_tx_bcnt_i">
+                  <obj_property name="ElementShortName">tl2f_tx_bcnt_i[15:0]</obj_property>
+                  <obj_property name="ObjectShortName">tl2f_tx_bcnt_i[15:0]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/core_fpga/OX_CORE_U1/OT1/N2TL/tl2f_tx_bcnt_we_i">
+                  <obj_property name="ElementShortName">tl2f_tx_bcnt_we_i</obj_property>
+                  <obj_property name="ObjectShortName">tl2f_tx_bcnt_we_i</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/core_fpga/OX_CORE_U1/OT1/N2TL/f2tl_tx_bcnt_full_i">
+                  <obj_property name="ElementShortName">f2tl_tx_bcnt_full_i</obj_property>
+                  <obj_property name="ObjectShortName">f2tl_tx_bcnt_full_i</obj_property>
+               </wvobject>
+            </wvobject>
+         </wvobject>
+      </wvobject>
+      <wvobject type="group" fp_name="group1480">
+         <obj_property name="label">OX2M</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <wvobject type="array" fp_name="/core_fpga/OX_CORE_U1/OT1/ox2m_u1/ascii_tx_state">
+            <obj_property name="ElementShortName">ascii_tx_state[96:0]</obj_property>
+            <obj_property name="ObjectShortName">ascii_tx_state[96:0]</obj_property>
+            <obj_property name="Radix">ASCIIRADIX</obj_property>
+            <obj_property name="CustomSignalColor">#FF0080</obj_property>
+            <obj_property name="UseCustomSignalColor">true</obj_property>
+         </wvobject>
+         <wvobject type="array" fp_name="/core_fpga/OX_CORE_U1/OT1/ox2m_u1/tx_state">
+            <obj_property name="ElementShortName">tx_state[15:0]</obj_property>
+            <obj_property name="ObjectShortName">tx_state[15:0]</obj_property>
+         </wvobject>
+         <wvobject type="group" fp_name="group1556">
+            <obj_property name="label">Internal</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <obj_property name="isExpanded"></obj_property>
+            <wvobject type="group" fp_name="group1564">
+               <obj_property name="label">TLoE Header</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <obj_property name="isExpanded"></obj_property>
+               <wvobject type="array" fp_name="/core_fpga/OX_CORE_U1/OT1/ox2m_u1/tloe_header_chan">
+                  <obj_property name="ElementShortName">tloe_header_chan[2:0]</obj_property>
+                  <obj_property name="ObjectShortName">tloe_header_chan[2:0]</obj_property>
+               </wvobject>
+               <wvobject type="array" fp_name="/core_fpga/OX_CORE_U1/OT1/ox2m_u1/tloe_header_credit">
+                  <obj_property name="ElementShortName">tloe_header_credit[4:0]</obj_property>
+                  <obj_property name="ObjectShortName">tloe_header_credit[4:0]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/core_fpga/OX_CORE_U1/OT1/ox2m_u1/tloe_header_ack">
+                  <obj_property name="ElementShortName">tloe_header_ack</obj_property>
+                  <obj_property name="ObjectShortName">tloe_header_ack</obj_property>
+               </wvobject>
+               <wvobject type="array" fp_name="/core_fpga/OX_CORE_U1/OT1/ox2m_u1/tloe_header_seq_num_ack">
+                  <obj_property name="ElementShortName">tloe_header_seq_num_ack[21:0]</obj_property>
+                  <obj_property name="ObjectShortName">tloe_header_seq_num_ack[21:0]</obj_property>
+               </wvobject>
+               <wvobject type="array" fp_name="/core_fpga/OX_CORE_U1/OT1/ox2m_u1/tloe_header_seq_num">
+                  <obj_property name="ElementShortName">tloe_header_seq_num[21:0]</obj_property>
+                  <obj_property name="ObjectShortName">tloe_header_seq_num[21:0]</obj_property>
+               </wvobject>
+               <wvobject type="array" fp_name="/core_fpga/OX_CORE_U1/OT1/ox2m_u1/tloe_header_vc">
+                  <obj_property name="ElementShortName">tloe_header_vc[2:0]</obj_property>
+                  <obj_property name="ObjectShortName">tloe_header_vc[2:0]</obj_property>
+               </wvobject>
+               <wvobject type="array" fp_name="/core_fpga/OX_CORE_U1/OT1/ox2m_u1/tloe_frame_mask">
+                  <obj_property name="ElementShortName">tloe_frame_mask[63:0]</obj_property>
+                  <obj_property name="ObjectShortName">tloe_frame_mask[63:0]</obj_property>
+               </wvobject>
+            </wvobject>
+         </wvobject>
+         <wvobject type="group" fp_name="group1476">
+            <obj_property name="label">FIFOs In</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject type="group" fp_name="group1532">
+               <obj_property name="label">Header</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <wvobject type="array" fp_name="/core_fpga/OX_CORE_U1/OT1/ox2m_u1/f2ox_tx_header_i">
+                  <obj_property name="ElementShortName">f2ox_tx_header_i[63:0]</obj_property>
+                  <obj_property name="ObjectShortName">f2ox_tx_header_i[63:0]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/core_fpga/OX_CORE_U1/OT1/ox2m_u1/ox2f_tx_header_re_i">
+                  <obj_property name="ElementShortName">ox2f_tx_header_re_i</obj_property>
+                  <obj_property name="ObjectShortName">ox2f_tx_header_re_i</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/core_fpga/OX_CORE_U1/OT1/ox2m_u1/f2ox_tx_header_empty_i">
+                  <obj_property name="ElementShortName">f2ox_tx_header_empty_i</obj_property>
+                  <obj_property name="ObjectShortName">f2ox_tx_header_empty_i</obj_property>
+               </wvobject>
+               <wvobject type="array" fp_name="/core_fpga/OX_CORE_U1/OT1/ox2m_u1/f2ox_tx_header_rdusedw_i">
+                  <obj_property name="ElementShortName">f2ox_tx_header_rdusedw_i[11:0]</obj_property>
+                  <obj_property name="ObjectShortName">f2ox_tx_header_rdusedw_i[11:0]</obj_property>
+               </wvobject>
+            </wvobject>
+            <wvobject type="group" fp_name="group1533">
+               <obj_property name="label">Addr</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <wvobject type="array" fp_name="/core_fpga/OX_CORE_U1/OT1/ox2m_u1/f2ox_tx_addr_i">
+                  <obj_property name="ElementShortName">f2ox_tx_addr_i[63:0]</obj_property>
+                  <obj_property name="ObjectShortName">f2ox_tx_addr_i[63:0]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/core_fpga/OX_CORE_U1/OT1/ox2m_u1/ox2f_tx_addr_re_i">
+                  <obj_property name="ElementShortName">ox2f_tx_addr_re_i</obj_property>
+                  <obj_property name="ObjectShortName">ox2f_tx_addr_re_i</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/core_fpga/OX_CORE_U1/OT1/ox2m_u1/f2ox_tx_addr_empty_i">
+                  <obj_property name="ElementShortName">f2ox_tx_addr_empty_i</obj_property>
+                  <obj_property name="ObjectShortName">f2ox_tx_addr_empty_i</obj_property>
+               </wvobject>
+               <wvobject type="array" fp_name="/core_fpga/OX_CORE_U1/OT1/ox2m_u1/f2ox_tx_addr_rdusedw_i">
+                  <obj_property name="ElementShortName">f2ox_tx_addr_rdusedw_i[11:0]</obj_property>
+                  <obj_property name="ObjectShortName">f2ox_tx_addr_rdusedw_i[11:0]</obj_property>
+               </wvobject>
+            </wvobject>
+            <wvobject type="group" fp_name="group1534">
+               <obj_property name="label">Mask</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <wvobject type="array" fp_name="/core_fpga/OX_CORE_U1/OT1/ox2m_u1/f2ox_tx_mask_i">
+                  <obj_property name="ElementShortName">f2ox_tx_mask_i[63:0]</obj_property>
+                  <obj_property name="ObjectShortName">f2ox_tx_mask_i[63:0]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/core_fpga/OX_CORE_U1/OT1/ox2m_u1/ox2f_tx_mask_re_i">
+                  <obj_property name="ElementShortName">ox2f_tx_mask_re_i</obj_property>
+                  <obj_property name="ObjectShortName">ox2f_tx_mask_re_i</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/core_fpga/OX_CORE_U1/OT1/ox2m_u1/f2ox_tx_mask_empty_i">
+                  <obj_property name="ElementShortName">f2ox_tx_mask_empty_i</obj_property>
+                  <obj_property name="ObjectShortName">f2ox_tx_mask_empty_i</obj_property>
+               </wvobject>
+               <wvobject type="array" fp_name="/core_fpga/OX_CORE_U1/OT1/ox2m_u1/f2ox_tx_mask_rdusedw_i">
+                  <obj_property name="ElementShortName">f2ox_tx_mask_rdusedw_i[11:0]</obj_property>
+                  <obj_property name="ObjectShortName">f2ox_tx_mask_rdusedw_i[11:0]</obj_property>
+               </wvobject>
+            </wvobject>
+            <wvobject type="group" fp_name="group1535">
+               <obj_property name="label">Data</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <wvobject type="array" fp_name="/core_fpga/OX_CORE_U1/OT1/ox2m_u1/f2ox_tx_data_i">
+                  <obj_property name="ElementShortName">f2ox_tx_data_i[255:0]</obj_property>
+                  <obj_property name="ObjectShortName">f2ox_tx_data_i[255:0]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/core_fpga/OX_CORE_U1/OT1/ox2m_u1/ox2f_tx_data_re_i">
+                  <obj_property name="ElementShortName">ox2f_tx_data_re_i</obj_property>
+                  <obj_property name="ObjectShortName">ox2f_tx_data_re_i</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/core_fpga/OX_CORE_U1/OT1/ox2m_u1/f2ox_tx_data_empty_i">
+                  <obj_property name="ElementShortName">f2ox_tx_data_empty_i</obj_property>
+                  <obj_property name="ObjectShortName">f2ox_tx_data_empty_i</obj_property>
+               </wvobject>
+               <wvobject type="array" fp_name="/core_fpga/OX_CORE_U1/OT1/ox2m_u1/f2ox_tx_data_rdusedw_i">
+                  <obj_property name="ElementShortName">f2ox_tx_data_rdusedw_i[12:0]</obj_property>
+                  <obj_property name="ObjectShortName">f2ox_tx_data_rdusedw_i[12:0]</obj_property>
+               </wvobject>
+            </wvobject>
+            <wvobject type="group" fp_name="group1536">
+               <obj_property name="label">BCNT</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <wvobject type="array" fp_name="/core_fpga/OX_CORE_U1/OT1/ox2m_u1/f2ox_tx_bcnt_i">
+                  <obj_property name="ElementShortName">f2ox_tx_bcnt_i[15:0]</obj_property>
+                  <obj_property name="ObjectShortName">f2ox_tx_bcnt_i[15:0]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/core_fpga/OX_CORE_U1/OT1/ox2m_u1/ox2f_tx_bcnt_re_i">
+                  <obj_property name="ElementShortName">ox2f_tx_bcnt_re_i</obj_property>
+                  <obj_property name="ObjectShortName">ox2f_tx_bcnt_re_i</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/core_fpga/OX_CORE_U1/OT1/ox2m_u1/f2ox_tx_bcnt_empty_i">
+                  <obj_property name="ElementShortName">f2ox_tx_bcnt_empty_i</obj_property>
+                  <obj_property name="ObjectShortName">f2ox_tx_bcnt_empty_i</obj_property>
+               </wvobject>
+               <wvobject type="array" fp_name="/core_fpga/OX_CORE_U1/OT1/ox2m_u1/f2ox_tx_bcnt_rdusedw_i">
+                  <obj_property name="ElementShortName">f2ox_tx_bcnt_rdusedw_i[11:0]</obj_property>
+                  <obj_property name="ObjectShortName">f2ox_tx_bcnt_rdusedw_i[11:0]</obj_property>
+               </wvobject>
+            </wvobject>
+         </wvobject>
+         <wvobject type="group" fp_name="group1587">
+            <obj_property name="label">Seq_Mgr IF</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject type="group" fp_name="group1588">
+               <obj_property name="label">Send Ack (RX &gt; TX)</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <obj_property name="isExpanded"></obj_property>
+               <wvobject type="logic" fp_name="/core_fpga/OX_CORE_U1/OT1/ox2m_u1/rx2tx_send_req">
+                  <obj_property name="ElementShortName">rx2tx_send_req</obj_property>
+                  <obj_property name="ObjectShortName">rx2tx_send_req</obj_property>
+                  <obj_property name="CustomSignalColor">#E0FFFF</obj_property>
+                  <obj_property name="UseCustomSignalColor">true</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/core_fpga/OX_CORE_U1/OT1/ox2m_u1/rx2tx_ack_mode">
+                  <obj_property name="ElementShortName">rx2tx_ack_mode</obj_property>
+                  <obj_property name="ObjectShortName">rx2tx_ack_mode</obj_property>
+                  <obj_property name="CustomSignalColor">#E0FFFF</obj_property>
+                  <obj_property name="UseCustomSignalColor">true</obj_property>
+               </wvobject>
+               <wvobject type="array" fp_name="/core_fpga/OX_CORE_U1/OT1/ox2m_u1/rx2tx_rxack_num">
+                  <obj_property name="ElementShortName">rx2tx_rxack_num[21:0]</obj_property>
+                  <obj_property name="ObjectShortName">rx2tx_rxack_num[21:0]</obj_property>
+                  <obj_property name="CustomSignalColor">#E0FFFF</obj_property>
+                  <obj_property name="UseCustomSignalColor">true</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/core_fpga/OX_CORE_U1/OT1/ox2m_u1/rx2tx_sendreq_done">
+                  <obj_property name="ElementShortName">rx2tx_sendreq_done</obj_property>
+                  <obj_property name="ObjectShortName">rx2tx_sendreq_done</obj_property>
+                  <obj_property name="CustomSignalColor">#E0FFFF</obj_property>
+                  <obj_property name="UseCustomSignalColor">true</obj_property>
+               </wvobject>
+            </wvobject>
+            <wvobject type="group" fp_name="group1592">
+               <obj_property name="label">TX Seqence Update (TX &gt; RX)</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <obj_property name="isExpanded"></obj_property>
+               <wvobject type="logic" fp_name="/core_fpga/OX_CORE_U1/OT1/ox2m_u1/tx2rx_updateseq_req">
+                  <obj_property name="ElementShortName">tx2rx_updateseq_req</obj_property>
+                  <obj_property name="ObjectShortName">tx2rx_updateseq_req</obj_property>
+                  <obj_property name="CustomSignalColor">#FFA500</obj_property>
+                  <obj_property name="UseCustomSignalColor">true</obj_property>
+               </wvobject>
+               <wvobject type="array" fp_name="/core_fpga/OX_CORE_U1/OT1/ox2m_u1/tx2rx_seq_num">
+                  <obj_property name="ElementShortName">tx2rx_seq_num[21:0]</obj_property>
+                  <obj_property name="ObjectShortName">tx2rx_seq_num[21:0]</obj_property>
+                  <obj_property name="CustomSignalColor">#FFA500</obj_property>
+                  <obj_property name="UseCustomSignalColor">true</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/core_fpga/OX_CORE_U1/OT1/ox2m_u1/tx2rx_updateseq_done">
+                  <obj_property name="ElementShortName">tx2rx_updateseq_done</obj_property>
+                  <obj_property name="ObjectShortName">tx2rx_updateseq_done</obj_property>
+                  <obj_property name="CustomSignalColor">#FFA500</obj_property>
+                  <obj_property name="UseCustomSignalColor">true</obj_property>
+               </wvobject>
+            </wvobject>
+         </wvobject>
+         <wvobject type="group" fp_name="group1596">
+            <obj_property name="label">RTX_Mgr IF</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <obj_property name="isExpanded"></obj_property>
+            <wvobject type="logic" fp_name="/core_fpga/OX_CORE_U1/OT1/ox2m_u1/tx_send_req">
+               <obj_property name="ElementShortName">tx_send_req</obj_property>
+               <obj_property name="ObjectShortName">tx_send_req</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/core_fpga/OX_CORE_U1/OT1/ox2m_u1/rtx_mgn_tx_grant">
+               <obj_property name="ElementShortName">rtx_mgn_tx_grant</obj_property>
+               <obj_property name="ObjectShortName">rtx_mgn_tx_grant</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/core_fpga/OX_CORE_U1/OT1/ox2m_u1/rtx_mgn_rtx_grant">
+               <obj_property name="ElementShortName">rtx_mgn_rtx_grant</obj_property>
+               <obj_property name="ObjectShortName">rtx_mgn_rtx_grant</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/core_fpga/OX_CORE_U1/OT1/ox2m_u1/tx_done">
+               <obj_property name="ElementShortName">tx_done</obj_property>
+               <obj_property name="ObjectShortName">tx_done</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/core_fpga/OX_CORE_U1/OT1/ox2m_u1/tx_rtx_entry_full">
+               <obj_property name="ElementShortName">tx_rtx_entry_full</obj_property>
+               <obj_property name="ObjectShortName">tx_rtx_entry_full</obj_property>
+            </wvobject>
+            <wvobject type="array" fp_name="/core_fpga/OX_CORE_U1/OT1/ox2m_u1/tx_buf_wr_addr">
+               <obj_property name="ElementShortName">tx_buf_wr_addr[11:0]</obj_property>
+               <obj_property name="ObjectShortName">tx_buf_wr_addr[11:0]</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/core_fpga/OX_CORE_U1/OT1/ox2m_u1/tx_local_bcnt_valid">
+               <obj_property name="ElementShortName">tx_local_bcnt_valid</obj_property>
+               <obj_property name="ObjectShortName">tx_local_bcnt_valid</obj_property>
+            </wvobject>
+            <wvobject type="array" fp_name="/core_fpga/OX_CORE_U1/OT1/ox2m_u1/tx_local_bcnt">
+               <obj_property name="ElementShortName">tx_local_bcnt[15:0]</obj_property>
+               <obj_property name="ObjectShortName">tx_local_bcnt[15:0]</obj_property>
+            </wvobject>
+            <wvobject type="array" fp_name="/core_fpga/OX_CORE_U1/OT1/ox2m_u1/tx_send_seq">
+               <obj_property name="ElementShortName">tx_send_seq[21:0]</obj_property>
+               <obj_property name="ObjectShortName">tx_send_seq[21:0]</obj_property>
+            </wvobject>
+         </wvobject>
+         <wvobject type="group" fp_name="group1537">
+            <obj_property name="label">RTX Buffer</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject type="array" fp_name="/core_fpga/OX_CORE_U1/OT1/ox2m_u1/ox2b_rtx_wrdata_i">
+               <obj_property name="ElementShortName">ox2b_rtx_wrdata_i[255:0]</obj_property>
+               <obj_property name="ObjectShortName">ox2b_rtx_wrdata_i[255:0]</obj_property>
+            </wvobject>
+            <wvobject type="array" fp_name="/core_fpga/OX_CORE_U1/OT1/ox2m_u1/ox2b_rtx_wrdata_wdaddr">
+               <obj_property name="ElementShortName">ox2b_rtx_wrdata_wdaddr[8:0]</obj_property>
+               <obj_property name="ObjectShortName">ox2b_rtx_wrdata_wdaddr[8:0]</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/core_fpga/OX_CORE_U1/OT1/ox2m_u1/ox2b_rtx_wrdata_we_i">
+               <obj_property name="ElementShortName">ox2b_rtx_wrdata_we_i</obj_property>
+               <obj_property name="ObjectShortName">ox2b_rtx_wrdata_we_i</obj_property>
+            </wvobject>
+            <wvobject type="array" fp_name="/core_fpga/OX_CORE_U1/OT1/ox2m_u1/b2ox_rtx_rddata_i">
+               <obj_property name="ElementShortName">b2ox_rtx_rddata_i[255:0]</obj_property>
+               <obj_property name="ObjectShortName">b2ox_rtx_rddata_i[255:0]</obj_property>
+            </wvobject>
+            <wvobject type="array" fp_name="/core_fpga/OX_CORE_U1/OT1/ox2m_u1/ox2b_rtx_rddata_rdaddr">
+               <obj_property name="ElementShortName">ox2b_rtx_rddata_rdaddr[8:0]</obj_property>
+               <obj_property name="ObjectShortName">ox2b_rtx_rddata_rdaddr[8:0]</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/core_fpga/OX_CORE_U1/OT1/ox2m_u1/ox2b_rtx_rddata_re_i">
+               <obj_property name="ElementShortName">ox2b_rtx_rddata_re_i</obj_property>
+               <obj_property name="ObjectShortName">ox2b_rtx_rddata_re_i</obj_property>
+            </wvobject>
+         </wvobject>
+         <wvobject type="group" fp_name="group1544">
+            <obj_property name="label">RTX CMD FIFO</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject type="array" fp_name="/core_fpga/OX_CORE_U1/OT1/ox2m_u1/f2ox_rtx_cmd_i">
+               <obj_property name="ElementShortName">f2ox_rtx_cmd_i[63:0]</obj_property>
+               <obj_property name="ObjectShortName">f2ox_rtx_cmd_i[63:0]</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/core_fpga/OX_CORE_U1/OT1/ox2m_u1/f2ox_rtx_cmd_empty_i">
+               <obj_property name="ElementShortName">f2ox_rtx_cmd_empty_i</obj_property>
+               <obj_property name="ObjectShortName">f2ox_rtx_cmd_empty_i</obj_property>
+            </wvobject>
+            <wvobject type="array" fp_name="/core_fpga/OX_CORE_U1/OT1/ox2m_u1/f2ox_rtx_cmd_rdusedw_i">
+               <obj_property name="ElementShortName">f2ox_rtx_cmd_rdusedw_i[2:0]</obj_property>
+               <obj_property name="ObjectShortName">f2ox_rtx_cmd_rdusedw_i[2:0]</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/core_fpga/OX_CORE_U1/OT1/ox2m_u1/ox2f_rtx_cmd_re_i">
+               <obj_property name="ElementShortName">ox2f_rtx_cmd_re_i</obj_property>
+               <obj_property name="ObjectShortName">ox2f_rtx_cmd_re_i</obj_property>
+            </wvobject>
+         </wvobject>
+         <wvobject type="group" fp_name="group1549">
+            <obj_property name="label">Reset Ctrl IF</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject type="logic" fp_name="/core_fpga/OX_CORE_U1/OT1/ox2m_u1/rst2ox_rst_ctrl_req">
+               <obj_property name="ElementShortName">rst2ox_rst_ctrl_req</obj_property>
+               <obj_property name="ObjectShortName">rst2ox_rst_ctrl_req</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/core_fpga/OX_CORE_U1/OT1/ox2m_u1/ox2rst_rst_ctrl_grant">
+               <obj_property name="ElementShortName">ox2rst_rst_ctrl_grant</obj_property>
+               <obj_property name="ObjectShortName">ox2rst_rst_ctrl_grant</obj_property>
+            </wvobject>
+            <wvobject type="array" fp_name="/core_fpga/OX_CORE_U1/OT1/ox2m_u1/rst2ox_send_pkt_data">
+               <obj_property name="ElementShortName">rst2ox_send_pkt_data[255:0]</obj_property>
+               <obj_property name="ObjectShortName">rst2ox_send_pkt_data[255:0]</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/core_fpga/OX_CORE_U1/OT1/ox2m_u1/rst2ox_pkt_credit_we">
+               <obj_property name="ElementShortName">rst2ox_pkt_credit_we</obj_property>
+               <obj_property name="ObjectShortName">rst2ox_pkt_credit_we</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/core_fpga/OX_CORE_U1/OT1/ox2m_u1/rst2ox_pkt_done">
+               <obj_property name="ElementShortName">rst2ox_pkt_done</obj_property>
+               <obj_property name="ObjectShortName">rst2ox_pkt_done</obj_property>
+            </wvobject>
+            <wvobject type="array" fp_name="/core_fpga/OX_CORE_U1/OT1/ox2m_u1/rst2ox_qqwd_cnter">
+               <obj_property name="ElementShortName">rst2ox_qqwd_cnter[1:0]</obj_property>
+               <obj_property name="ObjectShortName">rst2ox_qqwd_cnter[1:0]</obj_property>
+            </wvobject>
+         </wvobject>
+         <wvobject type="group" fp_name="group14107">
+            <obj_property name="label">LMAC Out</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <obj_property name="isExpanded"></obj_property>
+            <wvobject type="logic" fp_name="/core_fpga/OX_CORE_U1/OT1/ox2m_tx_we">
+               <obj_property name="ElementShortName">ox2m_tx_we</obj_property>
+               <obj_property name="ObjectShortName">ox2m_tx_we</obj_property>
+            </wvobject>
+            <wvobject type="array" fp_name="/core_fpga/OX_CORE_U1/OT1/ox2m_tx_data">
+               <obj_property name="ElementShortName">ox2m_tx_data[255:0]</obj_property>
+               <obj_property name="ObjectShortName">ox2m_tx_data[255:0]</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/core_fpga/OX_CORE_U1/OT1/m2ox_tx_fifo_full">
+               <obj_property name="ElementShortName">m2ox_tx_fifo_full</obj_property>
+               <obj_property name="ObjectShortName">m2ox_tx_fifo_full</obj_property>
+            </wvobject>
+            <wvobject type="array" fp_name="/core_fpga/OX_CORE_U1/OT1/m2ox_tx_fifo_wrused">
+               <obj_property name="ElementShortName">m2ox_tx_fifo_wrused[12:0]</obj_property>
+               <obj_property name="ObjectShortName">m2ox_tx_fifo_wrused[12:0]</obj_property>
+            </wvobject>
+         </wvobject>
+      </wvobject>
+      <wvobject type="group" fp_name="group1504">
+         <obj_property name="label">RTX Mgr</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <wvobject type="array" fp_name="/core_fpga/OX_CORE_U1/OT1/RTXM/ascii_main_sm">
+            <obj_property name="ElementShortName">ascii_main_sm[96:0]</obj_property>
+            <obj_property name="ObjectShortName">ascii_main_sm[96:0]</obj_property>
+            <obj_property name="Radix">ASCIIRADIX</obj_property>
+         </wvobject>
+         <wvobject type="array" fp_name="/core_fpga/OX_CORE_U1/OT1/RTXM/ascii_build_sm">
+            <obj_property name="ElementShortName">ascii_build_sm[80:0]</obj_property>
+            <obj_property name="ObjectShortName">ascii_build_sm[80:0]</obj_property>
+            <obj_property name="Radix">ASCIIRADIX</obj_property>
+         </wvobject>
+         <wvobject type="group" fp_name="group25520">
+            <obj_property name="label">I/O</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <obj_property name="isExpanded"></obj_property>
+            <wvobject type="logic" fp_name="/core_fpga/OX_CORE_U1/OT1/RTXM/clk">
+               <obj_property name="ElementShortName">clk</obj_property>
+               <obj_property name="ObjectShortName">clk</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/core_fpga/OX_CORE_U1/OT1/RTXM/reset_">
+               <obj_property name="ElementShortName">reset_</obj_property>
+               <obj_property name="ObjectShortName">reset_</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/core_fpga/OX_CORE_U1/OT1/RTXM/last_data">
+               <obj_property name="ElementShortName">last_data</obj_property>
+               <obj_property name="ObjectShortName">last_data</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/core_fpga/OX_CORE_U1/OT1/RTXM/tx_req">
+               <obj_property name="ElementShortName">tx_req</obj_property>
+               <obj_property name="ObjectShortName">tx_req</obj_property>
+            </wvobject>
+            <wvobject type="array" fp_name="/core_fpga/OX_CORE_U1/OT1/RTXM/tx_seq">
+               <obj_property name="ElementShortName">tx_seq[21:0]</obj_property>
+               <obj_property name="ObjectShortName">tx_seq[21:0]</obj_property>
+            </wvobject>
+            <wvobject type="array" fp_name="/core_fpga/OX_CORE_U1/OT1/RTXM/tx_bcnt">
+               <obj_property name="ElementShortName">tx_bcnt[15:0]</obj_property>
+               <obj_property name="ObjectShortName">tx_bcnt[15:0]</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/core_fpga/OX_CORE_U1/OT1/RTXM/bcnt_valid">
+               <obj_property name="ElementShortName">bcnt_valid</obj_property>
+               <obj_property name="ObjectShortName">bcnt_valid</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/core_fpga/OX_CORE_U1/OT1/RTXM/tx_gnt">
+               <obj_property name="ElementShortName">tx_gnt</obj_property>
+               <obj_property name="ObjectShortName">tx_gnt</obj_property>
+            </wvobject>
+            <wvobject type="array" fp_name="/core_fpga/OX_CORE_U1/OT1/RTXM/tx_buf_addr">
+               <obj_property name="ElementShortName">tx_buf_addr[11:0]</obj_property>
+               <obj_property name="ObjectShortName">tx_buf_addr[11:0]</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/core_fpga/OX_CORE_U1/OT1/RTXM/tx_entry_full">
+               <obj_property name="ElementShortName">tx_entry_full</obj_property>
+               <obj_property name="ObjectShortName">tx_entry_full</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/core_fpga/OX_CORE_U1/OT1/RTXM/tx_done">
+               <obj_property name="ElementShortName">tx_done</obj_property>
+               <obj_property name="ObjectShortName">tx_done</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/core_fpga/OX_CORE_U1/OT1/RTXM/ack_req">
+               <obj_property name="ElementShortName">ack_req</obj_property>
+               <obj_property name="ObjectShortName">ack_req</obj_property>
+            </wvobject>
+            <wvobject type="array" fp_name="/core_fpga/OX_CORE_U1/OT1/RTXM/ack_num">
+               <obj_property name="ElementShortName">ack_num[21:0]</obj_property>
+               <obj_property name="ObjectShortName">ack_num[21:0]</obj_property>
+            </wvobject>
+            <wvobject type="array" fp_name="/core_fpga/OX_CORE_U1/OT1/RTXM/entries2free">
+               <obj_property name="ElementShortName">entries2free[3:0]</obj_property>
+               <obj_property name="ObjectShortName">entries2free[3:0]</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/core_fpga/OX_CORE_U1/OT1/RTXM/oxm_rtx_done">
+               <obj_property name="ElementShortName">oxm_rtx_done</obj_property>
+               <obj_property name="ObjectShortName">oxm_rtx_done</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/core_fpga/OX_CORE_U1/OT1/RTXM/ack_done">
+               <obj_property name="ElementShortName">ack_done</obj_property>
+               <obj_property name="ObjectShortName">ack_done</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/core_fpga/OX_CORE_U1/OT1/RTXM/rtx_req">
+               <obj_property name="ElementShortName">rtx_req</obj_property>
+               <obj_property name="ObjectShortName">rtx_req</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/core_fpga/OX_CORE_U1/OT1/RTXM/rtx_done">
+               <obj_property name="ElementShortName">rtx_done</obj_property>
+               <obj_property name="ObjectShortName">rtx_done</obj_property>
+            </wvobject>
+            <wvobject type="array" fp_name="/core_fpga/OX_CORE_U1/OT1/RTXM/rtx_cmd_cnt">
+               <obj_property name="ElementShortName">rtx_cmd_cnt[3:0]</obj_property>
+               <obj_property name="ObjectShortName">rtx_cmd_cnt[3:0]</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/core_fpga/OX_CORE_U1/OT1/RTXM/rtx_gnt">
+               <obj_property name="ElementShortName">rtx_gnt</obj_property>
+               <obj_property name="ObjectShortName">rtx_gnt</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/core_fpga/OX_CORE_U1/OT1/RTXM/cmd_q_full">
+               <obj_property name="ElementShortName">cmd_q_full</obj_property>
+               <obj_property name="ObjectShortName">cmd_q_full</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/core_fpga/OX_CORE_U1/OT1/RTXM/cmd_q_wr_en">
+               <obj_property name="ElementShortName">cmd_q_wr_en</obj_property>
+               <obj_property name="ObjectShortName">cmd_q_wr_en</obj_property>
+            </wvobject>
+            <wvobject type="array" fp_name="/core_fpga/OX_CORE_U1/OT1/RTXM/cmd_q_datain">
+               <obj_property name="ElementShortName">cmd_q_datain[63:0]</obj_property>
+               <obj_property name="ObjectShortName">cmd_q_datain[63:0]</obj_property>
+            </wvobject>
+         </wvobject>
+      </wvobject>
+      <wvobject type="group" fp_name="group14117">
+         <obj_property name="label">Sequencing</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <wvobject type="logic" fp_name="/core_fpga/OX_CORE_U1/OT1/tx2rx_updateseq_done">
+            <obj_property name="ElementShortName">tx2rx_updateseq_done</obj_property>
+            <obj_property name="ObjectShortName">tx2rx_updateseq_done</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="/core_fpga/OX_CORE_U1/OT1/tx2rx_updateseq_req">
+            <obj_property name="ElementShortName">tx2rx_updateseq_req</obj_property>
+            <obj_property name="ObjectShortName">tx2rx_updateseq_req</obj_property>
+         </wvobject>
+         <wvobject type="array" fp_name="/core_fpga/OX_CORE_U1/OT1/tx2rx_seq_num">
+            <obj_property name="ElementShortName">tx2rx_seq_num[21:0]</obj_property>
+            <obj_property name="ObjectShortName">tx2rx_seq_num[21:0]</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="/core_fpga/OX_CORE_U1/OT1/rx2tx_updateack_req">
+            <obj_property name="ElementShortName">rx2tx_updateack_req</obj_property>
+            <obj_property name="ObjectShortName">rx2tx_updateack_req</obj_property>
+         </wvobject>
+         <wvobject type="array" fp_name="/core_fpga/OX_CORE_U1/OT1/rx2tx_new_ack_num">
+            <obj_property name="ElementShortName">rx2tx_new_ack_num[21:0]</obj_property>
+            <obj_property name="ObjectShortName">rx2tx_new_ack_num[21:0]</obj_property>
+         </wvobject>
+         <wvobject type="array" fp_name="/core_fpga/OX_CORE_U1/OT1/rx2tx_free_entries">
+            <obj_property name="ElementShortName">rx2tx_free_entries[3:0]</obj_property>
+            <obj_property name="ObjectShortName">rx2tx_free_entries[3:0]</obj_property>
+         </wvobject>
+         <wvobject type="array" fp_name="/core_fpga/OX_CORE_U1/OT1/rx2tx_rtx_entries">
+            <obj_property name="ElementShortName">rx2tx_rtx_entries[3:0]</obj_property>
+            <obj_property name="ObjectShortName">rx2tx_rtx_entries[3:0]</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="/core_fpga/OX_CORE_U1/OT1/rx2tx_rtx_req">
+            <obj_property name="ElementShortName">rx2tx_rtx_req</obj_property>
+            <obj_property name="ObjectShortName">rx2tx_rtx_req</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="/core_fpga/OX_CORE_U1/OT1/rx2tx_rtxreq_done">
+            <obj_property name="ElementShortName">rx2tx_rtxreq_done</obj_property>
+            <obj_property name="ObjectShortName">rx2tx_rtxreq_done</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="/core_fpga/OX_CORE_U1/OT1/rx2tx_updateack_done">
+            <obj_property name="ElementShortName">rx2tx_updateack_done</obj_property>
+            <obj_property name="ObjectShortName">rx2tx_updateack_done</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="/core_fpga/OX_CORE_U1/OT1/rx2tx_send_req">
+            <obj_property name="ElementShortName">rx2tx_send_req</obj_property>
+            <obj_property name="ObjectShortName">rx2tx_send_req</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="/core_fpga/OX_CORE_U1/OT1/rx2tx_ack_mode">
+            <obj_property name="ElementShortName">rx2tx_ack_mode</obj_property>
+            <obj_property name="ObjectShortName">rx2tx_ack_mode</obj_property>
+         </wvobject>
+         <wvobject type="array" fp_name="/core_fpga/OX_CORE_U1/OT1/rx2tx_rxack_num">
+            <obj_property name="ElementShortName">rx2tx_rxack_num[21:0]</obj_property>
+            <obj_property name="ObjectShortName">rx2tx_rxack_num[21:0]</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="/core_fpga/OX_CORE_U1/OT1/rx2tx_sendreq_done">
+            <obj_property name="ElementShortName">rx2tx_sendreq_done</obj_property>
+            <obj_property name="ObjectShortName">rx2tx_sendreq_done</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="/core_fpga/OX_CORE_U1/OT1/tx_send_req">
+            <obj_property name="ElementShortName">tx_send_req</obj_property>
+            <obj_property name="ObjectShortName">tx_send_req</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="/core_fpga/OX_CORE_U1/OT1/tx_done">
+            <obj_property name="ElementShortName">tx_done</obj_property>
+            <obj_property name="ObjectShortName">tx_done</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="/core_fpga/OX_CORE_U1/OT1/oxm_rtx_done">
+            <obj_property name="ElementShortName">oxm_rtx_done</obj_property>
+            <obj_property name="ObjectShortName">oxm_rtx_done</obj_property>
+         </wvobject>
+      </wvobject>
+      <wvobject type="group" fp_name="group14134">
+         <obj_property name="label">Coherency</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <wvobject type="logic" fp_name="/core_fpga/OX_CORE_U1/OT1/ackmtotx_busy">
+            <obj_property name="ElementShortName">ackmtotx_busy</obj_property>
+            <obj_property name="ObjectShortName">ackmtotx_busy</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="/core_fpga/OX_CORE_U1/OT1/coh2tl_tx_acquire_req_ack">
+            <obj_property name="ElementShortName">coh2tl_tx_acquire_req_ack</obj_property>
+            <obj_property name="ObjectShortName">coh2tl_tx_acquire_req_ack</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="/core_fpga/OX_CORE_U1/OT1/coh2tl_tx_acquire_gen_en">
+            <obj_property name="ElementShortName">coh2tl_tx_acquire_gen_en</obj_property>
+            <obj_property name="ObjectShortName">coh2tl_tx_acquire_gen_en</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="/core_fpga/OX_CORE_U1/OT1/coh2tl_gntack_gen_en">
+            <obj_property name="ElementShortName">coh2tl_gntack_gen_en</obj_property>
+            <obj_property name="ObjectShortName">coh2tl_gntack_gen_en</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="/core_fpga/OX_CORE_U1/OT1/tl2coh_tx_acquire_req">
+            <obj_property name="ElementShortName">tl2coh_tx_acquire_req</obj_property>
+            <obj_property name="ObjectShortName">tl2coh_tx_acquire_req</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="/core_fpga/OX_CORE_U1/OT1/tl2coh_tx_acquire_gen_done">
+            <obj_property name="ElementShortName">tl2coh_tx_acquire_gen_done</obj_property>
+            <obj_property name="ObjectShortName">tl2coh_tx_acquire_gen_done</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="/core_fpga/OX_CORE_U1/OT1/tl2coh_tx_gntack_gen_done">
+            <obj_property name="ElementShortName">tl2coh_tx_gntack_gen_done</obj_property>
+            <obj_property name="ObjectShortName">tl2coh_tx_gntack_gen_done</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="/core_fpga/OX_CORE_U1/OT1/coh2tl_tx_prb_flush_wait">
+            <obj_property name="ElementShortName">coh2tl_tx_prb_flush_wait</obj_property>
+            <obj_property name="ObjectShortName">coh2tl_tx_prb_flush_wait</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="/core_fpga/OX_CORE_U1/OT1/coh2tl_prb_ack_w_data">
+            <obj_property name="ElementShortName">coh2tl_prb_ack_w_data</obj_property>
+            <obj_property name="ObjectShortName">coh2tl_prb_ack_w_data</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="/core_fpga/OX_CORE_U1/OT1/coh2tl_prb_ack_no_data">
+            <obj_property name="ElementShortName">coh2tl_prb_ack_no_data</obj_property>
+            <obj_property name="ObjectShortName">coh2tl_prb_ack_no_data</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="/core_fpga/OX_CORE_U1/OT1/tl2coh_tx_probe_req_done">
+            <obj_property name="ElementShortName">tl2coh_tx_probe_req_done</obj_property>
+            <obj_property name="ObjectShortName">tl2coh_tx_probe_req_done</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="/core_fpga/OX_CORE_U1/OT1/tl2coh_tx_release_req_ack">
+            <obj_property name="ElementShortName">tl2coh_tx_release_req_ack</obj_property>
+            <obj_property name="ObjectShortName">tl2coh_tx_release_req_ack</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="/core_fpga/OX_CORE_U1/OT1/tl2coh_tx_release_req">
+            <obj_property name="ElementShortName">tl2coh_tx_release_req</obj_property>
+            <obj_property name="ObjectShortName">tl2coh_tx_release_req</obj_property>
+         </wvobject>
+         <wvobject type="array" fp_name="/core_fpga/OX_CORE_U1/OT1/c_prb_ack_size">
+            <obj_property name="ElementShortName">c_prb_ack_size[3:0]</obj_property>
+            <obj_property name="ObjectShortName">c_prb_ack_size[3:0]</obj_property>
+         </wvobject>
+         <wvobject type="array" fp_name="/core_fpga/OX_CORE_U1/OT1/c_prb_ack_source">
+            <obj_property name="ElementShortName">c_prb_ack_source[25:0]</obj_property>
+            <obj_property name="ObjectShortName">c_prb_ack_source[25:0]</obj_property>
+         </wvobject>
+         <wvobject type="array" fp_name="/core_fpga/OX_CORE_U1/OT1/c_prb_ack_address">
+            <obj_property name="ElementShortName">c_prb_ack_address[63:0]</obj_property>
+            <obj_property name="ObjectShortName">c_prb_ack_address[63:0]</obj_property>
+         </wvobject>
+         <wvobject type="array" fp_name="/core_fpga/OX_CORE_U1/OT1/e_sink">
+            <obj_property name="ElementShortName">e_sink[25:0]</obj_property>
+            <obj_property name="ObjectShortName">e_sink[25:0]</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="/core_fpga/OX_CORE_U1/OT1/lewiz_noc_mode">
+            <obj_property name="ElementShortName">lewiz_noc_mode</obj_property>
+            <obj_property name="ObjectShortName">lewiz_noc_mode</obj_property>
+         </wvobject>
+      </wvobject>
+   </wvobject>
+   <wvobject fp_name="divider14205" type="divider">
+      <obj_property name="label">NETE &amp; Endpoint</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+   </wvobject>
+   <wvobject type="group" fp_name="group1466">
+      <obj_property name="label">NETE</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+   </wvobject>
+   <wvobject type="group" fp_name="group14106">
+      <obj_property name="label">RX Path</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="isExpanded"></obj_property>
+      <wvobject type="logic" fp_name="/core_fpga/OX_CORE_U1/OR1/clk">
+         <obj_property name="ElementShortName">clk</obj_property>
+         <obj_property name="ObjectShortName">clk</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/core_fpga/OX_CORE_U1/OR1/rst_">
+         <obj_property name="ElementShortName">rst_</obj_property>
+         <obj_property name="ObjectShortName">rst_</obj_property>
+      </wvobject>
+      <wvobject type="group" fp_name="group1952">
+         <obj_property name="label">SEQ_MGR</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <wvobject type="group" fp_name="group1966">
+            <obj_property name="label">State Machines</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject type="group" fp_name="group1559">
+               <obj_property name="label">Update Sequence</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <obj_property name="isExpanded"></obj_property>
+               <wvobject type="array" fp_name="/core_fpga/OX_CORE_U1/OR1/SM/ascii_update_seq_state">
+                  <obj_property name="ElementShortName">ascii_update_seq_state[96:0]</obj_property>
+                  <obj_property name="ObjectShortName">ascii_update_seq_state[96:0]</obj_property>
+                  <obj_property name="Radix">ASCIIRADIX</obj_property>
+                  <obj_property name="CustomSignalColor">#FFA500</obj_property>
+                  <obj_property name="UseCustomSignalColor">true</obj_property>
+               </wvobject>
+               <wvobject type="vbus" fp_name="vbus1563">
+                  <obj_property name="label">updateseq_start, AND</obj_property>
+                  <obj_property name="DisplayName">label</obj_property>
+                  <obj_property name="CustomSignalColor">#FFA500</obj_property>
+                  <obj_property name="UseCustomSignalColor">true</obj_property>
+                  <wvobject type="logic" fp_name="/core_fpga/OX_CORE_U1/OR1/SM/updateseq_pending">
+                     <obj_property name="ElementShortName">updateseq_pending</obj_property>
+                     <obj_property name="ObjectShortName">updateseq_pending</obj_property>
+                     <obj_property name="CustomSignalColor">#FFA500</obj_property>
+                     <obj_property name="UseCustomSignalColor">true</obj_property>
+                  </wvobject>
+                  <wvobject type="logic" fp_name="/core_fpga/OX_CORE_U1/OR1/SM/updateseq_gnt">
+                     <obj_property name="ElementShortName">updateseq_gnt</obj_property>
+                     <obj_property name="ObjectShortName">updateseq_gnt</obj_property>
+                     <obj_property name="CustomSignalColor">#FFA500</obj_property>
+                     <obj_property name="UseCustomSignalColor">true</obj_property>
+                     <obj_property name="label">updateseq_gnt</obj_property>
+                  </wvobject>
+               </wvobject>
+            </wvobject>
+            <wvobject type="group" fp_name="group1558">
+               <obj_property name="label">Sequence/ACK Check/Update</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <obj_property name="isExpanded"></obj_property>
+               <wvobject type="array" fp_name="/core_fpga/OX_CORE_U1/OR1/SM/ascii_update_ack_state">
+                  <obj_property name="DisplayName">label</obj_property>
+                  <obj_property name="ElementShortName">ascii_update_ack_state[96:0]</obj_property>
+                  <obj_property name="ObjectShortName">ascii_update_ack_state[96:0]</obj_property>
+                  <obj_property name="Radix">ASCIIRADIX</obj_property>
+                  <obj_property name="CustomSignalColor">#008080</obj_property>
+                  <obj_property name="UseCustomSignalColor">true</obj_property>
+                  <obj_property name="label">Check/Update ACK State</obj_property>
+               </wvobject>
+               <wvobject fp_name="divider1576" type="divider">
+                  <obj_property name="label">--------</obj_property>
+                  <obj_property name="DisplayName">label</obj_property>
+               </wvobject>
+               <wvobject type="array" fp_name="/core_fpga/OX_CORE_U1/OR1/SM/ascii_send_req_state">
+                  <obj_property name="DisplayName">label</obj_property>
+                  <obj_property name="ElementShortName">ascii_send_req_state[96:0]</obj_property>
+                  <obj_property name="ObjectShortName">ascii_send_req_state[96:0]</obj_property>
+                  <obj_property name="Radix">ASCIIRADIX</obj_property>
+                  <obj_property name="CustomSignalColor">#00FFFF</obj_property>
+                  <obj_property name="UseCustomSignalColor">true</obj_property>
+                  <obj_property name="label">Check Seq / Send ACK State</obj_property>
+               </wvobject>
+               <wvobject type="group" fp_name="group1577">
+                  <obj_property name="label">Start Triggers</obj_property>
+                  <obj_property name="DisplayName">label</obj_property>
+                  <obj_property name="isExpanded"></obj_property>
+                  <wvobject type="vbus" fp_name="vbus1586">
+                     <obj_property name="label">ACK Timer Granted, AND</obj_property>
+                     <obj_property name="DisplayName">label</obj_property>
+                     <obj_property name="CustomSignalColor">#A0A0A4</obj_property>
+                     <obj_property name="UseCustomSignalColor">true</obj_property>
+                     <wvobject type="logic" fp_name="/core_fpga/OX_CORE_U1/OR1/SM/timer_gnt">
+                        <obj_property name="DisplayName">label</obj_property>
+                        <obj_property name="ElementShortName">timer_gnt</obj_property>
+                        <obj_property name="ObjectShortName">timer_gnt</obj_property>
+                        <obj_property name="CustomSignalColor">#A0A0A4</obj_property>
+                        <obj_property name="UseCustomSignalColor">true</obj_property>
+                        <obj_property name="label">timerrst_gnt (timer_gnt)</obj_property>
+                     </wvobject>
+                     <wvobject type="logic" fp_name="/core_fpga/OX_CORE_U1/OR1/SM/ack_timer_expired">
+                        <obj_property name="ElementShortName">ack_timer_expired</obj_property>
+                        <obj_property name="ObjectShortName">ack_timer_expired</obj_property>
+                        <obj_property name="CustomSignalColor">#A0A0A4</obj_property>
+                        <obj_property name="UseCustomSignalColor">true</obj_property>
+                     </wvobject>
+                  </wvobject>
+                  <wvobject type="vbus" fp_name="vbus1582">
+                     <obj_property name="label">Seq Check Granted, AND</obj_property>
+                     <obj_property name="DisplayName">label</obj_property>
+                     <obj_property name="CustomSignalColor">#00FFFF</obj_property>
+                     <obj_property name="UseCustomSignalColor">true</obj_property>
+                     <wvobject type="logic" fp_name="/core_fpga/OX_CORE_U1/OR1/SM/oxm2ackm_chk_req">
+                        <obj_property name="ElementShortName">oxm2ackm_chk_req</obj_property>
+                        <obj_property name="ObjectShortName">oxm2ackm_chk_req</obj_property>
+                        <obj_property name="CustomSignalColor">#00FFFF</obj_property>
+                        <obj_property name="UseCustomSignalColor">true</obj_property>
+                     </wvobject>
+                     <wvobject type="logic" fp_name="/core_fpga/OX_CORE_U1/OR1/SM/chk_req_gnt">
+                        <obj_property name="DisplayName">label</obj_property>
+                        <obj_property name="ElementShortName">chk_req_gnt</obj_property>
+                        <obj_property name="ObjectShortName">chk_req_gnt</obj_property>
+                        <obj_property name="CustomSignalColor">#00FFFF</obj_property>
+                        <obj_property name="UseCustomSignalColor">true</obj_property>
+                        <obj_property name="label">seqchk_gnt (chk_req_gnt)</obj_property>
+                     </wvobject>
+                  </wvobject>
+               </wvobject>
+               <wvobject type="group" fp_name="group1570">
+                  <obj_property name="label">Done Triggers</obj_property>
+                  <obj_property name="DisplayName">label</obj_property>
+                  <obj_property name="isExpanded"></obj_property>
+                  <wvobject type="logic" fp_name="/core_fpga/OX_CORE_U1/OR1/SM/rx2tx_sendreq_done">
+                     <obj_property name="DisplayName">label</obj_property>
+                     <obj_property name="ElementShortName">rx2tx_sendreq_done</obj_property>
+                     <obj_property name="ObjectShortName">rx2tx_sendreq_done</obj_property>
+                     <obj_property name="CustomSignalColor">#E0FFFF</obj_property>
+                     <obj_property name="UseCustomSignalColor">true</obj_property>
+                     <obj_property name="label">rx2tx_sendreq_done [Timer]</obj_property>
+                  </wvobject>
+                  <wvobject type="vbus" fp_name="vbus1573">
+                     <obj_property name="label">Sequence Check, AND</obj_property>
+                     <obj_property name="DisplayName">label</obj_property>
+                     <obj_property name="CustomSignalColor">#00FFFF</obj_property>
+                     <obj_property name="UseCustomSignalColor">true</obj_property>
+                     <wvobject type="logic" fp_name="/core_fpga/OX_CORE_U1/OR1/SM/rx_done">
+                        <obj_property name="ElementShortName">rx_done</obj_property>
+                        <obj_property name="ObjectShortName">rx_done</obj_property>
+                        <obj_property name="CustomSignalColor">#00FFFF</obj_property>
+                        <obj_property name="UseCustomSignalColor">true</obj_property>
+                     </wvobject>
+                     <wvobject type="logic" fp_name="/core_fpga/OX_CORE_U1/OR1/SM/chk_req_gnt">
+                        <obj_property name="DisplayName">label</obj_property>
+                        <obj_property name="ElementShortName">chk_req_gnt</obj_property>
+                        <obj_property name="ObjectShortName">chk_req_gnt</obj_property>
+                        <obj_property name="CustomSignalColor">#00FFFF</obj_property>
+                        <obj_property name="UseCustomSignalColor">true</obj_property>
+                        <obj_property name="label">seqchk_gnt (chk_req_gnt)</obj_property>
+                     </wvobject>
+                  </wvobject>
+               </wvobject>
+            </wvobject>
+            <wvobject type="group" fp_name="group1556">
+               <obj_property name="label">Master</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <obj_property name="isExpanded"></obj_property>
+               <wvobject type="array" fp_name="/core_fpga/OX_CORE_U1/OR1/SM/ascii_master_state">
+                  <obj_property name="ElementShortName">ascii_master_state[96:0]</obj_property>
+                  <obj_property name="ObjectShortName">ascii_master_state[96:0]</obj_property>
+                  <obj_property name="Radix">ASCIIRADIX</obj_property>
+               </wvobject>
+               <wvobject type="group" fp_name="group1997">
+                  <obj_property name="label">Start Triggers</obj_property>
+                  <obj_property name="DisplayName">label</obj_property>
+                  <obj_property name="isExpanded"></obj_property>
+                  <wvobject type="logic" fp_name="/core_fpga/OX_CORE_U1/OR1/SM/updateseq_pending">
+                     <obj_property name="ElementShortName">updateseq_pending</obj_property>
+                     <obj_property name="ObjectShortName">updateseq_pending</obj_property>
+                     <obj_property name="CustomSignalColor">#FFA500</obj_property>
+                     <obj_property name="UseCustomSignalColor">true</obj_property>
+                  </wvobject>
+                  <wvobject type="logic" fp_name="/core_fpga/OX_CORE_U1/OR1/SM/ack_timer_expired">
+                     <obj_property name="ElementShortName">ack_timer_expired</obj_property>
+                     <obj_property name="ObjectShortName">ack_timer_expired</obj_property>
+                     <obj_property name="CustomSignalColor">#A0A0A4</obj_property>
+                     <obj_property name="UseCustomSignalColor">true</obj_property>
+                  </wvobject>
+                  <wvobject type="logic" fp_name="/core_fpga/OX_CORE_U1/OR1/SM/oxm2ackm_chk_req">
+                     <obj_property name="ElementShortName">oxm2ackm_chk_req</obj_property>
+                     <obj_property name="ObjectShortName">oxm2ackm_chk_req</obj_property>
+                     <obj_property name="CustomSignalColor">#00FFFF</obj_property>
+                     <obj_property name="UseCustomSignalColor">true</obj_property>
+                  </wvobject>
+                  <wvobject type="logic" fp_name="/core_fpga/OX_CORE_U1/OR1/SM/tx_req">
+                     <obj_property name="ElementShortName">tx_req</obj_property>
+                     <obj_property name="ObjectShortName">tx_req</obj_property>
+                     <obj_property name="CustomSignalColor">#0000FF</obj_property>
+                     <obj_property name="UseCustomSignalColor">true</obj_property>
+                  </wvobject>
+               </wvobject>
+               <wvobject type="group" fp_name="group1989">
+                  <obj_property name="label">Grants</obj_property>
+                  <obj_property name="DisplayName">label</obj_property>
+                  <obj_property name="isExpanded"></obj_property>
+                  <wvobject type="logic" fp_name="/core_fpga/OX_CORE_U1/OR1/SM/updateseq_gnt">
+                     <obj_property name="ElementShortName">updateseq_gnt</obj_property>
+                     <obj_property name="ObjectShortName">updateseq_gnt</obj_property>
+                     <obj_property name="CustomSignalColor">#FFA500</obj_property>
+                     <obj_property name="UseCustomSignalColor">true</obj_property>
+                     <obj_property name="label">updateseq_gnt</obj_property>
+                  </wvobject>
+                  <wvobject type="logic" fp_name="/core_fpga/OX_CORE_U1/OR1/SM/timer_gnt">
+                     <obj_property name="DisplayName">label</obj_property>
+                     <obj_property name="ElementShortName">timer_gnt</obj_property>
+                     <obj_property name="ObjectShortName">timer_gnt</obj_property>
+                     <obj_property name="CustomSignalColor">#A0A0A4</obj_property>
+                     <obj_property name="UseCustomSignalColor">true</obj_property>
+                     <obj_property name="label">timerrst_gnt (timer_gnt)</obj_property>
+                  </wvobject>
+                  <wvobject type="logic" fp_name="/core_fpga/OX_CORE_U1/OR1/SM/chk_req_gnt">
+                     <obj_property name="DisplayName">label</obj_property>
+                     <obj_property name="ElementShortName">chk_req_gnt</obj_property>
+                     <obj_property name="ObjectShortName">chk_req_gnt</obj_property>
+                     <obj_property name="CustomSignalColor">#00FFFF</obj_property>
+                     <obj_property name="UseCustomSignalColor">true</obj_property>
+                     <obj_property name="label">seqchk_gnt (chk_req_gnt)</obj_property>
+                  </wvobject>
+                  <wvobject type="logic" fp_name="/core_fpga/OX_CORE_U1/OR1/SM/tx_req_gnt">
+                     <obj_property name="ElementShortName">tx_req_gnt</obj_property>
+                     <obj_property name="ObjectShortName">tx_req_gnt</obj_property>
+                     <obj_property name="CustomSignalColor">#0000FF</obj_property>
+                     <obj_property name="UseCustomSignalColor">true</obj_property>
+                  </wvobject>
+               </wvobject>
+               <wvobject type="group" fp_name="group2002">
+                  <obj_property name="label">Done Triggers</obj_property>
+                  <obj_property name="DisplayName">label</obj_property>
+                  <obj_property name="isExpanded"></obj_property>
+                  <wvobject type="logic" fp_name="/core_fpga/OX_CORE_U1/OR1/SM/us_done_st">
+                     <obj_property name="DisplayName">label</obj_property>
+                     <obj_property name="ElementShortName">us_done_st</obj_property>
+                     <obj_property name="ObjectShortName">us_done_st</obj_property>
+                     <obj_property name="CustomSignalColor">#FFA500</obj_property>
+                     <obj_property name="UseCustomSignalColor">true</obj_property>
+                     <obj_property name="label">updseq_done (us_done_st)</obj_property>
+                  </wvobject>
+                  <wvobject type="vbus" fp_name="vbus1557">
+                     <obj_property name="label">seqchk_done, AND</obj_property>
+                     <obj_property name="DisplayName">label</obj_property>
+                     <obj_property name="CustomSignalColor">#00FFFF</obj_property>
+                     <obj_property name="UseCustomSignalColor">true</obj_property>
+                     <obj_property name="isExpanded"></obj_property>
+                     <wvobject type="logic" fp_name="/core_fpga/OX_CORE_U1/OR1/SM/sr_done_st">
+                        <obj_property name="ElementShortName">sr_done_st</obj_property>
+                        <obj_property name="ObjectShortName">sr_done_st</obj_property>
+                        <obj_property name="CustomSignalColor">#00FFFF</obj_property>
+                        <obj_property name="UseCustomSignalColor">true</obj_property>
+                     </wvobject>
+                     <wvobject type="logic" fp_name="/core_fpga/OX_CORE_U1/OR1/SM/oxm2ackm_done">
+                        <obj_property name="ElementShortName">oxm2ackm_done</obj_property>
+                        <obj_property name="ObjectShortName">oxm2ackm_done</obj_property>
+                        <obj_property name="CustomSignalColor">#00FFFF</obj_property>
+                        <obj_property name="UseCustomSignalColor">true</obj_property>
+                     </wvobject>
+                  </wvobject>
+                  <wvobject type="logic" fp_name="/core_fpga/OX_CORE_U1/OR1/SM/tx_done">
+                     <obj_property name="ElementShortName">tx_done</obj_property>
+                     <obj_property name="ObjectShortName">tx_done</obj_property>
+                     <obj_property name="CustomSignalColor">#0000FF</obj_property>
+                     <obj_property name="UseCustomSignalColor">true</obj_property>
+                  </wvobject>
+               </wvobject>
+            </wvobject>
+         </wvobject>
+         <wvobject type="group" fp_name="group1992">
+            <obj_property name="label">Ack Timer</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject type="array" fp_name="/core_fpga/OX_CORE_U1/OR1/SM/ack_timer">
+               <obj_property name="ElementShortName">ack_timer[31:0]</obj_property>
+               <obj_property name="ObjectShortName">ack_timer[31:0]</obj_property>
+               <obj_property name="CustomSignalColor">#A0A0A4</obj_property>
+               <obj_property name="UseCustomSignalColor">true</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/core_fpga/OX_CORE_U1/OR1/SM/ack_timer_expired">
+               <obj_property name="ElementShortName">ack_timer_expired</obj_property>
+               <obj_property name="ObjectShortName">ack_timer_expired</obj_property>
+               <obj_property name="CustomSignalColor">#A0A0A4</obj_property>
+               <obj_property name="UseCustomSignalColor">true</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/core_fpga/OX_CORE_U1/OR1/SM/ack_timer_in_progress">
+               <obj_property name="ElementShortName">ack_timer_in_progress</obj_property>
+               <obj_property name="ObjectShortName">ack_timer_in_progress</obj_property>
+               <obj_property name="CustomSignalColor">#A0A0A4</obj_property>
+               <obj_property name="UseCustomSignalColor">true</obj_property>
+            </wvobject>
+         </wvobject>
+         <wvobject type="group" fp_name="group1983">
+            <obj_property name="label">Internal</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <obj_property name="isExpanded"></obj_property>
+            <wvobject type="array" fp_name="/core_fpga/OX_CORE_U1/OR1/SM/ack_num_max">
+               <obj_property name="ElementShortName">ack_num_max[21:0]</obj_property>
+               <obj_property name="ObjectShortName">ack_num_max[21:0]</obj_property>
+            </wvobject>
+            <wvobject type="array" fp_name="/core_fpga/OX_CORE_U1/OR1/SM/ack_num_cur">
+               <obj_property name="ElementShortName">ack_num_cur[21:0]</obj_property>
+               <obj_property name="ObjectShortName">ack_num_cur[21:0]</obj_property>
+            </wvobject>
+            <wvobject type="array" fp_name="/core_fpga/OX_CORE_U1/OR1/SM/ack_num_new">
+               <obj_property name="ElementShortName">ack_num_new[21:0]</obj_property>
+               <obj_property name="ObjectShortName">ack_num_new[21:0]</obj_property>
+            </wvobject>
+            <wvobject type="array" fp_name="/core_fpga/OX_CORE_U1/OR1/SM/seq_cur_tx">
+               <obj_property name="ElementShortName">seq_cur_tx[21:0]</obj_property>
+               <obj_property name="ObjectShortName">seq_cur_tx[21:0]</obj_property>
+            </wvobject>
+            <wvobject type="array" fp_name="/core_fpga/OX_CORE_U1/OR1/SM/seq_cur_rx">
+               <obj_property name="ElementShortName">seq_cur_rx[21:0]</obj_property>
+               <obj_property name="ObjectShortName">seq_cur_rx[21:0]</obj_property>
+            </wvobject>
+            <wvobject type="array" fp_name="/core_fpga/OX_CORE_U1/OR1/SM/seq_next_rx">
+               <obj_property name="ElementShortName">seq_next_rx[21:0]</obj_property>
+               <obj_property name="ObjectShortName">seq_next_rx[21:0]</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/core_fpga/OX_CORE_U1/OR1/SM/ack_mode_rx">
+               <obj_property name="ElementShortName">ack_mode_rx</obj_property>
+               <obj_property name="ObjectShortName">ack_mode_rx</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/core_fpga/OX_CORE_U1/OR1/SM/seq_in_order">
+               <obj_property name="ElementShortName">seq_in_order</obj_property>
+               <obj_property name="ObjectShortName">seq_in_order</obj_property>
+            </wvobject>
+         </wvobject>
+         <wvobject type="group" fp_name="group1967">
+            <obj_property name="label">RTX_MGR IF (TX Path)</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject type="array" fp_name="/core_fpga/OX_CORE_U1/OR1/SM/rx2tx_free_entries">
+               <obj_property name="ElementShortName">rx2tx_free_entries[3:0]</obj_property>
+               <obj_property name="ObjectShortName">rx2tx_free_entries[3:0]</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/core_fpga/OX_CORE_U1/OR1/SM/rx2tx_rtx_req">
+               <obj_property name="ElementShortName">rx2tx_rtx_req</obj_property>
+               <obj_property name="ObjectShortName">rx2tx_rtx_req</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/core_fpga/OX_CORE_U1/OR1/SM/rx2tx_updateack_req">
+               <obj_property name="ElementShortName">rx2tx_updateack_req</obj_property>
+               <obj_property name="ObjectShortName">rx2tx_updateack_req</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/core_fpga/OX_CORE_U1/OR1/SM/rx2tx_rtxreq_done">
+               <obj_property name="ElementShortName">rx2tx_rtxreq_done</obj_property>
+               <obj_property name="ObjectShortName">rx2tx_rtxreq_done</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/core_fpga/OX_CORE_U1/OR1/SM/rx2tx_updateack_done">
+               <obj_property name="ElementShortName">rx2tx_updateack_done</obj_property>
+               <obj_property name="ObjectShortName">rx2tx_updateack_done</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/core_fpga/OX_CORE_U1/OR1/SM/tx_done">
+               <obj_property name="ElementShortName">tx_done</obj_property>
+               <obj_property name="ObjectShortName">tx_done</obj_property>
+               <obj_property name="CustomSignalColor">#0000FF</obj_property>
+               <obj_property name="UseCustomSignalColor">true</obj_property>
+            </wvobject>
+         </wvobject>
+         <wvobject type="group" fp_name="group1968">
+            <obj_property name="label">OX2M IF (TX Path)</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject type="group" fp_name="group1565">
+               <obj_property name="label">Send Ack (RX &gt; TX)</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <wvobject type="logic" fp_name="/core_fpga/OX_CORE_U1/OR1/SM/rx2tx_send_req">
+                  <obj_property name="DisplayName">label</obj_property>
+                  <obj_property name="ElementShortName">rx2tx_send_req</obj_property>
+                  <obj_property name="ObjectShortName">rx2tx_send_req</obj_property>
+                  <obj_property name="CustomSignalColor">#E0FFFF</obj_property>
+                  <obj_property name="UseCustomSignalColor">true</obj_property>
+                  <obj_property name="label">rx2tx_send_req</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/core_fpga/OX_CORE_U1/OR1/SM/rx2tx_ack_mode">
+                  <obj_property name="ElementShortName">rx2tx_ack_mode</obj_property>
+                  <obj_property name="ObjectShortName">rx2tx_ack_mode</obj_property>
+                  <obj_property name="CustomSignalColor">#E0FFFF</obj_property>
+                  <obj_property name="UseCustomSignalColor">true</obj_property>
+               </wvobject>
+               <wvobject type="array" fp_name="/core_fpga/OX_CORE_U1/OR1/SM/rx2tx_rxack_num">
+                  <obj_property name="ElementShortName">rx2tx_rxack_num[21:0]</obj_property>
+                  <obj_property name="ObjectShortName">rx2tx_rxack_num[21:0]</obj_property>
+                  <obj_property name="CustomSignalColor">#E0FFFF</obj_property>
+                  <obj_property name="UseCustomSignalColor">true</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/core_fpga/OX_CORE_U1/OR1/SM/rx2tx_sendreq_done">
+                  <obj_property name="ElementShortName">rx2tx_sendreq_done</obj_property>
+                  <obj_property name="ObjectShortName">rx2tx_sendreq_done</obj_property>
+                  <obj_property name="CustomSignalColor">#E0FFFF</obj_property>
+                  <obj_property name="UseCustomSignalColor">true</obj_property>
+               </wvobject>
+            </wvobject>
+            <wvobject type="group" fp_name="group1564">
+               <obj_property name="label">Seqence Update (TX &gt; RX)</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <wvobject type="logic" fp_name="/core_fpga/OX_CORE_U1/OR1/SM/tx2rx_updateseq_req">
+                  <obj_property name="ElementShortName">tx2rx_updateseq_req</obj_property>
+                  <obj_property name="ObjectShortName">tx2rx_updateseq_req</obj_property>
+                  <obj_property name="CustomSignalColor">#FFA500</obj_property>
+                  <obj_property name="UseCustomSignalColor">true</obj_property>
+               </wvobject>
+               <wvobject type="array" fp_name="/core_fpga/OX_CORE_U1/OR1/SM/tx2rx_seq_num">
+                  <obj_property name="ElementShortName">tx2rx_seq_num[21:0]</obj_property>
+                  <obj_property name="ObjectShortName">tx2rx_seq_num[21:0]</obj_property>
+                  <obj_property name="CustomSignalColor">#FFA500</obj_property>
+                  <obj_property name="UseCustomSignalColor">true</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/core_fpga/OX_CORE_U1/OR1/SM/tx2rx_updateseq_done">
+                  <obj_property name="ElementShortName">tx2rx_updateseq_done</obj_property>
+                  <obj_property name="ObjectShortName">tx2rx_updateseq_done</obj_property>
+                  <obj_property name="CustomSignalColor">#FFA500</obj_property>
+                  <obj_property name="UseCustomSignalColor">true</obj_property>
+               </wvobject>
+            </wvobject>
+            <wvobject type="logic" fp_name="/core_fpga/OX_CORE_U1/OR1/SM/tx_req">
+               <obj_property name="ElementShortName">tx_req</obj_property>
+               <obj_property name="ObjectShortName">tx_req</obj_property>
+               <obj_property name="CustomSignalColor">#0000FF</obj_property>
+               <obj_property name="UseCustomSignalColor">true</obj_property>
+            </wvobject>
+         </wvobject>
+         <wvobject type="group" fp_name="group1961">
+            <obj_property name="label">M2OX IF</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <obj_property name="isExpanded"></obj_property>
+            <wvobject type="logic" fp_name="/core_fpga/OX_CORE_U1/OR1/SM/oxm2ackm_chk_req">
+               <obj_property name="ElementShortName">oxm2ackm_chk_req</obj_property>
+               <obj_property name="ObjectShortName">oxm2ackm_chk_req</obj_property>
+               <obj_property name="CustomSignalColor">#00FFFF</obj_property>
+               <obj_property name="UseCustomSignalColor">true</obj_property>
+            </wvobject>
+            <wvobject type="array" fp_name="/core_fpga/OX_CORE_U1/OR1/SM/oxm2ackm_new_ack_num">
+               <obj_property name="ElementShortName">oxm2ackm_new_ack_num[21:0]</obj_property>
+               <obj_property name="ObjectShortName">oxm2ackm_new_ack_num[21:0]</obj_property>
+               <obj_property name="CustomSignalColor">#00FFFF</obj_property>
+               <obj_property name="UseCustomSignalColor">true</obj_property>
+            </wvobject>
+            <wvobject type="array" fp_name="/core_fpga/OX_CORE_U1/OR1/SM/oxm2ackm_new_seq_num">
+               <obj_property name="ElementShortName">oxm2ackm_new_seq_num[21:0]</obj_property>
+               <obj_property name="ObjectShortName">oxm2ackm_new_seq_num[21:0]</obj_property>
+               <obj_property name="CustomSignalColor">#00FFFF</obj_property>
+               <obj_property name="UseCustomSignalColor">true</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/core_fpga/OX_CORE_U1/OR1/SM/oxm2ackm_ack">
+               <obj_property name="ElementShortName">oxm2ackm_ack</obj_property>
+               <obj_property name="ObjectShortName">oxm2ackm_ack</obj_property>
+               <obj_property name="CustomSignalColor">#008080</obj_property>
+               <obj_property name="UseCustomSignalColor">true</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/core_fpga/OX_CORE_U1/OR1/SM/rx_done">
+               <obj_property name="ElementShortName">rx_done</obj_property>
+               <obj_property name="ObjectShortName">rx_done</obj_property>
+               <obj_property name="CustomSignalColor">#00FFFF</obj_property>
+               <obj_property name="UseCustomSignalColor">true</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/core_fpga/OX_CORE_U1/OR1/SM/oxm2ackm_accept">
+               <obj_property name="ElementShortName">oxm2ackm_accept</obj_property>
+               <obj_property name="ObjectShortName">oxm2ackm_accept</obj_property>
+               <obj_property name="CustomSignalColor">#00FFFF</obj_property>
+               <obj_property name="UseCustomSignalColor">true</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/core_fpga/OX_CORE_U1/OR1/SM/oxm2ackm_done">
+               <obj_property name="ElementShortName">oxm2ackm_done</obj_property>
+               <obj_property name="ObjectShortName">oxm2ackm_done</obj_property>
+               <obj_property name="CustomSignalColor">#00FFFF</obj_property>
+               <obj_property name="UseCustomSignalColor">true</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/core_fpga/OX_CORE_U1/OR1/SM/oxm2ackm_busy">
+               <obj_property name="ElementShortName">oxm2ackm_busy</obj_property>
+               <obj_property name="ObjectShortName">oxm2ackm_busy</obj_property>
+               <obj_property name="CustomSignalColor">#00FFFF</obj_property>
+               <obj_property name="UseCustomSignalColor">true</obj_property>
+            </wvobject>
+         </wvobject>
+      </wvobject>
+      <wvobject type="group" fp_name="group1902">
+         <obj_property name="label">M2OX</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <obj_property name="isExpanded"></obj_property>
+         <wvobject type="array" fp_name="/core_fpga/OX_CORE_U1/OR1/m2ox_u1/ascii_rx_state">
+            <obj_property name="ElementShortName">ascii_rx_state[96:0]</obj_property>
+            <obj_property name="ObjectShortName">ascii_rx_state[96:0]</obj_property>
+            <obj_property name="Radix">ASCIIRADIX</obj_property>
+         </wvobject>
+         <wvobject type="group" fp_name="group14108">
+            <obj_property name="label">M2OX - LMAC In</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <obj_property name="isExpanded"></obj_property>
+            <wvobject type="group" fp_name="group1900">
+               <obj_property name="label">IPCS FIFO</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <obj_property name="isExpanded"></obj_property>
+               <wvobject type="array" fp_name="/core_fpga/OX_CORE_U1/OR1/m2ox_rx_ipcs_data">
+                  <obj_property name="ElementShortName">m2ox_rx_ipcs_data[63:0]</obj_property>
+                  <obj_property name="ObjectShortName">m2ox_rx_ipcs_data[63:0]</obj_property>
+                  <obj_property name="CustomSignalColor">#F0E68C</obj_property>
+                  <obj_property name="UseCustomSignalColor">true</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/core_fpga/OX_CORE_U1/OR1/ox2m_rx_ipcs_rden">
+                  <obj_property name="ElementShortName">ox2m_rx_ipcs_rden</obj_property>
+                  <obj_property name="ObjectShortName">ox2m_rx_ipcs_rden</obj_property>
+                  <obj_property name="CustomSignalColor">#F0E68C</obj_property>
+                  <obj_property name="UseCustomSignalColor">true</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/core_fpga/OX_CORE_U1/OR1/m2ox_rx_ipcs_empty">
+                  <obj_property name="ElementShortName">m2ox_rx_ipcs_empty</obj_property>
+                  <obj_property name="ObjectShortName">m2ox_rx_ipcs_empty</obj_property>
+                  <obj_property name="CustomSignalColor">#F0E68C</obj_property>
+                  <obj_property name="UseCustomSignalColor">true</obj_property>
+               </wvobject>
+               <wvobject type="array" fp_name="/core_fpga/OX_CORE_U1/OR1/m2ox_rx_ipcs_usedword">
+                  <obj_property name="ElementShortName">m2ox_rx_ipcs_usedword[6:0]</obj_property>
+                  <obj_property name="ObjectShortName">m2ox_rx_ipcs_usedword[6:0]</obj_property>
+                  <obj_property name="CustomSignalColor">#F0E68C</obj_property>
+                  <obj_property name="UseCustomSignalColor">true</obj_property>
+               </wvobject>
+            </wvobject>
+            <wvobject type="group" fp_name="group1901">
+               <obj_property name="label">PKT FIFO</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <obj_property name="isExpanded"></obj_property>
+               <wvobject type="array" fp_name="/core_fpga/OX_CORE_U1/OR1/m2ox_rx_pkt_data">
+                  <obj_property name="ElementShortName">m2ox_rx_pkt_data[255:0]</obj_property>
+                  <obj_property name="ObjectShortName">m2ox_rx_pkt_data[255:0]</obj_property>
+                  <obj_property name="CustomSignalColor">#FFFF00</obj_property>
+                  <obj_property name="UseCustomSignalColor">true</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/core_fpga/OX_CORE_U1/OR1/ox2m_rx_pkt_rden">
+                  <obj_property name="ElementShortName">ox2m_rx_pkt_rden</obj_property>
+                  <obj_property name="ObjectShortName">ox2m_rx_pkt_rden</obj_property>
+                  <obj_property name="CustomSignalColor">#FFFF00</obj_property>
+                  <obj_property name="UseCustomSignalColor">true</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/core_fpga/OX_CORE_U1/OR1/ox2m_rx_pkt_rd_cycle">
+                  <obj_property name="ElementShortName">ox2m_rx_pkt_rd_cycle</obj_property>
+                  <obj_property name="ObjectShortName">ox2m_rx_pkt_rd_cycle</obj_property>
+                  <obj_property name="CustomSignalColor">#FFFF00</obj_property>
+                  <obj_property name="UseCustomSignalColor">true</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/core_fpga/OX_CORE_U1/OR1/m2ox_rx_pkt_empty">
+                  <obj_property name="ElementShortName">m2ox_rx_pkt_empty</obj_property>
+                  <obj_property name="ObjectShortName">m2ox_rx_pkt_empty</obj_property>
+                  <obj_property name="CustomSignalColor">#FFFF00</obj_property>
+                  <obj_property name="UseCustomSignalColor">true</obj_property>
+               </wvobject>
+               <wvobject type="array" fp_name="/core_fpga/OX_CORE_U1/OR1/m2ox_rx_pkt_usedword">
+                  <obj_property name="ElementShortName">m2ox_rx_pkt_usedword[6:0]</obj_property>
+                  <obj_property name="ObjectShortName">m2ox_rx_pkt_usedword[6:0]</obj_property>
+                  <obj_property name="CustomSignalColor">#FFFF00</obj_property>
+                  <obj_property name="UseCustomSignalColor">true</obj_property>
+               </wvobject>
+            </wvobject>
+         </wvobject>
+         <wvobject type="array" fp_name="/core_fpga/OX_CORE_U1/OR1/m2ox_u1/lewiz_bcnt">
+            <obj_property name="ElementShortName">lewiz_bcnt[15:0]</obj_property>
+            <obj_property name="ObjectShortName">lewiz_bcnt[15:0]</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="/core_fpga/OX_CORE_U1/OR1/m2ox_u1/oxm2ackm_done">
+            <obj_property name="ElementShortName">oxm2ackm_done</obj_property>
+            <obj_property name="ObjectShortName">oxm2ackm_done</obj_property>
+         </wvobject>
+         <wvobject type="group" fp_name="group1907">
+            <obj_property name="label">M2OX - FIFOs Out</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <obj_property name="isExpanded"></obj_property>
+            <wvobject type="group" fp_name="group1928">
+               <obj_property name="label">Header</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <obj_property name="isExpanded"></obj_property>
+               <wvobject type="array" fp_name="/core_fpga/OX_CORE_U1/OR1/m2ox_u1/ox2f_rx_header_i">
+                  <obj_property name="ElementShortName">ox2f_rx_header_i[63:0]</obj_property>
+                  <obj_property name="ObjectShortName">ox2f_rx_header_i[63:0]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/core_fpga/OX_CORE_U1/OR1/m2ox_u1/ox2f_rx_header_we_i">
+                  <obj_property name="ElementShortName">ox2f_rx_header_we_i</obj_property>
+                  <obj_property name="ObjectShortName">ox2f_rx_header_we_i</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/core_fpga/OX_CORE_U1/OR1/m2ox_u1/f2ox_rx_header_full_i">
+                  <obj_property name="ElementShortName">f2ox_rx_header_full_i</obj_property>
+                  <obj_property name="ObjectShortName">f2ox_rx_header_full_i</obj_property>
+               </wvobject>
+               <wvobject type="array" fp_name="/core_fpga/OX_CORE_U1/OR1/m2ox_u1/f2ox_rx_header_wrusedw_i">
+                  <obj_property name="ElementShortName">f2ox_rx_header_wrusedw_i[12:0]</obj_property>
+                  <obj_property name="ObjectShortName">f2ox_rx_header_wrusedw_i[12:0]</obj_property>
+               </wvobject>
+            </wvobject>
+            <wvobject type="group" fp_name="group1929">
+               <obj_property name="label">Addr</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <obj_property name="isExpanded"></obj_property>
+               <wvobject type="array" fp_name="/core_fpga/OX_CORE_U1/OR1/m2ox_u1/ox2f_rx_addr_i">
+                  <obj_property name="ElementShortName">ox2f_rx_addr_i[63:0]</obj_property>
+                  <obj_property name="ObjectShortName">ox2f_rx_addr_i[63:0]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/core_fpga/OX_CORE_U1/OR1/m2ox_u1/ox2f_rx_addr_we_i">
+                  <obj_property name="ElementShortName">ox2f_rx_addr_we_i</obj_property>
+                  <obj_property name="ObjectShortName">ox2f_rx_addr_we_i</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/core_fpga/OX_CORE_U1/OR1/m2ox_u1/f2ox_rx_addr_full_i">
+                  <obj_property name="ElementShortName">f2ox_rx_addr_full_i</obj_property>
+                  <obj_property name="ObjectShortName">f2ox_rx_addr_full_i</obj_property>
+               </wvobject>
+               <wvobject type="array" fp_name="/core_fpga/OX_CORE_U1/OR1/m2ox_u1/f2ox_rx_addr_wrusedw_i">
+                  <obj_property name="ElementShortName">f2ox_rx_addr_wrusedw_i[12:0]</obj_property>
+                  <obj_property name="ObjectShortName">f2ox_rx_addr_wrusedw_i[12:0]</obj_property>
+               </wvobject>
+            </wvobject>
+            <wvobject type="group" fp_name="group1930">
+               <obj_property name="label">Mask</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <obj_property name="isExpanded"></obj_property>
+               <wvobject type="array" fp_name="/core_fpga/OX_CORE_U1/OR1/m2ox_u1/ox2f_rx_mask_i">
+                  <obj_property name="ElementShortName">ox2f_rx_mask_i[63:0]</obj_property>
+                  <obj_property name="ObjectShortName">ox2f_rx_mask_i[63:0]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/core_fpga/OX_CORE_U1/OR1/m2ox_u1/ox2f_rx_mask_we_i">
+                  <obj_property name="ElementShortName">ox2f_rx_mask_we_i</obj_property>
+                  <obj_property name="ObjectShortName">ox2f_rx_mask_we_i</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/core_fpga/OX_CORE_U1/OR1/m2ox_u1/f2ox_rx_mask_full_i">
+                  <obj_property name="ElementShortName">f2ox_rx_mask_full_i</obj_property>
+                  <obj_property name="ObjectShortName">f2ox_rx_mask_full_i</obj_property>
+               </wvobject>
+               <wvobject type="array" fp_name="/core_fpga/OX_CORE_U1/OR1/m2ox_u1/f2ox_rx_mask_wrusedw_i">
+                  <obj_property name="ElementShortName">f2ox_rx_mask_wrusedw_i[12:0]</obj_property>
+                  <obj_property name="ObjectShortName">f2ox_rx_mask_wrusedw_i[12:0]</obj_property>
+               </wvobject>
+            </wvobject>
+            <wvobject type="group" fp_name="group1931">
+               <obj_property name="label">Data</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <obj_property name="isExpanded"></obj_property>
+               <wvobject type="array" fp_name="/core_fpga/OX_CORE_U1/OR1/m2ox_u1/ox2f_rx_data_i">
+                  <obj_property name="ElementShortName">ox2f_rx_data_i[255:0]</obj_property>
+                  <obj_property name="ObjectShortName">ox2f_rx_data_i[255:0]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/core_fpga/OX_CORE_U1/OR1/m2ox_u1/ox2f_rx_data_we_i">
+                  <obj_property name="ElementShortName">ox2f_rx_data_we_i</obj_property>
+                  <obj_property name="ObjectShortName">ox2f_rx_data_we_i</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/core_fpga/OX_CORE_U1/OR1/m2ox_u1/f2ox_rx_data_full_i">
+                  <obj_property name="ElementShortName">f2ox_rx_data_full_i</obj_property>
+                  <obj_property name="ObjectShortName">f2ox_rx_data_full_i</obj_property>
+               </wvobject>
+               <wvobject type="array" fp_name="/core_fpga/OX_CORE_U1/OR1/m2ox_u1/f2ox_rx_data_wrusedw_i">
+                  <obj_property name="ElementShortName">f2ox_rx_data_wrusedw_i[13:0]</obj_property>
+                  <obj_property name="ObjectShortName">f2ox_rx_data_wrusedw_i[13:0]</obj_property>
+               </wvobject>
+            </wvobject>
+            <wvobject type="group" fp_name="group1932">
+               <obj_property name="label">BCNT</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <wvobject type="array" fp_name="/core_fpga/OX_CORE_U1/OR1/m2ox_u1/ox2f_rx_bcnt_i">
+                  <obj_property name="ElementShortName">ox2f_rx_bcnt_i[15:0]</obj_property>
+                  <obj_property name="ObjectShortName">ox2f_rx_bcnt_i[15:0]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/core_fpga/OX_CORE_U1/OR1/m2ox_u1/ox2f_rx_bcnt_we_i">
+                  <obj_property name="ElementShortName">ox2f_rx_bcnt_we_i</obj_property>
+                  <obj_property name="ObjectShortName">ox2f_rx_bcnt_we_i</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/core_fpga/OX_CORE_U1/OR1/m2ox_u1/f2ox_rx_bcnt_full_i">
+                  <obj_property name="ElementShortName">f2ox_rx_bcnt_full_i</obj_property>
+                  <obj_property name="ObjectShortName">f2ox_rx_bcnt_full_i</obj_property>
+               </wvobject>
+               <wvobject type="array" fp_name="/core_fpga/OX_CORE_U1/OR1/m2ox_u1/f2ox_rx_bcnt_wrusedw_i">
+                  <obj_property name="ElementShortName">f2ox_rx_bcnt_wrusedw_i[12:0]</obj_property>
+                  <obj_property name="ObjectShortName">f2ox_rx_bcnt_wrusedw_i[12:0]</obj_property>
+               </wvobject>
+            </wvobject>
+         </wvobject>
+         <wvobject type="group" fp_name="group1934">
+            <obj_property name="label">M2OX - seq_mgr IF</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject type="array" fp_name="/core_fpga/OX_CORE_U1/OR1/m2ox_u1/oxm2ackm_new_ack_num">
+               <obj_property name="ElementShortName">oxm2ackm_new_ack_num[21:0]</obj_property>
+               <obj_property name="ObjectShortName">oxm2ackm_new_ack_num[21:0]</obj_property>
+            </wvobject>
+            <wvobject type="array" fp_name="/core_fpga/OX_CORE_U1/OR1/m2ox_u1/oxm2ackm_new_seq_num">
+               <obj_property name="ElementShortName">oxm2ackm_new_seq_num[21:0]</obj_property>
+               <obj_property name="ObjectShortName">oxm2ackm_new_seq_num[21:0]</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/core_fpga/OX_CORE_U1/OR1/m2ox_u1/oxm2ackm_chk_req">
+               <obj_property name="ElementShortName">oxm2ackm_chk_req</obj_property>
+               <obj_property name="ObjectShortName">oxm2ackm_chk_req</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/core_fpga/OX_CORE_U1/OR1/m2ox_u1/oxm2ackm_ack">
+               <obj_property name="ElementShortName">oxm2ackm_ack</obj_property>
+               <obj_property name="ObjectShortName">oxm2ackm_ack</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/core_fpga/OX_CORE_U1/OR1/m2ox_u1/rx_done">
+               <obj_property name="ElementShortName">rx_done</obj_property>
+               <obj_property name="ObjectShortName">rx_done</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/core_fpga/OX_CORE_U1/OR1/m2ox_u1/oxm2ackm_accept">
+               <obj_property name="ElementShortName">oxm2ackm_accept</obj_property>
+               <obj_property name="ObjectShortName">oxm2ackm_accept</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/core_fpga/OX_CORE_U1/OR1/m2ox_u1/oxm2ackm_done">
+               <obj_property name="ElementShortName">oxm2ackm_done</obj_property>
+               <obj_property name="ObjectShortName">oxm2ackm_done</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/core_fpga/OX_CORE_U1/OR1/m2ox_u1/oxm2ackm_busy">
+               <obj_property name="ElementShortName">oxm2ackm_busy</obj_property>
+               <obj_property name="ObjectShortName">oxm2ackm_busy</obj_property>
+            </wvobject>
+         </wvobject>
+         <wvobject type="group" fp_name="group1943">
+            <obj_property name="label">M2OX - To TL2N</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject type="logic" fp_name="/core_fpga/OX_CORE_U1/OR1/m2ox_u1/ox2tl_aquire_gnt">
+               <obj_property name="ElementShortName">ox2tl_aquire_gnt</obj_property>
+               <obj_property name="ObjectShortName">ox2tl_aquire_gnt</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/core_fpga/OX_CORE_U1/OR1/m2ox_u1/ox2tl_release_ack">
+               <obj_property name="ElementShortName">ox2tl_release_ack</obj_property>
+               <obj_property name="ObjectShortName">ox2tl_release_ack</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/core_fpga/OX_CORE_U1/OR1/m2ox_u1/ox2tl_acc_ack">
+               <obj_property name="ElementShortName">ox2tl_acc_ack</obj_property>
+               <obj_property name="ObjectShortName">ox2tl_acc_ack</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/core_fpga/OX_CORE_U1/OR1/m2ox_u1/ox2tl_acc_ack_data">
+               <obj_property name="ElementShortName">ox2tl_acc_ack_data</obj_property>
+               <obj_property name="ObjectShortName">ox2tl_acc_ack_data</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/core_fpga/OX_CORE_U1/OR1/m2ox_u1/ox2tl_probe">
+               <obj_property name="ElementShortName">ox2tl_probe</obj_property>
+               <obj_property name="ObjectShortName">ox2tl_probe</obj_property>
+            </wvobject>
+         </wvobject>
+         <wvobject type="group" fp_name="group1950">
+            <obj_property name="label">M2OX - To rtx_mgr (in TX Path)</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject type="logic" fp_name="/core_fpga/OX_CORE_U1/OR1/m2ox_u1/oxm_rtx_done">
+               <obj_property name="ElementShortName">oxm_rtx_done</obj_property>
+               <obj_property name="ObjectShortName">oxm_rtx_done</obj_property>
+            </wvobject>
+         </wvobject>
+      </wvobject>
+      <wvobject fp_name="divider1903" type="divider">
+         <obj_property name="label">FIFOs</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+      </wvobject>
+      <wvobject type="group" fp_name="group1904">
+         <obj_property name="label">TL2N</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <obj_property name="isExpanded"></obj_property>
+         <wvobject type="group" fp_name="group1576">
+            <obj_property name="label">State Machines</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <obj_property name="isExpanded"></obj_property>
+            <wvobject type="array" fp_name="/core_fpga/OX_CORE_U1/OR1/TL2N/ascii_tl2n_header_state">
+               <obj_property name="ElementShortName">ascii_tl2n_header_state[72:0]</obj_property>
+               <obj_property name="ObjectShortName">ascii_tl2n_header_state[72:0]</obj_property>
+               <obj_property name="Radix">ASCIIRADIX</obj_property>
+            </wvobject>
+            <wvobject type="array" fp_name="/core_fpga/OX_CORE_U1/OR1/TL2N/ascii_tl2n_data_state">
+               <obj_property name="ElementShortName">ascii_tl2n_data_state[72:0]</obj_property>
+               <obj_property name="ObjectShortName">ascii_tl2n_data_state[72:0]</obj_property>
+               <obj_property name="Radix">ASCIIRADIX</obj_property>
+            </wvobject>
+            <wvobject type="array" fp_name="/core_fpga/OX_CORE_U1/OR1/TL2N/ascii_tl2n_fifo_state">
+               <obj_property name="ElementShortName">ascii_tl2n_fifo_state[72:0]</obj_property>
+               <obj_property name="ObjectShortName">ascii_tl2n_fifo_state[72:0]</obj_property>
+               <obj_property name="Radix">ASCIIRADIX</obj_property>
+            </wvobject>
+         </wvobject>
+         <wvobject type="group" fp_name="group1933">
+            <obj_property name="label">TL2N FIFOs In</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject type="group" fp_name="group2024">
+               <obj_property name="label">Header</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <obj_property name="isExpanded"></obj_property>
+               <wvobject type="array" fp_name="/core_fpga/OX_CORE_U1/OR1/TL2N/f2tl_rx_header_i">
+                  <obj_property name="ElementShortName">f2tl_rx_header_i[63:0]</obj_property>
+                  <obj_property name="ObjectShortName">f2tl_rx_header_i[63:0]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/core_fpga/OX_CORE_U1/OR1/TL2N/tl2f_rx_header_re_i">
+                  <obj_property name="ElementShortName">tl2f_rx_header_re_i</obj_property>
+                  <obj_property name="ObjectShortName">tl2f_rx_header_re_i</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/core_fpga/OX_CORE_U1/OR1/TL2N/f2tl_rx_header_empty_i">
+                  <obj_property name="ElementShortName">f2tl_rx_header_empty_i</obj_property>
+                  <obj_property name="ObjectShortName">f2tl_rx_header_empty_i</obj_property>
+               </wvobject>
+            </wvobject>
+            <wvobject type="group" fp_name="group2025">
+               <obj_property name="label">Addr</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <obj_property name="isExpanded"></obj_property>
+               <wvobject type="array" fp_name="/core_fpga/OX_CORE_U1/OR1/TL2N/f2tl_rx_addr_i">
+                  <obj_property name="ElementShortName">f2tl_rx_addr_i[63:0]</obj_property>
+                  <obj_property name="ObjectShortName">f2tl_rx_addr_i[63:0]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/core_fpga/OX_CORE_U1/OR1/TL2N/tl2f_rx_addr_re_i">
+                  <obj_property name="ElementShortName">tl2f_rx_addr_re_i</obj_property>
+                  <obj_property name="ObjectShortName">tl2f_rx_addr_re_i</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/core_fpga/OX_CORE_U1/OR1/TL2N/f2tl_rx_addr_empty_i">
+                  <obj_property name="ElementShortName">f2tl_rx_addr_empty_i</obj_property>
+                  <obj_property name="ObjectShortName">f2tl_rx_addr_empty_i</obj_property>
+               </wvobject>
+            </wvobject>
+            <wvobject type="group" fp_name="group2026">
+               <obj_property name="label">Mask</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <obj_property name="isExpanded"></obj_property>
+               <wvobject type="array" fp_name="/core_fpga/OX_CORE_U1/OR1/TL2N/f2tl_rx_mask_i">
+                  <obj_property name="ElementShortName">f2tl_rx_mask_i[63:0]</obj_property>
+                  <obj_property name="ObjectShortName">f2tl_rx_mask_i[63:0]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/core_fpga/OX_CORE_U1/OR1/TL2N/tl2f_rx_mask_re_i">
+                  <obj_property name="ElementShortName">tl2f_rx_mask_re_i</obj_property>
+                  <obj_property name="ObjectShortName">tl2f_rx_mask_re_i</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/core_fpga/OX_CORE_U1/OR1/TL2N/f2tl_rx_mask_empty_i">
+                  <obj_property name="ElementShortName">f2tl_rx_mask_empty_i</obj_property>
+                  <obj_property name="ObjectShortName">f2tl_rx_mask_empty_i</obj_property>
+               </wvobject>
+            </wvobject>
+            <wvobject type="group" fp_name="group2027">
+               <obj_property name="label">Data</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <obj_property name="isExpanded"></obj_property>
+               <wvobject type="array" fp_name="/core_fpga/OX_CORE_U1/OR1/TL2N/f2tl_rx_data_i">
+                  <obj_property name="ElementShortName">f2tl_rx_data_i[255:0]</obj_property>
+                  <obj_property name="ObjectShortName">f2tl_rx_data_i[255:0]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/core_fpga/OX_CORE_U1/OR1/TL2N/tl2f_rx_data_re_i">
+                  <obj_property name="ElementShortName">tl2f_rx_data_re_i</obj_property>
+                  <obj_property name="ObjectShortName">tl2f_rx_data_re_i</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/core_fpga/OX_CORE_U1/OR1/TL2N/f2tl_rx_data_empty_i">
+                  <obj_property name="ElementShortName">f2tl_rx_data_empty_i</obj_property>
+                  <obj_property name="ObjectShortName">f2tl_rx_data_empty_i</obj_property>
+               </wvobject>
+            </wvobject>
+            <wvobject type="group" fp_name="group2028">
+               <obj_property name="label">BCNT</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <obj_property name="isExpanded"></obj_property>
+               <wvobject type="array" fp_name="/core_fpga/OX_CORE_U1/OR1/TL2N/f2tl_rx_bcnt_i">
+                  <obj_property name="ElementShortName">f2tl_rx_bcnt_i[15:0]</obj_property>
+                  <obj_property name="ObjectShortName">f2tl_rx_bcnt_i[15:0]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/core_fpga/OX_CORE_U1/OR1/TL2N/tl2f_rx_bcnt_re_i">
+                  <obj_property name="ElementShortName">tl2f_rx_bcnt_re_i</obj_property>
+                  <obj_property name="ObjectShortName">tl2f_rx_bcnt_re_i</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/core_fpga/OX_CORE_U1/OR1/TL2N/f2tl_rx_bcnt_empty_i">
+                  <obj_property name="ElementShortName">f2tl_rx_bcnt_empty_i</obj_property>
+                  <obj_property name="ObjectShortName">f2tl_rx_bcnt_empty_i</obj_property>
+               </wvobject>
+            </wvobject>
+         </wvobject>
+         <wvobject type="group" fp_name="group1578">
+            <obj_property name="label">Ready Handler</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <obj_property name="isExpanded"></obj_property>
+            <wvobject type="array" fp_name="/core_fpga/OX_CORE_U1/OR1/TL2N/data_reg_cnt">
+               <obj_property name="ElementShortName">data_reg_cnt[3:0]</obj_property>
+               <obj_property name="ObjectShortName">data_reg_cnt[3:0]</obj_property>
+               <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+            </wvobject>
+            <wvobject type="array" fp_name="/core_fpga/OX_CORE_U1/OR1/TL2N/data_reg_cnt_bkup">
+               <obj_property name="ElementShortName">data_reg_cnt_bkup[3:0]</obj_property>
+               <obj_property name="ObjectShortName">data_reg_cnt_bkup[3:0]</obj_property>
+               <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+            </wvobject>
+            <wvobject type="array" fp_name="/core_fpga/OX_CORE_U1/OR1/TL2N/data_reg_01">
+               <obj_property name="ElementShortName">data_reg_01[63:0]</obj_property>
+               <obj_property name="ObjectShortName">data_reg_01[63:0]</obj_property>
+            </wvobject>
+            <wvobject type="array" fp_name="/core_fpga/OX_CORE_U1/OR1/TL2N/data_reg_02">
+               <obj_property name="ElementShortName">data_reg_02[63:0]</obj_property>
+               <obj_property name="ObjectShortName">data_reg_02[63:0]</obj_property>
+            </wvobject>
+            <wvobject type="array" fp_name="/core_fpga/OX_CORE_U1/OR1/TL2N/data_reg_03">
+               <obj_property name="ElementShortName">data_reg_03[63:0]</obj_property>
+               <obj_property name="ObjectShortName">data_reg_03[63:0]</obj_property>
+            </wvobject>
+            <wvobject type="array" fp_name="/core_fpga/OX_CORE_U1/OR1/TL2N/data_reg_04">
+               <obj_property name="ElementShortName">data_reg_04[63:0]</obj_property>
+               <obj_property name="ObjectShortName">data_reg_04[63:0]</obj_property>
+            </wvobject>
+            <wvobject type="array" fp_name="/core_fpga/OX_CORE_U1/OR1/TL2N/data_reg_05">
+               <obj_property name="ElementShortName">data_reg_05[63:0]</obj_property>
+               <obj_property name="ObjectShortName">data_reg_05[63:0]</obj_property>
+            </wvobject>
+            <wvobject type="array" fp_name="/core_fpga/OX_CORE_U1/OR1/TL2N/data_reg_06">
+               <obj_property name="ElementShortName">data_reg_06[63:0]</obj_property>
+               <obj_property name="ObjectShortName">data_reg_06[63:0]</obj_property>
+            </wvobject>
+            <wvobject type="array" fp_name="/core_fpga/OX_CORE_U1/OR1/TL2N/data_reg_07">
+               <obj_property name="ElementShortName">data_reg_07[63:0]</obj_property>
+               <obj_property name="ObjectShortName">data_reg_07[63:0]</obj_property>
+            </wvobject>
+            <wvobject type="array" fp_name="/core_fpga/OX_CORE_U1/OR1/TL2N/data_reg_08">
+               <obj_property name="ElementShortName">data_reg_08[63:0]</obj_property>
+               <obj_property name="ObjectShortName">data_reg_08[63:0]</obj_property>
+            </wvobject>
+            <wvobject type="array" fp_name="/core_fpga/OX_CORE_U1/OR1/TL2N/data_reg_09">
+               <obj_property name="ElementShortName">data_reg_09[63:0]</obj_property>
+               <obj_property name="ObjectShortName">data_reg_09[63:0]</obj_property>
+            </wvobject>
+            <wvobject type="array" fp_name="/core_fpga/OX_CORE_U1/OR1/TL2N/output_rden_cnt">
+               <obj_property name="ElementShortName">output_rden_cnt[7:0]</obj_property>
+               <obj_property name="ObjectShortName">output_rden_cnt[7:0]</obj_property>
+               <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+            </wvobject>
+         </wvobject>
+         <wvobject type="group" fp_name="group14104">
+            <obj_property name="label">TL2N NOC Out</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <obj_property name="isExpanded"></obj_property>
+            <wvobject type="logic" fp_name="/core_fpga/OX_CORE_U1/OR1/noc_out_ready">
+               <obj_property name="ElementShortName">noc_out_ready</obj_property>
+               <obj_property name="ObjectShortName">noc_out_ready</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/core_fpga/OX_CORE_U1/OR1/noc_out_valid">
+               <obj_property name="ElementShortName">noc_out_valid</obj_property>
+               <obj_property name="ObjectShortName">noc_out_valid</obj_property>
+            </wvobject>
+            <wvobject type="array" fp_name="/core_fpga/OX_CORE_U1/OR1/noc_out_data">
+               <obj_property name="ElementShortName">noc_out_data[63:0]</obj_property>
+               <obj_property name="ObjectShortName">noc_out_data[63:0]</obj_property>
+            </wvobject>
+         </wvobject>
+      </wvobject>
+      <wvobject type="group" fp_name="group14172">
+         <obj_property name="label">Sequencing</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <wvobject type="logic" fp_name="/core_fpga/OX_CORE_U1/OR1/tx2rx_updateseq_req">
+            <obj_property name="ElementShortName">tx2rx_updateseq_req</obj_property>
+            <obj_property name="ObjectShortName">tx2rx_updateseq_req</obj_property>
+         </wvobject>
+         <wvobject type="array" fp_name="/core_fpga/OX_CORE_U1/OR1/tx2rx_seq_num">
+            <obj_property name="ElementShortName">tx2rx_seq_num[21:0]</obj_property>
+            <obj_property name="ObjectShortName">tx2rx_seq_num[21:0]</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="/core_fpga/OX_CORE_U1/OR1/tx2rx_updateseq_done">
+            <obj_property name="ElementShortName">tx2rx_updateseq_done</obj_property>
+            <obj_property name="ObjectShortName">tx2rx_updateseq_done</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="/core_fpga/OX_CORE_U1/OR1/rx2tx_updateack_req">
+            <obj_property name="ElementShortName">rx2tx_updateack_req</obj_property>
+            <obj_property name="ObjectShortName">rx2tx_updateack_req</obj_property>
+         </wvobject>
+         <wvobject type="array" fp_name="/core_fpga/OX_CORE_U1/OR1/rx2tx_new_ack_num">
+            <obj_property name="ElementShortName">rx2tx_new_ack_num[21:0]</obj_property>
+            <obj_property name="ObjectShortName">rx2tx_new_ack_num[21:0]</obj_property>
+         </wvobject>
+         <wvobject type="array" fp_name="/core_fpga/OX_CORE_U1/OR1/rx2tx_free_entries">
+            <obj_property name="ElementShortName">rx2tx_free_entries[3:0]</obj_property>
+            <obj_property name="ObjectShortName">rx2tx_free_entries[3:0]</obj_property>
+         </wvobject>
+         <wvobject type="array" fp_name="/core_fpga/OX_CORE_U1/OR1/rx2tx_rtx_entries">
+            <obj_property name="ElementShortName">rx2tx_rtx_entries[3:0]</obj_property>
+            <obj_property name="ObjectShortName">rx2tx_rtx_entries[3:0]</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="/core_fpga/OX_CORE_U1/OR1/rx2tx_rtx_req">
+            <obj_property name="ElementShortName">rx2tx_rtx_req</obj_property>
+            <obj_property name="ObjectShortName">rx2tx_rtx_req</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="/core_fpga/OX_CORE_U1/OR1/rx2tx_rtxreq_done">
+            <obj_property name="ElementShortName">rx2tx_rtxreq_done</obj_property>
+            <obj_property name="ObjectShortName">rx2tx_rtxreq_done</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="/core_fpga/OX_CORE_U1/OR1/rx2tx_updateack_done">
+            <obj_property name="ElementShortName">rx2tx_updateack_done</obj_property>
+            <obj_property name="ObjectShortName">rx2tx_updateack_done</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="/core_fpga/OX_CORE_U1/OR1/rx2tx_send_req">
+            <obj_property name="ElementShortName">rx2tx_send_req</obj_property>
+            <obj_property name="ObjectShortName">rx2tx_send_req</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="/core_fpga/OX_CORE_U1/OR1/rx2tx_ack_mode">
+            <obj_property name="ElementShortName">rx2tx_ack_mode</obj_property>
+            <obj_property name="ObjectShortName">rx2tx_ack_mode</obj_property>
+         </wvobject>
+         <wvobject type="array" fp_name="/core_fpga/OX_CORE_U1/OR1/rx2tx_rxack_num">
+            <obj_property name="ElementShortName">rx2tx_rxack_num[21:0]</obj_property>
+            <obj_property name="ObjectShortName">rx2tx_rxack_num[21:0]</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="/core_fpga/OX_CORE_U1/OR1/rx2tx_sendreq_done">
+            <obj_property name="ElementShortName">rx2tx_sendreq_done</obj_property>
+            <obj_property name="ObjectShortName">rx2tx_sendreq_done</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="/core_fpga/OX_CORE_U1/OR1/tx_req">
+            <obj_property name="ElementShortName">tx_req</obj_property>
+            <obj_property name="ObjectShortName">tx_req</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="/core_fpga/OX_CORE_U1/OR1/tx_done">
+            <obj_property name="ElementShortName">tx_done</obj_property>
+            <obj_property name="ObjectShortName">tx_done</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="/core_fpga/OX_CORE_U1/OR1/oxm_rtx_done">
+            <obj_property name="ElementShortName">oxm_rtx_done</obj_property>
+            <obj_property name="ObjectShortName">oxm_rtx_done</obj_property>
+         </wvobject>
+      </wvobject>
+      <wvobject type="group" fp_name="group14173">
+         <obj_property name="label">Coherency</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <wvobject type="logic" fp_name="/core_fpga/OX_CORE_U1/OR1/ackmtotx_busy">
+            <obj_property name="ElementShortName">ackmtotx_busy</obj_property>
+            <obj_property name="ObjectShortName">ackmtotx_busy</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="/core_fpga/OX_CORE_U1/OR1/tx2rx_rcv_tlgnt_ack">
+            <obj_property name="ElementShortName">tx2rx_rcv_tlgnt_ack</obj_property>
+            <obj_property name="ObjectShortName">tx2rx_rcv_tlgnt_ack</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="/core_fpga/OX_CORE_U1/OR1/rx2tx_rcv_tlgnt">
+            <obj_property name="ElementShortName">rx2tx_rcv_tlgnt</obj_property>
+            <obj_property name="ObjectShortName">rx2tx_rcv_tlgnt</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="/core_fpga/OX_CORE_U1/OR1/coh2tl_rx_probe_req_ack">
+            <obj_property name="ElementShortName">coh2tl_rx_probe_req_ack</obj_property>
+            <obj_property name="ObjectShortName">coh2tl_rx_probe_req_ack</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="/core_fpga/OX_CORE_U1/OR1/coh2tl_rx_prb_displ_gen_en">
+            <obj_property name="ElementShortName">coh2tl_rx_prb_displ_gen_en</obj_property>
+            <obj_property name="ObjectShortName">coh2tl_rx_prb_displ_gen_en</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="/core_fpga/OX_CORE_U1/OR1/coh2tl_prb_ack_w_data">
+            <obj_property name="ElementShortName">coh2tl_prb_ack_w_data</obj_property>
+            <obj_property name="ObjectShortName">coh2tl_prb_ack_w_data</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="/core_fpga/OX_CORE_U1/OR1/coh2tl_prb_ack_no_data">
+            <obj_property name="ElementShortName">coh2tl_prb_ack_no_data</obj_property>
+            <obj_property name="ObjectShortName">coh2tl_prb_ack_no_data</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="/core_fpga/OX_CORE_U1/OR1/tl2coh_rx_probe_req">
+            <obj_property name="ElementShortName">tl2coh_rx_probe_req</obj_property>
+            <obj_property name="ObjectShortName">tl2coh_rx_probe_req</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="/core_fpga/OX_CORE_U1/OR1/tl2coh_rx_prb_displ_gen_ack">
+            <obj_property name="ElementShortName">tl2coh_rx_prb_displ_gen_ack</obj_property>
+            <obj_property name="ObjectShortName">tl2coh_rx_prb_displ_gen_ack</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="/core_fpga/OX_CORE_U1/OR1/tl2coh_rx_release_ack_rcvd">
+            <obj_property name="ElementShortName">tl2coh_rx_release_ack_rcvd</obj_property>
+            <obj_property name="ObjectShortName">tl2coh_rx_release_ack_rcvd</obj_property>
+         </wvobject>
+         <wvobject type="array" fp_name="/core_fpga/OX_CORE_U1/OR1/b_size">
+            <obj_property name="ElementShortName">b_size[3:0]</obj_property>
+            <obj_property name="ObjectShortName">b_size[3:0]</obj_property>
+         </wvobject>
+         <wvobject type="array" fp_name="/core_fpga/OX_CORE_U1/OR1/b_source">
+            <obj_property name="ElementShortName">b_source[25:0]</obj_property>
+            <obj_property name="ObjectShortName">b_source[25:0]</obj_property>
+         </wvobject>
+         <wvobject type="array" fp_name="/core_fpga/OX_CORE_U1/OR1/b_address">
+            <obj_property name="ElementShortName">b_address[63:0]</obj_property>
+            <obj_property name="ObjectShortName">b_address[63:0]</obj_property>
+         </wvobject>
+         <wvobject type="array" fp_name="/core_fpga/OX_CORE_U1/OR1/d_sink">
+            <obj_property name="ElementShortName">d_sink[25:0]</obj_property>
+            <obj_property name="ObjectShortName">d_sink[25:0]</obj_property>
+         </wvobject>
+      </wvobject>
+   </wvobject>
+   <wvobject type="group" fp_name="group14109">
+      <obj_property name="label">Sequencing</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <wvobject type="logic" fp_name="/core_fpga/OX_CORE_U1/tx2rx_updateseq_req">
+         <obj_property name="ElementShortName">tx2rx_updateseq_req</obj_property>
+         <obj_property name="ObjectShortName">tx2rx_updateseq_req</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/core_fpga/OX_CORE_U1/tx2rx_seq_num">
+         <obj_property name="ElementShortName">tx2rx_seq_num[21:0]</obj_property>
+         <obj_property name="ObjectShortName">tx2rx_seq_num[21:0]</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/core_fpga/OX_CORE_U1/tx2rx_updateseq_done">
+         <obj_property name="ElementShortName">tx2rx_updateseq_done</obj_property>
+         <obj_property name="ObjectShortName">tx2rx_updateseq_done</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/core_fpga/OX_CORE_U1/rx2tx_updateack_req">
+         <obj_property name="ElementShortName">rx2tx_updateack_req</obj_property>
+         <obj_property name="ObjectShortName">rx2tx_updateack_req</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/core_fpga/OX_CORE_U1/rx2tx_new_ack_num">
+         <obj_property name="ElementShortName">rx2tx_new_ack_num[21:0]</obj_property>
+         <obj_property name="ObjectShortName">rx2tx_new_ack_num[21:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/core_fpga/OX_CORE_U1/rx2tx_free_entries">
+         <obj_property name="ElementShortName">rx2tx_free_entries[3:0]</obj_property>
+         <obj_property name="ObjectShortName">rx2tx_free_entries[3:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/core_fpga/OX_CORE_U1/rx2tx_rtx_entries">
+         <obj_property name="ElementShortName">rx2tx_rtx_entries[3:0]</obj_property>
+         <obj_property name="ObjectShortName">rx2tx_rtx_entries[3:0]</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/core_fpga/OX_CORE_U1/rx2tx_rtx_req">
+         <obj_property name="ElementShortName">rx2tx_rtx_req</obj_property>
+         <obj_property name="ObjectShortName">rx2tx_rtx_req</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/core_fpga/OX_CORE_U1/rx2tx_rtxreq_done">
+         <obj_property name="ElementShortName">rx2tx_rtxreq_done</obj_property>
+         <obj_property name="ObjectShortName">rx2tx_rtxreq_done</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/core_fpga/OX_CORE_U1/rx2tx_updateack_done">
+         <obj_property name="ElementShortName">rx2tx_updateack_done</obj_property>
+         <obj_property name="ObjectShortName">rx2tx_updateack_done</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/core_fpga/OX_CORE_U1/rx2tx_send_req">
+         <obj_property name="ElementShortName">rx2tx_send_req</obj_property>
+         <obj_property name="ObjectShortName">rx2tx_send_req</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/core_fpga/OX_CORE_U1/rx2tx_ack_mode">
+         <obj_property name="ElementShortName">rx2tx_ack_mode</obj_property>
+         <obj_property name="ObjectShortName">rx2tx_ack_mode</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/core_fpga/OX_CORE_U1/rx2tx_rxack_num">
+         <obj_property name="ElementShortName">rx2tx_rxack_num[21:0]</obj_property>
+         <obj_property name="ObjectShortName">rx2tx_rxack_num[21:0]</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/core_fpga/OX_CORE_U1/rx2tx_sendreq_done">
+         <obj_property name="ElementShortName">rx2tx_sendreq_done</obj_property>
+         <obj_property name="ObjectShortName">rx2tx_sendreq_done</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/core_fpga/OX_CORE_U1/tx_req">
+         <obj_property name="ElementShortName">tx_req</obj_property>
+         <obj_property name="ObjectShortName">tx_req</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/core_fpga/OX_CORE_U1/tx_done">
+         <obj_property name="ElementShortName">tx_done</obj_property>
+         <obj_property name="ObjectShortName">tx_done</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject type="group" fp_name="group14154">
+      <obj_property name="label">Coherency</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <wvobject type="logic" fp_name="/core_fpga/OX_CORE_U1/ackmtotx_busy">
+         <obj_property name="ElementShortName">ackmtotx_busy</obj_property>
+         <obj_property name="ObjectShortName">ackmtotx_busy</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/core_fpga/OX_CORE_U1/tl2coh_tx_acquire_req">
+         <obj_property name="ElementShortName">tl2coh_tx_acquire_req</obj_property>
+         <obj_property name="ObjectShortName">tl2coh_tx_acquire_req</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/core_fpga/OX_CORE_U1/tl2coh_tx_acquire_gen_done">
+         <obj_property name="ElementShortName">tl2coh_tx_acquire_gen_done</obj_property>
+         <obj_property name="ObjectShortName">tl2coh_tx_acquire_gen_done</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/core_fpga/OX_CORE_U1/rx2tx_rcv_tlgnt">
+         <obj_property name="ElementShortName">rx2tx_rcv_tlgnt</obj_property>
+         <obj_property name="ObjectShortName">rx2tx_rcv_tlgnt</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/core_fpga/OX_CORE_U1/tl2coh_tx_gntack_gen_done">
+         <obj_property name="ElementShortName">tl2coh_tx_gntack_gen_done</obj_property>
+         <obj_property name="ObjectShortName">tl2coh_tx_gntack_gen_done</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/core_fpga/OX_CORE_U1/coh2tl_tx_acquire_req_ack">
+         <obj_property name="ElementShortName">coh2tl_tx_acquire_req_ack</obj_property>
+         <obj_property name="ObjectShortName">coh2tl_tx_acquire_req_ack</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/core_fpga/OX_CORE_U1/coh2tl_tx_acquire_gen_en">
+         <obj_property name="ElementShortName">coh2tl_tx_acquire_gen_en</obj_property>
+         <obj_property name="ObjectShortName">coh2tl_tx_acquire_gen_en</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/core_fpga/OX_CORE_U1/tx2rx_rcv_tlgnt_ack">
+         <obj_property name="ElementShortName">tx2rx_rcv_tlgnt_ack</obj_property>
+         <obj_property name="ObjectShortName">tx2rx_rcv_tlgnt_ack</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/core_fpga/OX_CORE_U1/coh2tl_gntack_gen_en">
+         <obj_property name="ElementShortName">coh2tl_gntack_gen_en</obj_property>
+         <obj_property name="ObjectShortName">coh2tl_gntack_gen_en</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/core_fpga/OX_CORE_U1/tl2coh_rx_probe_req">
+         <obj_property name="ElementShortName">tl2coh_rx_probe_req</obj_property>
+         <obj_property name="ObjectShortName">tl2coh_rx_probe_req</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/core_fpga/OX_CORE_U1/tl2coh_rx_prb_displ_gen_ack">
+         <obj_property name="ElementShortName">tl2coh_rx_prb_displ_gen_ack</obj_property>
+         <obj_property name="ObjectShortName">tl2coh_rx_prb_displ_gen_ack</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/core_fpga/OX_CORE_U1/tl2coh_tx_probe_req_done">
+         <obj_property name="ElementShortName">tl2coh_tx_probe_req_done</obj_property>
+         <obj_property name="ObjectShortName">tl2coh_tx_probe_req_done</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/core_fpga/OX_CORE_U1/coh2tl_rx_probe_req_ack">
+         <obj_property name="ElementShortName">coh2tl_rx_probe_req_ack</obj_property>
+         <obj_property name="ObjectShortName">coh2tl_rx_probe_req_ack</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/core_fpga/OX_CORE_U1/coh2tl_rx_prb_displ_gen_en">
+         <obj_property name="ElementShortName">coh2tl_rx_prb_displ_gen_en</obj_property>
+         <obj_property name="ObjectShortName">coh2tl_rx_prb_displ_gen_en</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/core_fpga/OX_CORE_U1/coh2tl_tx_prb_flush_wait">
+         <obj_property name="ElementShortName">coh2tl_tx_prb_flush_wait</obj_property>
+         <obj_property name="ObjectShortName">coh2tl_tx_prb_flush_wait</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/core_fpga/OX_CORE_U1/coh2tl_prb_ack_w_data">
+         <obj_property name="ElementShortName">coh2tl_prb_ack_w_data</obj_property>
+         <obj_property name="ObjectShortName">coh2tl_prb_ack_w_data</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/core_fpga/OX_CORE_U1/coh2tl_prb_ack_no_data">
+         <obj_property name="ElementShortName">coh2tl_prb_ack_no_data</obj_property>
+         <obj_property name="ObjectShortName">coh2tl_prb_ack_no_data</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/core_fpga/OX_CORE_U1/tl2coh_tx_release_req">
+         <obj_property name="ElementShortName">tl2coh_tx_release_req</obj_property>
+         <obj_property name="ObjectShortName">tl2coh_tx_release_req</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/core_fpga/OX_CORE_U1/tl2coh_rx_release_ack_rcvd">
+         <obj_property name="ElementShortName">tl2coh_rx_release_ack_rcvd</obj_property>
+         <obj_property name="ObjectShortName">tl2coh_rx_release_ack_rcvd</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/core_fpga/OX_CORE_U1/tl2coh_tx_release_req_ack">
+         <obj_property name="ElementShortName">tl2coh_tx_release_req_ack</obj_property>
+         <obj_property name="ObjectShortName">tl2coh_tx_release_req_ack</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/core_fpga/OX_CORE_U1/b_size">
+         <obj_property name="ElementShortName">b_size[3:0]</obj_property>
+         <obj_property name="ObjectShortName">b_size[3:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/core_fpga/OX_CORE_U1/b_source">
+         <obj_property name="ElementShortName">b_source[25:0]</obj_property>
+         <obj_property name="ObjectShortName">b_source[25:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/core_fpga/OX_CORE_U1/b_address">
+         <obj_property name="ElementShortName">b_address[63:0]</obj_property>
+         <obj_property name="ObjectShortName">b_address[63:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/core_fpga/OX_CORE_U1/c_prb_ack_size">
+         <obj_property name="ElementShortName">c_prb_ack_size[3:0]</obj_property>
+         <obj_property name="ObjectShortName">c_prb_ack_size[3:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/core_fpga/OX_CORE_U1/c_prb_ack_source">
+         <obj_property name="ElementShortName">c_prb_ack_source[25:0]</obj_property>
+         <obj_property name="ObjectShortName">c_prb_ack_source[25:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/core_fpga/OX_CORE_U1/c_prb_ack_address">
+         <obj_property name="ElementShortName">c_prb_ack_address[63:0]</obj_property>
+         <obj_property name="ObjectShortName">c_prb_ack_address[63:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/core_fpga/OX_CORE_U1/d_sink">
+         <obj_property name="ElementShortName">d_sink[25:0]</obj_property>
+         <obj_property name="ObjectShortName">d_sink[25:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/core_fpga/OX_CORE_U1/e_sink">
+         <obj_property name="ElementShortName">e_sink[25:0]</obj_property>
+         <obj_property name="ObjectShortName">e_sink[25:0]</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/core_fpga/OX_CORE_U1/oxm_rtx_done">
+         <obj_property name="ElementShortName">oxm_rtx_done</obj_property>
+         <obj_property name="ObjectShortName">oxm_rtx_done</obj_property>
+      </wvobject>
+   </wvobject>
+</wave_config>

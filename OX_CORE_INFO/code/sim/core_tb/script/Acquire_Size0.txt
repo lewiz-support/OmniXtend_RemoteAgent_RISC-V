@@ -1,0 +1,15 @@
+# Requires NOC_MASTER data file `mem_Acquire.txt`
+
+relaunch_sim
+
+#run 1000ns
+
+add_force {/core_tb/gen_en} -radix hex {1 0ns}
+add_force {/core_tb/pkt_gen_addr} -radix hex {1E 0ns}
+add_force {/core_tb/pkt_gen_cnt} -radix hex {5 0ns}
+run 10ns
+remove_forces { {/core_tb/gen_en} }
+remove_forces { {/core_tb/pkt_gen_cnt} }
+remove_forces { {/core_tb/pkt_gen_addr} }
+
+run 2us

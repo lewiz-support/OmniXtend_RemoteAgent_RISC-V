@@ -1,0 +1,177 @@
+--------------------------------
+NOC Request 0 @ time  211 ns
+  CHIPID      : 2000
+  XPOS        : 01
+  YPOS        : 00
+  FBITS       : 2
+  Payload Len : 02
+  Msg Type    : 13
+  TAG         : 00
+  Options1    : 08
+  Address     : 000080000000
+  Options2    : 00c0
+  Last Bytes  : 0
+  SRC CHIPID  : 0000
+  SRC XPOS    : 00
+  SRC YPOS    : 00
+  SRC FBITS   : 0
+  Options3    : 00000000
+ 
+~~Building TL Response 0 (flit 0): 0000f0ffff321200
+~~Building TL Response 0 (flit 1): 0000aaaa00000000
+~~Building TL Response 0 (flit 2): 00002a0200000000
+~~Building TL Response 0 (flit 3): 0000000000000000
+~~Building TL Response 0 (flit 4): 0000000000000000
+~~Building TL Response 0 (flit 5): 0000000000000000
+~~Building TL Response 0 (flit 6): 0000000000000000
+~~Building TL Response 0 (flit 7): 0000000000000000
+~~Building TL Response 0 (flit 8): 0000000000000000
+~~Building TL Response 0 (flit 0): 0000f0ffff321200
+~~Building TL Response 0 (flit 1): 0000aaaa00000000
+~~Building TL Response 0 (flit 2): 00006a0600000100
+~~Building TL Response 0 (flit 3): 0000000000000000
+~~Building TL Response 0 (flit 4): 0000000000000000
+~~Building TL Response 0 (flit 5): 0000000000000000
+~~Building TL Response 0 (flit 6): 0000000000000000
+~~Building TL Response 0 (flit 7): 0000000000000000
+~~Building TL Response 0 (flit 8): 0000000000000000
+~~Building TL Response 0 (flit 0): 0000f0ffff321200
+~~Building TL Response 0 (flit 1): 0000aaaa00000000
+~~Building TL Response 0 (flit 2): 0000aa0600000200
+~~Building TL Response 0 (flit 3): 0000000000000000
+~~Building TL Response 0 (flit 4): 0000000000000000
+~~Building TL Response 0 (flit 5): 0000000000000000
+~~Building TL Response 0 (flit 6): 0000000000000000
+~~Building TL Response 0 (flit 7): 0000000000000000
+~~Building TL Response 0 (flit 8): 0000000000000000
+~~Building TL Response 0 (flit 0): 0000f0ffff321200
+~~Building TL Response 0 (flit 1): 0000aaaa00000000
+~~Building TL Response 0 (flit 2): 00006a0600000100
+~~Building TL Response 0 (flit 3): 0000000000000000
+~~Building TL Response 0 (flit 4): 0000000000000000
+~~Building TL Response 0 (flit 5): 0000000000000000
+~~Building TL Response 0 (flit 6): 0000000000000000
+~~Building TL Response 0 (flit 7): 0000000000000000
+~~Building TL Response 0 (flit 8): 0000000000000000
+--------------------------------
+NOC Request 1 @ time  621 ns
+  CHIPID      : 2000
+  XPOS        : 01
+  YPOS        : 00
+  FBITS       : 2
+  Payload Len : 02
+  Msg Type    : 13
+  TAG         : 00
+  Options1    : 08
+  Address     : 000080000040
+  Options2    : 00c0
+  Last Bytes  : 0
+  SRC CHIPID  : 0000
+  SRC XPOS    : 00
+  SRC YPOS    : 00
+  SRC FBITS   : 0
+  Options3    : 00000000
+ 
+--------------------------------
+TileLink Request 0 @ time  695 ns
+  Dst MAC     : 000000000000
+  Src MAC     : f0ffff321200
+  Ether Type  : aaaa
+  TLoE Head   : 0000000300000a08
+   -Credit    : 08
+   -Channel   : 0
+   -Rsrvd     : 0
+   -Ack       : 1
+   -Seq# Ack  : 000002
+   -Seq#      : 000003
+   -Rsrvd     : 00
+   -V.Channel : 0
+  TL0         : 1806000000000000
+   -Source    : 0000000
+   -Rsrvd     : 000
+   -Error     : 0
+   -Domain    : 00
+   -Size      : 6
+   -Param     : 0
+   -R         : 0
+   -Opcode    : 4
+   -Channel   : 1
+   -R         : 0
+  TL1+, TLoE Mask
+    0100000080000040
+    0000000000000000
+    0000000000000000
+    0000000000000000
+    0000000000000001
+ 
+~~Building TL Response 0 (flit 0): 0000f0ffff321200
+~~Building TL Response 0 (flit 1): 0000aaaa00000000
+~~Building TL Response 0 (flit 2): 0642210e00000300
+~~Building TL Response 0 (flit 3): fe02000000000000
+~~Building TL Response 0 (flit 4): 971273a002308542
+~~Building TL Response 0 (flit 5): ddbf63d802000545
+~~Building TL Response 0 (flit 6): 0209000023a9a29a
+~~Building TL Response 0 (flit 7): 3000970200009382
+~~Building TL Response 0 (flit 8): 00f0739052307310
+~~Building TL Response 0 (flit 9): 00f0530000f0d300
+~~Building TL Response 0 (flit 10): 00f0530100f0d301
+~~Building TL Response 0 (flit 11): 0000530200f0d302
+~~Building TL Response 0 (flit 12): 0000000000000000
+~~Building TL Response 0 (flit 13): 0000010000000000
+--------------------------------
+TileLink Response 0 @ time  797 ns
+  Dst MAC     : f0ffff321200
+  Src MAC     : 000000000000
+  Ether Type  : aaaa
+  TLoE Head   : 0000000300000e21
+   -Credit    : 01
+   -Channel   : 1
+   -Rsrvd     : 0
+   -Ack       : 1
+   -Seq# Ack  : 000003
+   -Seq#      : 000003
+   -Rsrvd     : 00
+   -V.Channel : 0
+  TL0         : 4206000000000000
+   -Source    : 0000000
+   -Rsrvd     : 000
+   -Error     : 0
+   -Domain    : 00
+   -Size      : 6
+   -Param     : 0
+   -R         : 0
+   -Opcode    : 1
+   -Channel   : 4
+   -R         : 0
+  TL1+, TLoE Mask
+    02fe42853002a073
+    129745050002d863
+    bfdd9aa2a9230000
+    0902829300000297
+    0030107330529073
+    f00000d3f0000053
+    f00001d3f0000153
+    f00002d3f0000253
+    0000000000000000
+    0000000000000001
+ 
+--------------------------------
+NOC Response 0 @ time  911 ns
+  CHIPID      : 0000
+  XPOS        : 00
+  YPOS        : 00
+  FBITS       : 0
+  Payload Len : 08
+  Msg Type    : 18
+  TAG         : 00
+  Options1    : 01
+  Data
+    73a002308542fe02
+    63d8020005459712
+    000023a9a29addbf
+    9702000093820209
+    7390523073103000
+    530000f0d30000f0
+    530100f0d30100f0
+    530200f0d30200f0
+ 
