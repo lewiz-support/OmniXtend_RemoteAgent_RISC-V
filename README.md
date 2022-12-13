@@ -4,6 +4,20 @@ Author: LeWiz Communications, Inc.
 
 www.LeWiz.com
 
+---------- Dec 12, 2022
+
+Restructured the directories:
+
+DOCS: Contains document(s) to describe the release. Please read this doc first
+
+OX_CORE_INFO: Contains the source and all files related to OmniXtend Remote Agent IP core written in Verilog.
+
+FPGA: This directory contains FPGA implementation specific releases. 
+VCU118* contains the implementation of RISC-V CPU with OX_CORE capable of fetching and executing programs stored remotely. 
+U50* contains specific implementation of OmniXtend Endpoint on Alveo U50 board.
+
+
+
 --------- November 28, 2022
 
 This repository contains the open source and documentation for OmniXtend protocol with RISC-V CPU as the initiator.
