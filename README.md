@@ -10,11 +10,13 @@ Restructured the directories:
 
 DOCS: Contains document(s) to describe the release. Please read this doc first
 
-OX_CORE_INFO: Contains the source and all files related to OmniXtend Remote Agent IP core written in Verilog.
+OX_CORE_INFO: Contains the source and all files related to OmniXtend (OX) Remote Agent IP core written in Verilog. OmniXtend is useful for clustering of large number of processors (or servers) with endpoints such as network based storage or memory systems.
 
 FPGA: This directory contains FPGA implementation specific releases. 
-VCU118* contains the implementation of RISC-V CPU with OX_CORE capable of fetching and executing programs stored remotely. 
-U50* contains specific implementation of OmniXtend Endpoint on Alveo U50 board.
+
+VCU118* contains the implementation of RISC-V CPU with OX_CORE networked with remote OX endpoint. This implementation demonstrates the clustering of RISC-V CPU(s) with remote networked memory system(s). Its CPU fetches and executes programs stored remotely not on its CPU's external local memory. This was implemented on Xilinx's VCU118 board with UltraScale+ FPGA chip.
+
+U50* contains specific implementation of OmniXtend Endpoint on Alveo U50 board. To be used with the VCU118* implementation. This remote endpoint contains the actual program that the RISC-V CPU executes.
 
 
 
