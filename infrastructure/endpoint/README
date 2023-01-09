@@ -18,7 +18,7 @@ The FPGA version uses the [default release][oxendpointrelease_synth] without the
 The test environment requires that the endpoint contains a program at address at offset `0x80000000` in memory. A "Hello World" program is available in the `example` folder.
 
 ### Simulation
-The BRAM simulation of the endpoint loads the bitstream using standard Verilog function `$readmemh`. The `example` directory contains a script to convert a RISC-V binary to this format.
+The BRAM simulation of the endpoint loads the bitstream using standard Verilog function `$readmemh`. `byte_flip.py` in `example` converts a RISC-V binary to this format.
 
 ### FPGA
 The `bitload` program distributed with the endpoint loads the RISC-V binary into the endpoint memory via Ethernet.
