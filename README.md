@@ -1,47 +1,51 @@
-# OmniXtend_RemoteAgent_RISC-V
+[![Issues][issues-shield]][issues-url]
+[![Apache 2.0 License][license-shield]][license-url]
 
-Author: LeWiz Communications, Inc.
+<br />
+<div align="center">
 
-www.LeWiz.com
+  <h3 align="center">OmniXtend_RemoteAgent_RISC-V</h3>
 
----------- Dec 12, 2022
+  <p align="center">
+    Openpiton to OmniXtend 1.0.3 bridge. Attaches CVA6 coherently to the Network.
+    <br />
+    by [LeWiz Communications, Inc.][lewiz]
+    <br />
+    <a href="https://github.com/lewiz-support/OmniXtend_RemoteAgent_RISC-V/issues">Report Bug</a>
+    ·
+    <a href="https://github.com/lewiz-support/OmniXtend_RemoteAgent_RISC-V/issues">Request Feature</a>
+  </p>
+</div>
 
-Restructured the directories:
+## About The Project
 
-DOCS: Contains document(s) to describe the release. Please read this doc first
+This repository contains a version of OpenPiton coherently attached to remote main memory. A bridge module is attached to the OpenPiton NoC. This module translates the native OpenPiton coherence protocol to TileLink and wraps these messages into OmniXtend for Ethernet transmission. Our open source [LMAC3][lmac] provides 10G/25G/40G/50G/100G Ethernet.
 
-OX_CORE_INFO: Contains the source and all files related to OmniXtend (OX) Remote Agent IP core written in Verilog. OmniXtend is useful for clustering of large number of processors (or servers) with endpoints such as network based storage or memory systems.
+The open source [OmniXtend endpoint][oxendpoint] implements the remote main memory.
 
-FPGA: This directory contains FPGA implementation specific releases. 
+Features:
+- Transparent coherent access to remote memory.
+- Support for the OpenPiton infrastructure for debugging/UART etc.
+- Written in Verilog.
+- Full system simulation.
 
-VCU118* contains the implementation of RISC-V CPU with OX_CORE networked with remote OX endpoint. This implementation demonstrates the clustering of RISC-V CPU(s) with remote networked memory system(s). Its CPU fetches and executes programs stored remotely not on its CPU's external local memory. This was implemented on Xilinx's VCU118 board with UltraScale+ FPGA chip.
+The current implementation uses the Xilinx VCU118 for our OpenPiton fork. The endpoint runs on a wider variety of cores but has been tested on Xilinx Alveo U50 by us.
 
-U50* contains specific implementation of OmniXtend Endpoint on Alveo U50 board. To be used with the VCU118* implementation. This remote endpoint contains the actual program that the RISC-V CPU executes.
+![System Overview](TODO: LINK)
 
+## Directory Structure
+- DOCS: Contains a detailed description of this project in [OmniXtend_Remote_Agent.pdf][oxradoc].
+- OX_CORE_INFO: Verilog source code of the OmniXtend Remote Agent IP.
+- FPGA/VCU118: Implementation details for the OmniXtend Remote Agent IP on Xilinx VCU118.
+- FPGA/U50_FPGA_INFO: Information related to the [OmniXtend endpoint][oxendpoint] FPGA bitstream and simulation.
 
-
---------- November 28, 2022
-
-This repository contains the open source and documentation for OmniXtend protocol with RISC-V CPU as the initiator.
-An OmniXtend Endpoint was used as a target. The RISC-V CPU fetches program code from a remote network endpoint (not
-on its local memory) and executes a simple C-program. The design contains:
-
-RISC-V64 <==> OmniXtend Core <==> LeWiz LMAC3 <==> PHY <==> NETWORK SWITCH <==> Endpoint
-
-RISC-V64 to PHY was implemented on a VCU118 Xilinx board and the Endpoint was implemented on a U50 Xilinx board.
-LeWiz LMAC cores are available on Github in lewiz-support repository (Here)
-
-The RISC-V CPU are also available in open source and released by its developer under its own open source license
-(Link to RISC-V core:   )
-
-The OmniXtend core (developed by LeWiz) is released under Apache 2.0 license
-
-https://www.apache.org/licenses/LICENSE-2.0
-
-Any other work(s) not mentioned above which had been developed by LeWiz and contained in this release are also released under Apache 2.0 license.
-As such this work is released on an AS-IS basis and 
-
-NO WARRANTY of ANY KIND is provided and 
-
-NO LIABILITY of ANY KIND is assumed by LeWiz.
-
+[issues-shield]: https://img.shields.io/github/issues/lewiz-support/OmniXtend_RemoteAgent_RISC-V.svg?style=for-the-badge
+[issues-url]: https://github.com/lewiz-support/OmniXtend_RemoteAgent_RISC-V/issues
+[license-shield]: https://img.shields.io/github/license/lewiz-support/OmniXtend_RemoteAgent_RISC-V.svg?style=for-the-badge
+[license-url]: https://github.com/lewiz-support/OmniXtend_RemoteAgent_RISC-V/blob/master/LICENSE
+[oxspec]: https://github.com/chipsalliance/omnixtend/blob/master/OmniXtend-1.0.3/spec/OmniXtend-1.0.3.pdf
+[tlspec]: https://github.com/chipsalliance/omnixtend/blob/master/OmniXtend-1.0.3/spec/TileLink-1.8.0.pdf
+[lewiz]: https://www.LeWiz.com
+[oxendpoint]: https://github.com/westerndigitalcorporation/OmnixtendEndpoint
+[lmac]: https://github.com/lewiz-support/LMAC_CORE3
+[oxradoc]: https://github.com/lewiz-support/OmniXtend_RemoteAgent_RISC-V/blob/main/DOCS/OmniXtend_Remote_Agent.pdf
