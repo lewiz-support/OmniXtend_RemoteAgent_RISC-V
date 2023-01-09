@@ -74,7 +74,7 @@ set proj_no_waveforms 0
 #   -All paths relative to code directory
 #   -Each new line in this list must be escaped (end lines with '\')
 set proj_addsrc { \
-    "src/Endpoint/memoryconfig.hex" \
+    "src/endpoint/memoryconfig.hex" \
 }
 
 # Any non-standard simulation files to add to the project
