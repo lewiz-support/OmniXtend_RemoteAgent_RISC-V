@@ -7,9 +7,11 @@
   <h3 align="center">OmniXtend_RemoteAgent_RISC-V</h3>
 
   <p align="center">
-    Openpiton to OmniXtend 1.0.3 bridge. Attaches CVA6 coherently to the Network.
+    OpenPiton to OmniXtend 1.0.3 bridge. Attaches CVA6 coherently to the Network.
     <br />
-    by [LeWiz Communications, Inc.][lewiz]
+    <br />
+    by <a href="https://www.LeWiz.com">LeWiz Communications, Inc.</a>
+    <br />
     <br />
     <a href="https://github.com/lewiz-support/OmniXtend_RemoteAgent_RISC-V/issues">Report Bug</a>
     ·
@@ -23,15 +25,15 @@ This repository contains a version of OpenPiton coherently attached to remote ma
 
 The open source [OmniXtend endpoint][oxendpoint] implements the remote main memory.
 
-Features:
-- Transparent coherent access to remote memory.
+### Features
+- CVA6 accesses remote memory transparent and coherent.
 - Support for the OpenPiton infrastructure for debugging/UART etc.
 - Written in Verilog.
 - Full system simulation.
 
 The current implementation uses the Xilinx VCU118 for our OpenPiton fork. The endpoint runs on a wider variety of cores but has been tested on Xilinx Alveo U50 by us.
 
-![System Overview](TODO: LINK)
+![system_overview](https://user-images.githubusercontent.com/451732/211386729-f1bc360f-a483-4571-b0d1-72d11af0e03d.png)
 
 ## Directory Structure
 - DOCS: Contains a detailed description of this project in [OmniXtend_Remote_Agent.pdf][oxradoc].
@@ -49,3 +51,4 @@ The current implementation uses the Xilinx VCU118 for our OpenPiton fork. The en
 [oxendpoint]: https://github.com/westerndigitalcorporation/OmnixtendEndpoint
 [lmac]: https://github.com/lewiz-support/LMAC_CORE3
 [oxradoc]: https://github.com/lewiz-support/OmniXtend_RemoteAgent_RISC-V/blob/main/DOCS/OmniXtend_Remote_Agent.pdf
+
