@@ -37,9 +37,9 @@ The current implementation uses the Xilinx VCU118 for our OpenPiton fork. The en
 
 ## Directory Structure
 - DOCS: Contains a detailed description of this project in [OmniXtend_Remote_Agent.pdf][oxradoc].
-- OX_CORE_INFO: Verilog source code of the OmniXtend Remote Agent IP.
-- FPGA/VCU118: Implementation details for the OmniXtend Remote Agent IP on Xilinx VCU118.
-- FPGA/U50_FPGA_INFO: Information related to the [OmniXtend endpoint][oxendpoint] FPGA bitstream and simulation.
+- src: Verilog source code of the OmniXtend Remote Agent IP.
+- infrastructure/bridge: Implementation details for the OmniXtend Remote Agent IP on Xilinx VCU118.
+- infrastructure/endpoint: Information related to the [OmniXtend endpoint][oxendpoint] FPGA bitstream and simulation.
 
 [issues-shield]: https://img.shields.io/github/issues/lewiz-support/OmniXtend_RemoteAgent_RISC-V.svg?style=for-the-badge
 [issues-url]: https://github.com/lewiz-support/OmniXtend_RemoteAgent_RISC-V/issues
