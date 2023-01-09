@@ -23,6 +23,6 @@ The BRAM simulation of the endpoint loads the bitstream using standard Verilog f
 ### FPGA
 The `bitload` program distributed with the endpoint loads the RISC-V binary into the endpoint memory via Ethernet.
 
-[oxendpointrelease][https://github.com/westerndigitalcorporation/OmnixtendEndpoint/releases/tag/v1.0.0]
-[oxendpointrelease_sim][https://github.com/westerndigitalcorporation/OmnixtendEndpoint/releases/download/v1.0.0/OmnixtendEndpoint_RES_15_RESTO_21_ACKTO_12_OX11_0_MAC_0_CON_4_MAXFRAME_1500_MAXTLFRAME_1_BRAMSIM_1.zip]
-[oxendpointrelease_synth][https://github.com/westerndigitalcorporation/OmnixtendEndpoint/releases/download/v1.0.0/OmnixtendEndpoint_RES_15_RESTO_21_ACKTO_12_OX11_0_MAC_0_CON_8_MAXFRAME_1500_MAXTLFRAME_1_BRAMSIM_0.zip]
+[oxendpointrelease]: https://github.com/westerndigitalcorporation/OmnixtendEndpoint/releases/tag/v1.0.0
+[oxendpointrelease_sim]: https://github.com/westerndigitalcorporation/OmnixtendEndpoint/releases/download/v1.0.0/OmnixtendEndpoint_RES_15_RESTO_21_ACKTO_12_OX11_0_MAC_0_CON_4_MAXFRAME_1500_MAXTLFRAME_1_BRAMSIM_1.zip
+[oxendpointrelease_synth]: https://github.com/westerndigitalcorporation/OmnixtendEndpoint/releases/download/v1.0.0/OmnixtendEndpoint_RES_15_RESTO_21_ACKTO_12_OX11_0_MAC_0_CON_8_MAXFRAME_1500_MAXTLFRAME_1_BRAMSIM_0.zip
