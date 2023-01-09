@@ -22,12 +22,12 @@ Other versions may work, but success is not guaranteed.
 
 ## Simulations/Testbenches
 
-Testbench 'core_tb' 
+Testbench `core_tb`
 - set as top by default
 - Requires hand-verification
 - `run all` to ensure bench runs to completion
 
-Module 'core_fpga'
+Module `core_fpga`
 - Run simulation on 'core_fpga' and source `code/sim/core_fpga/core_fpga.tcl`
 - Debug CGMII TX data is written to `code/src/fpga/core_fpga.TX.mem`
 - Debug CGMII RX data is read from  `code/src/fpga/core_fpga.RX.mem`
@@ -57,9 +57,9 @@ after with a line of zeros.
 
 ## Notes
 
--In `core_tb.wcfg`, the 'OUT' group of one module matches the 'IN' group of its connected module. For example, NOC_MASTER's "NOC OUT" is the "NOC IN" for OX_CORE
+- In `core_tb.wcfg`, the 'OUT' group of one module matches the 'IN' group of its connected module. For example, NOC_MASTER's "NOC OUT" is the "NOC IN" for OX_CORE
 
-- The RISC-V CPU this will be connecting to only makes naturally aligned requests and expects a whole 64 byte block in response (block is also naturally aligned)
-  e.g. request bytes  8-15 -> get bytes 0-63
-    request bytes 16-31 -> get bytes 0-63
-    request bytes  8-23 -> NOT ALLOWED (not naturally aligned)
+- The RISC-V CPU this will be connecting to only makes naturally aligned requests and expects a whole 64 byte block in response (block is also naturally aligned), e.g.,
+    - request bytes  8-15 -> get bytes 0-63
+    - request bytes 16-31 -> get bytes 0-63
+    - request bytes  8-23 -> NOT ALLOWED (not naturally aligned)
